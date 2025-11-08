@@ -25,9 +25,8 @@ export default function LocaleSwitcher() {
       onClick={toggleLocale}
       disabled={isPending}
       className="rounded-full border border-zinc-300 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-zinc-700 transition hover:bg-zinc-100 disabled:opacity-60 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-900"
-      aria-label={`${t("label")}: ${t("switchTo", { locale: nextLocale })}`}
+      aria-label={`${t("switchTo", { locale: nextLocale })}`}
     >
-      {t("current", { locale })} |{" "}
       {isPending ? "..." : t("switchTo", { locale: nextLocale })}
     </button>
   );

@@ -8,9 +8,7 @@
     "secondaryCta": "Lihat karya kami"
   },
   "LocaleSwitcher": {
-    "label": "Bahasa",
-    "current": "{locale, select, en {Bahasa Inggris} id {Bahasa Indonesia} other {Bahasa Inggris}}",
-    "switchTo": "Ganti ke {locale, select, en {Bahasa Inggris} id {Bahasa Indonesia} other {Bahasa Inggris}}"
+    "switchTo": "en"
   },
   "Metadata": {
     "title": "Arsy Studio",
