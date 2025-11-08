@@ -1,0 +1,19 @@
+{
+  "Home": {
+    "eyebrow": "Creative Studio",
+    "headline": "Designing thoughtful digital experiences.",
+    "subhead": "Arsy Studio partners with ambitious teams to craft products, brands, and websites that feel effortless to use.",
+    "body": "From research to final launch, we combine strategy, design, and engineering to help you move faster with confidence.",
+    "primaryCta": "Start a project",
+    "secondaryCta": "See our work"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "current": "{locale, select, en {English} id {Bahasa Indonesia} other {English}}",
+    "switchTo": "Switch to {locale, select, en {English} id {Bahasa Indonesia} other {English}}"
+  },
+  "Metadata": {
+    "title": "Arsy Studio",
+    "description": "Digital studio crafting considerate web experiences."
+  }
+}

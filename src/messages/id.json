@@ -1,0 +1,19 @@
+{
+  "Home": {
+    "eyebrow": "Studio Kreatif",
+    "headline": "Merancang pengalaman digital yang penuh makna.",
+    "subhead": "Arsy Studio bekerja bersama tim ambisius untuk menghadirkan produk, brand, dan situs yang terasa alami digunakan.",
+    "body": "Dari riset hingga peluncuran, kami memadukan strategi, desain, dan rekayasa agar Anda bisa melaju dengan percaya diri.",
+    "primaryCta": "Mulai proyek",
+    "secondaryCta": "Lihat karya kami"
+  },
+  "LocaleSwitcher": {
+    "label": "Bahasa",
+    "current": "{locale, select, en {Bahasa Inggris} id {Bahasa Indonesia} other {Bahasa Inggris}}",
+    "switchTo": "Ganti ke {locale, select, en {Bahasa Inggris} id {Bahasa Indonesia} other {Bahasa Inggris}}"
+  },
+  "Metadata": {
+    "title": "Arsy Studio",
+    "description": "Studio digital yang menciptakan pengalaman web penuh perhatian."
+  }
+}
