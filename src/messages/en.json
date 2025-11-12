@@ -3,7 +3,7 @@
     "hero": {
       "eyebrow": "Digital atelier",
       "title": "Web experiences crafted for daring, thoughtful brands.",
-      "body": "We partner with founders and CMOs to shape interactive flagships where design, engineering, and copy move in unison.",
+      "body": "We build digital flagships for ambitious brands — blending design, technology, and storytelling into one seamless experience.",
       "subcopy": "Every engagement is senior-led, research-rich, and engineered in-house so your launch feels cinematic and controlled.",
       "primaryCta": "Plan a discovery call",
       "secondaryCta": "See how we work",
@@ -23,27 +23,27 @@
       }
     },
     "services": {
-      "eyebrow": "Signature services",
-      "title": "Tailored website programs with editorial precision.",
-      "body": "We choreograph storytelling, interaction, and infrastructure so your flagship feels lavish yet effortless.",
+      "eyebrow": "Signature Services",
+      "title": "Tailored website programs with precision and intent.",
+      "body": "We choreograph storytelling, interaction, and systems so every creation feels luxurious yet effortless.",
       "cards": {
-        "alchemy": {
-          "tag": "Experience design",
-          "title": "Experience alchemy",
-          "body": "Narrative workshops, interactive art direction, and premium front-end craft turned into a living system.",
-          "detail": "Brand storytelling · 3D & motion · Microcopy"
+        "web": {
+          "tag": "01",
+          "title": "Web Application Development",
+          "body": "We build fast, reliable, and scalable web systems designed around your business needs.",
+          "detail": ""
         },
-        "systems": {
-          "tag": "Engineering",
-          "title": "Systems engineering",
-          "body": "Composable tech, headless builds, and automation layers that keep marketing, product, and ops in sync.",
-          "detail": "Next.js · CMS tailoring · Performance QA"
+        "mobile": {
+          "tag": "02",
+          "title": "Mobile Application Development",
+          "body": "We craft intuitive, lightweight mobile apps that deliver a seamless user experience across every device.",
+          "detail": ""
         },
-        "partnership": {
-          "tag": "Partnership",
-          "title": "Continuing partnership",
-          "body": "A retainership that monitors health, ships enhancements, and keeps experiments humming after launch.",
-          "detail": "Optimisation · Analytics · Growth rituals"
+        "brand": {
+          "tag": "03",
+          "title": "Design & Branding",
+          "body": "We help shape a visual identity that's consistent and full of character — making your brand recognizable and memorable.",
+          "detail": ""
         }
       }
     },
@@ -74,25 +74,25 @@
       }
     },
     "studio": {
-      "eyebrow": "Studio pulse",
+      "eyebrow": "Studio Pulse",
       "title": "Meticulous process, soulful detail.",
-      "body": "We run discovery in narrative form, prototype in code, and stage every launch like opening night.",
-      "detail": "Clients join weekly direction rooms with direct access to directors.",
+      "body": "We explore ideas through stories, prototype through code, and launch every project like opening night.",
+      "detail": "We share progress updates throughout each phase, keeping every milestone clear and aligned.",
       "highlights": {
-        "method": {
+        "planning": {
           "tag": "01",
-          "title": "Narrative-first method",
-          "body": "Every sprint begins with a story arc so the interface feels conversational instead of transactional."
+          "title": "Planning & Strategy",
+          "body": "We'll collaborate to define your website's goals, audience, and core features. Together, we'll shape the site's structure, navigation, and content priorities."
         },
-        "stack": {
+        "design": {
           "tag": "02",
-          "title": "Modern stack & QA",
-          "body": "Next.js, Radix, and bespoke CMS layers audited for accessibility, speed, and maintainability."
+          "title": "Design & Development",
+          "body": "Once the plan is set, we move from sketches to code - blending creativity and precision. You'll receive regular updates as your vision turns into something tangible."
         },
-        "relationship": {
+        "launch": {
           "tag": "03",
-          "title": "Direct relationship",
-          "body": "You speak with the makers shipping your product - no middle layer, no diluted feedback."
+          "title": "Launch & Beyond",
+          "body": "Here's where everything comes to life. We bring the final build online, ensure everything runs smoothly, and celebrate the launch like it deserves."
         }
       }
     },

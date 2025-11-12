@@ -45,9 +45,9 @@ export default function HomePage({ params }) {
   );
 
   const servicesCards = [
-    { key: "alchemy", icon: "craft" },
-    { key: "systems", icon: "spark" },
-    { key: "partnership", icon: "flow" },
+    { key: "web", icon: "web" },
+    { key: "mobile", icon: "mobile" },
+    { key: "brand", icon: "brand" },
   ].map((card) => ({
     title: t(`services.cards.${card.key}.title`),
     body: t(`services.cards.${card.key}.body`),
@@ -64,7 +64,7 @@ export default function HomePage({ params }) {
     image: caseImages[key],
   }));
 
-  const studioHighlights = ["method", "stack", "relationship"].map((key) => ({
+  const studioHighlights = ["planning", "design", "launch"].map((key) => ({
     title: t(`studio.highlights.${key}.title`),
     body: t(`studio.highlights.${key}.body`),
     tag: t(`studio.highlights.${key}.tag`),

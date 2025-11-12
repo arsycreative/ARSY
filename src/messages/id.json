@@ -3,7 +3,7 @@
     "hero": {
       "eyebrow": "Atelier digital",
       "title": "Pengalaman web berkelas untuk brand berani dan cerdas.",
-      "body": "Kami mendampingi founder dan CMO menyusun flagship interaktif di mana desain, copy, dan engineering bergerak serempak.",
+      "body": "Kami menciptakan identitas digital bagi brand ambisius, menyatukan desain, teknologi, dan narasi menjadi pengalaman yang mulus.",
       "subcopy": "Setiap proyek dipimpin partner senior, riset menyeluruh, dan dikembangkan in-house agar peluncuran terasa sinematik namun terkontrol.",
       "primaryCta": "Atur discovery call",
       "secondaryCta": "Lihat cara kami bekerja",
@@ -23,27 +23,27 @@
       }
     },
     "services": {
-      "eyebrow": "Layanan utama",
-      "title": "Program website khusus dengan presisi editorial.",
-      "body": "Kami menata storytelling, interaksi, dan infrastruktur agar flagship terasa mahal namun mudah dinavigasi.",
+      "eyebrow": "Signature Services",
+      "title": "Program website yang dirancang dengan presisi dan rasa.",
+      "body": "Kami menyatukan cerita, interaksi, dan sistem agar setiap karya terasa mewah sekaligus alami.",
       "cards": {
-        "alchemy": {
-          "tag": "Experience design",
-          "title": "Experience alchemy",
-          "body": "Workshop narasi, art direction interaktif, dan front-end premium yang diterjemahkan menjadi sistem hidup.",
-          "detail": "Storytelling brand · 3D & motion · Microcopy"
+        "web": {
+          "tag": "01",
+          "title": "Pengembangan Aplikasi Web",
+          "body": "Kami membangun website dan sistem web yang stabil, mudah digunakan, dan relevan dengan kebutuhan bisnismu.",
+          "detail": ""
         },
-        "systems": {
-          "tag": "Engineering",
-          "title": "Systems engineering",
-          "body": "Teknologi composable, headless build, dan lapisan automasi yang membuat marketing, produk, dan operasional selaras.",
-          "detail": "Next.js · Penyesuaian CMS · Performance QA"
+        "mobile": {
+          "tag": "02",
+          "title": "Pengembangan Aplikasi Seluler",
+          "body": "Kami merancang aplikasi mobile yang ringan, intuitif, dan memberi pengalaman pengguna yang nyaman di setiap perangkat.",
+          "detail": ""
         },
-        "partnership": {
-          "tag": "Kemitraan",
-          "title": "Kemitraan berkelanjutan",
-          "body": "Retainer yang menjaga kesehatan produk, mengirimkan peningkatan, dan memupuk eksperimen setelah go-live.",
-          "detail": "Optimasi · Analytics · Ritual growth"
+        "brand": {
+          "tag": "03",
+          "title": "Desain & Branding",
+          "body": "Kami membantu membentuk identitas visual yang konsisten dan berkarakter, agar merekmu mudah dikenali dan diingat.",
+          "detail": ""
         }
       }
     },
@@ -74,25 +74,25 @@
       }
     },
     "studio": {
-      "eyebrow": "Studio pulse",
-      "title": "Proses teliti, detail penuh rasa.",
-      "body": "Discovery bercerita, prototyping langsung di kode, dan peluncuran yang terasa seperti opening night.",
-      "detail": "Klien bergabung dalam direction room mingguan bersama para director.",
+      "eyebrow": "Ritme Studio",
+      "title": "Proses yang teliti, detail yang penuh jiwa.",
+      "body": "Kami menggali ide lewat cerita, membuat purwarupa dengan kode, dan meluncurkan setiap proyek layaknya malam pembukaan.",
+      "detail": "Kami mengirim pembaruan perkembangan di setiap fase, memastikan setiap langkah jelas dan sejalan.",
       "highlights": {
-        "method": {
+        "planning": {
           "tag": "01",
-          "title": "Metode narrative-first",
-          "body": "Setiap sprint diawali alur cerita agar antarmuka terasa berdialog, bukan sekadar transaksional."
+          "title": "Perencanaan & Strategi",
+          "body": "Kami berkolaborasi untuk menentukan tujuan website, target audiens, dan fitur utama. Bersama, kita merancang struktur situs, alur navigasi, serta prioritas konten."
         },
-        "stack": {
+        "design": {
           "tag": "02",
-          "title": "Stack modern & QA",
-          "body": "Next.js, Radix, dan CMS tailor-made yang diaudit untuk aksesibilitas, kecepatan, dan kemudahan perawatan."
+          "title": "Desain & Pengembangan",
+          "body": "Setelah arah disepakati, kami bergerak dari sketsa ke kode - menggabungkan kreativitas dan ketelitian. Kamu akan selalu mendapat pembaruan seiring visi kamu mulai terwujud."
         },
-        "relationship": {
+        "launch": {
           "tag": "03",
-          "title": "Relasi langsung",
-          "body": "Anda berbicara dengan pembuatnya, tanpa lapisan birokrasi jadi keputusan lebih tajam."
+          "title": "Peluncuran & Lanjutan",
+          "body": "Inilah tahap di mana semuanya hidup. Kami memastikan website berjalan lancar dan siap digunakan, lalu merayakan peluncurannya bersama."
         }
       }
     },

@@ -1,8 +1,18 @@
 "use client";
 
-import { Code2, Sparkles, Workflow } from "lucide-react";
+import {
+  Code2,
+  Globe,
+  PenTool,
+  Smartphone,
+  Sparkles,
+  Workflow,
+} from "lucide-react";
 
 const iconMap = {
+  web: Globe,
+  mobile: Smartphone,
+  brand: PenTool,
   craft: Code2,
   spark: Sparkles,
   flow: Workflow,
@@ -53,11 +63,13 @@ export function ServicesSection({ copy, cards }) {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-zinc-100 dark:border-white/10">
-                    <p className="text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-white/40">
-                      {card.detail}
-                    </p>
-                  </div>
+                  {card.detail && (
+                    <div className="pt-4 border-t border-zinc-100 dark:border-white/10">
+                      <p className="text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-white/40">
+                        {card.detail}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             );
