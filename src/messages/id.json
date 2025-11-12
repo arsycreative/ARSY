@@ -224,6 +224,118 @@
       "secondary": "Email studio"
     }
   },
+  "ServicesPage": {
+    "hero": {
+      "eyebrow": "Signature services",
+      "title": "Program yang dirancang dengan ketenangan editorial.",
+      "body": "Kami menyatukan strategi, desain, dan engineering dalam satu atap agar setiap peluncuran terasa sinematik, presisi, dan manusiawi.",
+      "detail": "Hanya dua peluncuran sekaligus. Partner senior hadir di setiap sesi. Tanpa estafet.",
+      "cta": "Rencanakan discovery call",
+      "secondary": "Lihat kapabilitas",
+      "stats": {
+        "timeline": { "label": "Timeline", "value": "6-8 minggu" },
+        "coverage": { "label": "Cakupan", "value": "Strategi → QA" },
+        "access": { "label": "Akses", "value": "Ruang dipimpin partner" }
+      }
+    },
+    "offerings": {
+      "eyebrow": "Yang kami bangun",
+      "title": "Menu butik untuk flagship digital.",
+      "body": "Setiap program memadukan narasi, craft, dan sistem agar produkmu terasa premium namun natural.",
+      "cardBadge": "End-to-end",
+      "items": {
+        "web": {
+          "tag": "01",
+          "title": "Program web flagship",
+          "body": "Strategi pengalaman, sistem responsif, dan headless CMS yang disesuaikan untuk tim marketing serta produk.",
+          "features": {
+            "one": "UX naratif + copy",
+            "two": "Penyesuaian headless CMS",
+            "three": "Ritual performa & QA"
+          }
+        },
+        "product": {
+          "tag": "02",
+          "title": "Sistem produk & mobile",
+          "body": "Interface lintas platform, design system, dan aplikasi yang ringan namun ekspresif.",
+          "features": {
+            "one": "Pengelolaan design system",
+            "two": "Build aplikasi web & mobile",
+            "three": "Orkestrasi integrasi"
+          }
+        },
+        "brand": {
+          "tag": "03",
+          "title": "Brand & content system",
+          "body": "Penyegaran identitas visual, arahan motion, dan playbook konten agar tiap touchpoint konsisten.",
+          "features": {
+            "one": "Identitas & art direction",
+            "two": "Kit konten & campaign",
+            "three": "Motion + micro interaction"
+          }
+        }
+      }
+    },
+    "approach": {
+      "eyebrow": "Cara kami bermitra",
+      "title": "Satu ritme lintas disiplin.",
+      "steps": {
+        "discover": {
+          "tag": "Discovery",
+          "title": "Mendengar & menulis naskah",
+          "body": "Sesi immersif, riset, dan workshop alignment membentuk narasi serta kebutuhan produk."
+        },
+        "build": {
+          "tag": "Build",
+          "title": "Merancang & merekayasa",
+          "body": "Design system, prototipe, dan kode berjalan paralel agar momentum tinggi tanpa mengorbankan detail."
+        },
+        "launch": {
+          "tag": "Launch",
+          "title": "Mempersembahkan & merawat",
+          "body": "Staging, QA, dan orkestrasi integrasi sebelum peluncuran, lalu ritual optimasi berkelanjutan."
+        }
+      }
+    },
+    "stack": {
+      "eyebrow": "Tool & perawatan",
+      "title": "Stack modern, sikap klasik.",
+      "body": "Kami memilih alat untuk daya tahan dan kenyamanan, lalu tetap menjaga agar selalu tajam.",
+      "items": {
+        "experience": {
+          "title": "Experience",
+          "bullets": {
+            "one": "Pemetaan narasi",
+            "two": "Strategi pengalaman",
+            "three": "Koreografi konten"
+          }
+        },
+        "technology": {
+          "title": "Teknologi",
+          "bullets": {
+            "one": "Next.js & React",
+            "two": "Headless commerce",
+            "three": "Automasi & integrasi"
+          }
+        },
+        "delivery": {
+          "title": "Delivery",
+          "bullets": {
+            "one": "Aksesibilitas & QA",
+            "two": "Instrumentasi analytics",
+            "three": "Ritual pertumbuhan"
+          }
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Siap membangun?",
+      "title": "Mari kita orkestrasi flagship berikutnya.",
+      "body": "Bawa brief, intuisi, atau roadmap produkmu. Kami akan membalas dengan rencana khusus kurang dari 24 jam.",
+      "primary": "Mulai brief",
+      "secondary": "Email studio"
+    }
+  },
   "ContactPage": {
     "hero": {
       "eyebrow": "Hubungi studio",
@@ -348,6 +460,8 @@
     "description": "Arsy Studio merancang, menulis, dan mengembangkan pengalaman web premium untuk brand modern.",
     "aboutTitle": "Tentang - Arsy Studio",
     "aboutDescription": "Kenali tim, filosofi, dan proses Arsy Studio.",
+    "servicesTitle": "Layanan - Arsy Studio",
+    "servicesDescription": "Jelajahi program web, produk, dan brand premium dari Arsy Studio untuk peluncuran ambisius.",
     "contactTitle": "Kontak - Arsy Studio",
     "contactDescription": "Bagikan brief, ide awal, atau tantanganmu dan kami akan membalas dengan rencana khusus dalam 24 jam."
   }

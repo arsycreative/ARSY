@@ -224,6 +224,118 @@
       "secondary": "Email the studio"
     }
   },
+  "ServicesPage": {
+    "hero": {
+      "eyebrow": "Signature services",
+      "title": "Programs engineered with editorial calm.",
+      "body": "We choreograph strategy, design, and engineering under one roof so every launch feels cinematic, precise, and human.",
+      "detail": "Two launches at a time. Senior partners in every room. No handoffs.",
+      "cta": "Plan a discovery call",
+      "secondary": "See our capabilities",
+      "stats": {
+        "timeline": { "label": "Timeline", "value": "6-8 weeks" },
+        "coverage": { "label": "Coverage", "value": "Strategy → QA" },
+        "access": { "label": "Access", "value": "Partner-led rooms" }
+      }
+    },
+    "offerings": {
+      "eyebrow": "What we build",
+      "title": "A boutique menu crafted for digital flagships.",
+      "body": "Every program blends narrative, craft, and systems thinking so your product feels premium yet effortless.",
+      "cardBadge": "Full scope",
+      "items": {
+        "web": {
+          "tag": "01",
+          "title": "Flagship web programs",
+          "body": "Experience strategy, responsive systems, and headless CMS tailored for marketing and product teams.",
+          "features": {
+            "one": "Narrative UX + copy",
+            "two": "Headless CMS tailoring",
+            "three": "Performance & QA rituals"
+          }
+        },
+        "product": {
+          "tag": "02",
+          "title": "Product & mobile systems",
+          "body": "Cross-platform interfaces, design systems, and app experiences that stay lightweight yet expressive.",
+          "features": {
+            "one": "Design system stewardship",
+            "two": "Mobile & web app builds",
+            "three": "Integration choreography"
+          }
+        },
+        "brand": {
+          "tag": "03",
+          "title": "Brand & content systems",
+          "body": "Visual identity refresh, motion direction, and content playbooks that keep every touchpoint consistent.",
+          "features": {
+            "one": "Identity & art direction",
+            "two": "Content & campaign kits",
+            "three": "Motion + micro interactions"
+          }
+        }
+      }
+    },
+    "approach": {
+      "eyebrow": "How we partner",
+      "title": "One rhythm across disciplines.",
+      "steps": {
+        "discover": {
+          "tag": "Discovery",
+          "title": "Listen & script",
+          "body": "Immersion sessions, research, and alignment workshops shape the narrative and product requirements."
+        },
+        "build": {
+          "tag": "Build",
+          "title": "Design & engineer",
+          "body": "Design systems, prototypes, and code evolve in parallel so momentum stays high without sacrificing detail."
+        },
+        "launch": {
+          "tag": "Launch",
+          "title": "Stage & sustain",
+          "body": "Staging, QA, and integration orchestration lead into launch, followed by rituals for optimisation."
+        }
+      }
+    },
+    "stack": {
+      "eyebrow": "Tooling & care",
+      "title": "Modern stack, timeless restraint.",
+      "body": "We pick tools for longevity and comfort, then stay on the loop to keep them sharp.",
+      "items": {
+        "experience": {
+          "title": "Experience",
+          "bullets": {
+            "one": "Narrative mapping",
+            "two": "Experience strategy",
+            "three": "Content choreography"
+          }
+        },
+        "technology": {
+          "title": "Technology",
+          "bullets": {
+            "one": "Next.js & React",
+            "two": "Headless commerce",
+            "three": "Automation & integrations"
+          }
+        },
+        "delivery": {
+          "title": "Delivery",
+          "bullets": {
+            "one": "Accessibility & QA",
+            "two": "Analytics instrumentation",
+            "three": "Growth rituals"
+          }
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Ready to build?",
+      "title": "Let’s choreograph the next flagship together.",
+      "body": "Bring the brief, the hunch, or the product roadmap. We’ll respond with a tailored plan in under 24 hours.",
+      "primary": "Start the brief",
+      "secondary": "Email the studio"
+    }
+  },
   "ContactPage": {
     "hero": {
       "eyebrow": "Contact the studio",
@@ -348,6 +460,8 @@
     "description": "Arsy Studio designs, writes, and engineers premium web experiences for modern brands.",
     "aboutTitle": "About - Arsy Studio",
     "aboutDescription": "Discover the team, philosophy, and process behind Arsy Studio.",
+    "servicesTitle": "Services - Arsy Studio",
+    "servicesDescription": "Explore Arsy Studio's premium web, product, and brand programs tailored for ambitious launches.",
     "contactTitle": "Contact - Arsy Studio",
     "contactDescription": "Share your hunch, deck, or product brief and receive a bespoke plan from Arsy Studio within 24 hours."
   }
