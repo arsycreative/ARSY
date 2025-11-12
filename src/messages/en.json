@@ -123,102 +123,188 @@
   },
   "About": {
     "hero": {
-      "eyebrow": "Portrait",
-      "title": "We are a digital agency obsessed with poetic clarity.",
-      "body": "Arsy Studio is an independent practice blending research, editorial craft, and engineering to help brands move with precision.",
-      "subhead": "We champion soft-spoken luxury: tactile typography, cinematic motion, and infrastructure that stays fast even when the story is rich.",
-      "primaryCta": "Schedule chemistry call",
-      "secondaryCta": "Download studio notes",
-      "caption": "Creative review ritual",
-      "captionBody": "Weekly cadence with founders, CMOs, and product leads."
+      "eyebrow": "About us",
+      "title": "We are more than a digital practice.",
+      "body": "We are a creative team weaving design, technology, and storytelling so brands feel alive online. Every engagement begins with understanding the people behind the idea.",
+      "detail": "We believe remarkable digital experiences are born at the balance of function and emotion.",
+      "secondary": "We stay close to the humans who will use what we build so every interaction feels considered.",
+      "highlights": {
+        "balance": { "label": "Craft focus", "value": "Function x emotion" },
+        "approach": { "label": "Working model", "value": "2 concurrent launches" }
+      },
+      "card": {
+        "tag": "Studio ritual",
+        "title": "Bandung born, globally present.",
+        "body": "Partners, engineers, and writers share one table during every review."
+      }
     },
-    "story": {
-      "eyebrow": "Our arc",
-      "title": "Born in Jakarta, collaborating globally.",
-      "body": "We operate like an atelier: limited editions, handcrafted detail, and brutal focus on quality.",
-      "timeline": {
-        "origin": {
-          "year": "2016",
-          "title": "Origins",
-          "body": "Arsy launched as a two-person experiment building narrative sites for hospitality groups."
+    "who": {
+      "eyebrow": "Who we are",
+      "title": "A multidisciplinary studio with a human touch.",
+      "body": "Our studio was born from the belief that technology can feel human. We grew in Bandung's creative energy and matured with brands that value collaboration.",
+      "cards": {
+        "roots": {
+          "title": "Roots in Bandung",
+          "body": "Raised in a city full of creative energy, we carry that warmth into every partnership."
         },
-        "scale": {
-          "year": "2019",
-          "title": "Resonance",
-          "body": "Expanded into strategy, product design, and headless engineering for venture-backed teams."
+        "craft": {
+          "title": "Design, build, care",
+          "body": "We design, engineer, and steward digital products that help businesses connect with their audience in a warm, intuitive, character-led way."
         },
-        "future": {
-          "year": "Today",
-          "title": "Precision era",
-          "body": "Tight senior team spanning Jakarta & Singapore serving founders from Asia to Europe."
+        "relationships": {
+          "title": "Long-term relationships",
+          "body": "We do more than deliver projects. We build trust so the collaboration stays honest and long lasting."
         }
       }
     },
-    "values": {
-      "items": {
-        "care": {
-          "tag": "Value 01",
-          "title": "Care as craft",
-          "body": "We obsess over voice, rhythm, and micro-interactions because luxury is a series of small decisions."
-        },
-        "clarity": {
-          "tag": "Value 02",
-          "title": "Clarity over noise",
-          "body": "Every deck, component, and handshake is designed to remove friction for your team."
-        },
-        "momentum": {
-          "tag": "Value 03",
-          "title": "Momentum with calm",
-          "body": "We keep delivery rhythmic and transparent so you can make confident decisions fast."
-        }
+    "philosophy": {
+      "eyebrow": "Our philosophy",
+      "title": "Meticulous process, soulful outcomes.",
+      "body": "Every design decision, line of code, and interaction detail is crafted with a clear intent.",
+      "detail": "We are not racing after trends. We create work that remains relevant, functional, and directional.",
+      "pillars": {
+        "intent": "Every artifact stays intentional, from systems architecture to microcopy.",
+        "clarity": "Perfection means clarity that feels effortless, not decoration."
       }
     },
     "process": {
       "eyebrow": "How we work",
-      "title": "Immersive, collaborative, obsessive.",
+      "title": "A rhythm of listening, crafting, sustaining.",
       "steps": {
         "listen": {
-          "detail": "Phase 01",
-          "title": "Listen & script",
-          "body": "In-depth interviews, brand archetype mapping, and tone exploration become the script for the build."
+          "tag": "01",
+          "title": "Listen & understand",
+          "body": "We start with stories, listening to needs, audiences, and the meaning behind every idea."
         },
-        "design": {
-          "detail": "Phase 02",
-          "title": "Design & choreograph",
-          "body": "Visual systems, prototypes, and motion studies converge with technical planning."
+        "craft": {
+          "tag": "02",
+          "title": "Design & build",
+          "body": "Ideas move from sketches to tactile interfaces, balancing aesthetics and performance."
         },
-        "evolve": {
-          "detail": "Phase 03",
-          "title": "Evolve & launch",
-          "body": "Development, QA, and orchestration of every integration followed by cinematic release."
+        "sustain": {
+          "tag": "03",
+          "title": "Sustain & evolve",
+          "body": "After launch we stay close, keeping everything smooth while evolving with the business."
         }
       }
     },
-    "leadership": {
-      "eyebrow": "People",
-      "title": "Led by senior partners.",
-      "body": "Direct access to the people who make the work keeps decisions sharp.",
-      "cta": "Meet the team",
-      "team": {
-        "amira": {
-          "name": "Amira Rahmania",
-          "title": "Managing Partner · Experience",
-          "bio": "Guides storytelling, editorial systems, and experimentation labs."
+    "reasons": {
+      "eyebrow": "Why choose us",
+      "title": "Human, exacting, collaborative.",
+      "items": {
+        "human": {
+          "title": "Human approach",
+          "body": "We understand that every product is used by people with needs, emotion, and context."
         },
-        "rafi": {
-          "name": "Rafi Azhar",
-          "title": "Technical Director",
-          "bio": "Architects headless stacks, performance rituals, and QA culture."
+        "quality": {
+          "title": "Uncompromising quality",
+          "body": "Every detail is handled carefully, from system architecture down to micro-interactions."
+        },
+        "collaboration": {
+          "title": "Open collaboration",
+          "body": "Clients stay involved at every stage so decisions remain transparent and meaningful."
         }
       }
     },
-    "capabilities": {
-      "eyebrow": "Capabilities",
-      "title": "Strategy, design, and engineering led under one roof.",
-      "list": {
-        "experience": "Experience strategy, UX writing, art direction",
-        "platforms": "Headless CMS, eCommerce, marketing automation",
-        "scale": "Performance, accessibility, localisation, experimentation"
+    "metrics": {
+      "eyebrow": "Numbers behind the story",
+      "title": "Proof from the past years.",
+      "items": {
+        "years": { "value": "8+", "label": "Years of practice" },
+        "projects": { "value": "200+", "label": "Projects delivered" },
+        "clients": { "value": "100+", "label": "Clients partnered" },
+        "vision": { "value": "1", "label": "Vision: meaningful digital experiences" }
+      }
+    },
+    "cta": {
+      "eyebrow": "Let's connect",
+      "title": "Tell us about the next big thing you want to build.",
+      "body": "We love working with people who have a vision. Share the idea, brand, or challenge and we'll translate it into a living digital experience.",
+      "primary": "Start a conversation",
+      "secondary": "Email the studio"
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "eyebrow": "Contact the studio",
+      "title": "Let's make your launch feel inevitable.",
+      "body": "Share the deck, the half-written brief, or even just a hunch. We'll respond with a clear path forward within 24 hours.",
+      "detail": "We cap ourselves at two concurrent engagements so every build feels cinematic and controlled.",
+      "primaryCta": "Book a discovery call",
+      "secondaryCta": "Email the studio",
+      "primaryHref": "https://cal.com/arsy-studio/discovery",
+      "secondaryHref": "mailto:hello@arsystudio.com",
+      "directLabel": "Direct access",
+      "cardSubcopy": "Send the deck, challenge, or even a whisper of an idea.",
+      "highlights": {
+        "response": { "label": "Response time", "value": "<24 hours" },
+        "timezone": { "label": "Timezones", "value": "Jakarta • Singapore" }
+      }
+    },
+    "channels": {
+      "eyebrow": "Channels",
+      "title": "Choose the path that fits your pace.",
+      "subtitle": "Every conversation routes directly to partners and directors.",
+      "items": {
+        "email": {
+          "tag": "01",
+          "title": "Write to us",
+          "body": "Send context, timelines, and ambitions. You'll receive a POV and next steps shortly.",
+          "action": "hello@arsystudio.com",
+          "href": "mailto:hello@arsystudio.com"
+        },
+        "whatsapp": {
+          "tag": "02",
+          "title": "WhatsApp the studio",
+          "body": "Perfect for fast gut-checks, voice notes, or introductions between teams.",
+          "action": "+62 812-8898-1122",
+          "href": "https://wa.me/6281288981122"
+        },
+        "workshop": {
+          "tag": "03",
+          "title": "Request a workshop",
+          "body": "Book a 45-minute working session to map scope, squads, and success metrics.",
+          "action": "Book a chemistry call",
+          "href": "https://cal.com/arsy-studio/discovery"
+        }
+      }
+    },
+    "availability": {
+      "eyebrow": "Studio rhythm",
+      "title": "Two builds at a time, always senior-led.",
+      "body": "Sprints run 6-8 weeks with research, design, and engineering layered in parallel.",
+      "detail": "Need a different working model? We'll architect a bespoke collaboration.",
+      "slots": {
+        "builds": {
+          "label": "Flagship builds",
+          "value": "Next opening: April 2025"
+        },
+        "partnerships": {
+          "label": "Retainer partnerships",
+          "value": "1 slot available"
+        },
+        "audits": {
+          "label": "Product / UX audits",
+          "value": "Bookable within 2 weeks"
+        }
+      }
+    },
+    "panel": {
+      "eyebrow": "Signature Services",
+      "title": "Tell us what you want the internet to feel like.",
+      "body": "We take on two launches at a time to preserve care. Share your hunch, deck, or challenge.",
+      "primaryCta": "Start the brief",
+      "secondaryCta": "WhatsApp the team",
+      "reasons": {
+        "build": "Shaping a flagship, product, or fund launch",
+        "refresh": "Refreshing an existing property without losing equity",
+        "partner": "Looking for a long-term design + engineering partner"
+      },
+      "person": {
+        "role": "Studio line",
+        "name": "Salma N.",
+        "title": "Client Partner",
+        "email": "hello@arsystudio.com"
       }
     }
   },
@@ -261,6 +347,8 @@
     "title": "Arsy Studio - Boutique digital agency",
     "description": "Arsy Studio designs, writes, and engineers premium web experiences for modern brands.",
     "aboutTitle": "About - Arsy Studio",
-    "aboutDescription": "Discover the team, philosophy, and process behind Arsy Studio."
+    "aboutDescription": "Discover the team, philosophy, and process behind Arsy Studio.",
+    "contactTitle": "Contact - Arsy Studio",
+    "contactDescription": "Share your hunch, deck, or product brief and receive a bespoke plan from Arsy Studio within 24 hours."
   }
 }

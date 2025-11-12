@@ -79,10 +79,10 @@ export default async function LocaleLayout({ children, params }) {
   ]);
 
   const navLinks = [
-    { label: navigationCopy("home"), href: `/${locale}` },
-    { label: navigationCopy("about"), href: `/${locale}/about` },
-    { label: navigationCopy("services"), href: `/${locale}#services` },
-    { label: navigationCopy("contact"), href: `/${locale}#contact` },
+    { label: navigationCopy("home"), href: "/" },
+    { label: navigationCopy("about"), href: "/about" },
+    { label: navigationCopy("services"), href: "/#services" },
+    { label: navigationCopy("contact"), href: "/contact" },
   ];
 
   const footer = {

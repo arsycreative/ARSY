@@ -2,268 +2,374 @@ import { use } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Button } from "@/components/ui/button";
-import { Reveal } from "@/components/reveal";
-import { TiltCard } from "@/components/tilt-card";
+import { Link } from "@/i18n/navigation";
+import {
+  ArrowUpRight,
+  BookOpen,
+  Gem,
+  HeartHandshake,
+  PenTool,
+  RefreshCcw,
+  Sparkles,
+  Users,
+} from "lucide-react";
 
-const portraits = {
-  amira:
-    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80&auto=format&fit=crop",
-  rafi:
-    "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80&auto=format&fit=crop",
+const processIcons = {
+  listen: BookOpen,
+  craft: PenTool,
+  sustain: RefreshCcw,
+};
+
+const reasonIcons = {
+  human: HeartHandshake,
+  quality: Gem,
+  collaboration: Sparkles,
 };
 
 export default function AboutPage({ params }) {
   const { locale } = use(params);
   setRequestLocale(locale);
+
   const t = useTranslations("About");
 
-  const timeline = ["origin", "scale", "future"].map((key) => ({
-    year: t(`story.timeline.${key}.year`),
-    title: t(`story.timeline.${key}.title`),
-    body: t(`story.timeline.${key}.body`),
-  }));
+  const hero = {
+    eyebrow: t("hero.eyebrow"),
+    title: t("hero.title"),
+    body: t("hero.body"),
+    detail: t("hero.detail"),
+    secondary: t("hero.secondary"),
+    highlights: ["balance", "approach"].map((key) => ({
+      label: t(`hero.highlights.${key}.label`),
+      value: t(`hero.highlights.${key}.value`),
+    })),
+  };
 
-  const values = ["care", "clarity", "momentum"].map((key) => ({
-    title: t(`values.items.${key}.title`),
-    body: t(`values.items.${key}.body`),
-    tag: t(`values.items.${key}.tag`),
-  }));
+  const who = {
+    eyebrow: t("who.eyebrow"),
+    title: t("who.title"),
+    body: t("who.body"),
+    cards: ["roots", "craft", "relationships"].map((key) => ({
+      title: t(`who.cards.${key}.title`),
+      body: t(`who.cards.${key}.body`),
+    })),
+  };
 
-  const process = ["listen", "design", "evolve"].map((key) => ({
-    title: t(`process.steps.${key}.title`),
-    body: t(`process.steps.${key}.body`),
-    detail: t(`process.steps.${key}.detail`),
-  }));
+  const philosophy = {
+    eyebrow: t("philosophy.eyebrow"),
+    title: t("philosophy.title"),
+    body: t("philosophy.body"),
+    detail: t("philosophy.detail"),
+    pillars: ["intent", "clarity"].map((key) => t(`philosophy.pillars.${key}`)),
+  };
 
-  const leadership = ["amira", "rafi"].map((key) => ({
-    name: t(`leadership.team.${key}.name`),
-    title: t(`leadership.team.${key}.title`),
-    bio: t(`leadership.team.${key}.bio`),
-    portrait: portraits[key],
-  }));
+  const process = {
+    eyebrow: t("process.eyebrow"),
+    title: t("process.title"),
+    steps: ["listen", "craft", "sustain"].map((key) => ({
+      key,
+      tag: t(`process.steps.${key}.tag`),
+      title: t(`process.steps.${key}.title`),
+      body: t(`process.steps.${key}.body`),
+    })),
+  };
 
-  const capabilities = ["experience", "platforms", "scale"].map((key) =>
-    t(`capabilities.list.${key}`)
-  );
+  const reasons = {
+    eyebrow: t("reasons.eyebrow"),
+    title: t("reasons.title"),
+    items: ["human", "quality", "collaboration"].map((key) => ({
+      key,
+      title: t(`reasons.items.${key}.title`),
+      body: t(`reasons.items.${key}.body`),
+    })),
+  };
+
+  const metrics = {
+    eyebrow: t("metrics.eyebrow"),
+    title: t("metrics.title"),
+    items: ["years", "projects", "clients", "vision"].map((key) => ({
+      value: t(`metrics.items.${key}.value`),
+      label: t(`metrics.items.${key}.label`),
+    })),
+  };
+
+  const cta = {
+    eyebrow: t("cta.eyebrow"),
+    title: t("cta.title"),
+    body: t("cta.body"),
+    primary: t("cta.primary"),
+    secondary: t("cta.secondary"),
+  };
 
   return (
-    <div className="space-y-16 pb-12 text-zinc-900 dark:text-white">
-      <section className="grid gap-10 rounded-[2.5rem] border border-black/5 bg-white/90 p-8 shadow-[0_40px_120px_rgba(15,15,15,0.08)] dark:border-white/10 dark:bg-white/5 lg:grid-cols-[1.1fr,0.9fr] lg:p-12">
-        <div className="space-y-6">
-          <Reveal>
-          <p className="text-xs uppercase tracking-[0.6em] text-zinc-500 dark:text-white/60">
-            {t("hero.eyebrow")}
-          </p>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="text-4xl font-semibold lg:text-5xl">
-            {t("hero.title")}
-          </h1>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="text-lg text-zinc-600 dark:text-white/70">
-            {t("hero.body")}
-          </p>
-        </Reveal>
-        <Reveal delay={0.25}>
-          <p className="text-sm text-zinc-500 dark:text-white/60">
-            {t("hero.subhead")}
-          </p>
-        </Reveal>
-        <div className="flex flex-wrap gap-3">
-          <Reveal delay={0.3}>
-            <Button
-              size="lg"
-              className="dark:bg-white dark:text-zinc-900"
-            >
-              {t("hero.primaryCta")}
-            </Button>
-          </Reveal>
-          <Reveal delay={0.35}>
-            <Button
-              size="lg"
-              variant="ghost"
-              className="border-zinc-300 text-zinc-900 dark:border-white/30 dark:text-white"
-            >
-              {t("hero.secondaryCta")}
-            </Button>
-          </Reveal>
+    <>
+      <section className="relative overflow-hidden py-32 px-6 text-white lg:px-12">
+        <div
+          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-60 blur-3xl"
+          aria-hidden="true"
+        >
+          <div className="absolute -top-16 right-10 h-80 w-80 rounded-full bg-violet-500/30" />
+          <div className="absolute bottom-0 left-10 h-96 w-96 rounded-full bg-purple-500/20" />
         </div>
-        </div>
-        <Reveal delay={0.2}>
-          <div className="relative h-[420px] overflow-hidden rounded-[2rem] border border-black/5 dark:border-white/10">
-            <Image
-              src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?w=900&q=80&auto=format&fit=crop"
-              alt="Arsy Studio atelier"
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-              <p className="text-sm font-semibold text-white">
-                {t("hero.caption")}
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="grid items-center gap-16 lg:grid-cols-[1.1fr,0.9fr]">
+            <div className="space-y-8">
+              <p className="text-xs uppercase tracking-[0.4em] text-white/50">
+                {hero.eyebrow}
               </p>
-              <p className="text-xs text-white/60">{t("hero.captionBody")}</p>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      <section className="space-y-6 rounded-[2.5rem] border border-black/5 bg-white/90 p-8 shadow-[0_30px_90px_rgba(15,15,15,0.08)] dark:border-white/10 dark:bg-white/5 lg:p-12">
-        <Reveal>
-          <p className="text-xs uppercase tracking-[0.5em] text-zinc-500 dark:text-white/50">
-            {t("story.eyebrow")}
-          </p>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h2 className="text-3xl font-semibold">{t("story.title")}</h2>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="text-lg text-zinc-600 dark:text-white/70">
-            {t("story.body")}
-          </p>
-        </Reveal>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {timeline.map((item, index) => (
-            <Reveal key={item.title} delay={0.1 * index}>
-              <div className="rounded-3xl border border-black/5 bg-white/80 p-6 text-zinc-900 dark:border-white/10 dark:bg-white/5 dark:text-white">
-                <p className="text-xs uppercase tracking-[0.5em] text-zinc-400 dark:text-white/40">
-                  {item.year}
-                </p>
-                <h3 className="mt-2 text-xl font-semibold">{item.title}</h3>
-                <p className="text-sm text-zinc-600 dark:text-white/70">
-                  {item.body}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="grid gap-6 lg:grid-cols-3">
-        {values.map((value, index) => (
-          <TiltCard key={value.title}>
-            <Reveal delay={0.1 * index}>
-              <div className="space-y-3">
-                <span className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/40">
-                  {value.tag}
-                </span>
-                <h3 className="text-2xl font-semibold">
-                  {value.title}
-                </h3>
-                <p className="text-sm text-zinc-600 dark:text-white/70">
-                  {value.body}
-                </p>
-              </div>
-            </Reveal>
-          </TiltCard>
-        ))}
-      </section>
-
-      <section className="space-y-6 rounded-[2.5rem] border border-black/5 bg-white/90 p-8 shadow-[0_30px_90px_rgba(15,15,15,0.08)] dark:border-white/10 dark:bg-white/5 lg:p-12">
-        <Reveal>
-          <p className="text-xs uppercase tracking-[0.5em] text-zinc-500 dark:text-white/50">
-            {t("process.eyebrow")}
-          </p>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h2 className="text-3xl font-semibold">{t("process.title")}</h2>
-        </Reveal>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {process.map((step, index) => (
-            <Reveal key={step.title} delay={0.1 * index}>
-              <div className="rounded-3xl border border-black/5 bg-gradient-to-b from-white to-zinc-100 p-6 text-zinc-900 dark:border-white/10 dark:from-white/10 dark:to-transparent dark:text-white">
-                <p className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/40">
-                  {step.detail}
-                </p>
-                <h3 className="mt-2 text-2xl font-semibold">{step.title}</h3>
-                <p className="text-sm text-zinc-600 dark:text-white/70">
-                  {step.body}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="rounded-[2.5rem] border border-black/5 bg-white/90 p-8 text-zinc-900 shadow-[0_30px_90px_rgba(15,15,15,0.08)] dark:border-white/10 dark:bg-white/5 dark:text-white lg:p-12">
-        <Reveal>
-          <p className="text-xs uppercase tracking-[0.5em] text-zinc-500 dark:text-white/50">
-            {t("leadership.eyebrow")}
-          </p>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-semibold">
-                {t("leadership.title")}
-              </h2>
-              <p className="text-sm text-zinc-600 dark:text-white/70">
-                {t("leadership.body")}
+              <h1 className="text-5xl font-light leading-tight lg:text-6xl">
+                {hero.title}
+              </h1>
+              <p className="text-xl font-light text-white/70 leading-relaxed">
+                {hero.body}
               </p>
+              <p className="text-sm text-white/50">{hero.detail}</p>
+              <p className="text-sm text-white/40">{hero.secondary}</p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {hero.highlights.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-3xl border border-white/10 bg-white/5 px-6 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/10"
+                  >
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/50">
+                      {item.label}
+                    </p>
+                    <p className="text-2xl font-light">{item.value}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href={`/${locale}/contact`}
+                  className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition-all hover:scale-[1.02] hover:shadow-[0_20px_45px_rgba(255,255,255,0.25)]"
+                >
+                  {cta.primary}
+                  <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </Link>
+                <a
+                  href="#studio"
+                  className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10 hover:border-white/50"
+                >
+                  {cta.secondary}
+                </a>
+              </div>
             </div>
-            <Button
-              variant="ghost"
-              className="border-zinc-300 text-zinc-900 dark:border-white/30 dark:text-white"
-            >
-              {t("leadership.cta")}
-            </Button>
-          </div>
-        </Reveal>
-        <div className="mt-8 grid gap-6 lg:grid-cols-2">
-          {leadership.map((leader, index) => (
-            <Reveal key={leader.name} delay={0.1 * index}>
-              <div className="rounded-3xl border border-black/5 bg-white/80 p-6 text-zinc-900 dark:border-white/10 dark:bg-white/10 dark:text-white">
-                <div className="relative h-64 overflow-hidden rounded-2xl border border-black/5 dark:border-white/10">
-                  <Image
-                    src={leader.portrait}
-                    alt={leader.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 40vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="mt-4 space-y-2">
-                  <p className="text-xl font-semibold">{leader.name}</p>
-                  <p className="text-sm text-zinc-600 dark:text-white/60">
-                    {leader.title}
+
+            <div className="relative">
+              <div className="absolute -inset-1 rounded-[32px] bg-linear-to-br from-violet-500/30 to-purple-500/20 blur-3xl" />
+              <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/10 shadow-2xl backdrop-blur-3xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1600&q=90&auto=format&fit=crop"
+                  alt="Studio ritual"
+                  width={900}
+                  height={1100}
+                  className="h-full w-full object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur">
+                  <p className="text-sm uppercase tracking-[0.3em] text-white/70">
+                    {t("hero.card.tag")}
                   </p>
-                  <p className="text-sm text-zinc-600 dark:text-white/70">
-                    {leader.bio}
+                  <p className="text-2xl font-light text-white">
+                    {t("hero.card.title")}
                   </p>
+                  <p className="text-white/70">{t("hero.card.body")}</p>
                 </div>
               </div>
-            </Reveal>
-          ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="rounded-[2.5rem] border border-black/5 bg-white/90 p-8 text-zinc-900 shadow-[0_30px_90px_rgba(15,15,15,0.08)] dark:border-white/10 dark:bg-white/5 dark:text-white lg:flex lg:items-center lg:justify-between lg:gap-10 lg:p-12">
-        <div className="space-y-4">
-          <Reveal>
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/50">
-              {t("capabilities.eyebrow")}
+      <section
+        id="studio"
+        className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl space-y-6">
+            <p className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40">
+              {who.eyebrow}
             </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="text-3xl font-semibold">
-              {t("capabilities.title")}
+            <h2 className="text-5xl lg:text-6xl font-light text-zinc-950 dark:text-white leading-tight">
+              {who.title}
             </h2>
-          </Reveal>
-        </div>
-        <Reveal delay={0.2}>
-          <ul className="space-y-2 text-sm text-zinc-600 dark:text-white/70">
-            {capabilities.map((capability) => (
-              <li key={capability} className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-zinc-900 dark:bg-white" />
-                {capability}
-              </li>
+            <p className="text-xl text-zinc-600 dark:text-white/60 font-light leading-relaxed">
+              {who.body}
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {who.cards.map((card) => (
+              <div
+                key={card.title}
+                className="group rounded-3xl border border-zinc-200/80 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-zinc-900/10 hover:shadow-[0_35px_90px_rgba(0,0,0,0.12)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
+              >
+                <h3 className="text-2xl font-light text-zinc-950 dark:text-white">
+                  {card.title}
+                </h3>
+                <p className="mt-4 text-base text-zinc-600 dark:text-white/60 font-light leading-relaxed">
+                  {card.body}
+                </p>
+              </div>
             ))}
-          </ul>
-        </Reveal>
+          </div>
+        </div>
       </section>
-    </div>
+
+      <section className="relative overflow-hidden py-24 px-6 text-white lg:px-12">
+        <div
+          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-[0.9fr,1.1fr]">
+            <div className="space-y-6">
+              <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+                {philosophy.eyebrow}
+              </p>
+              <h2 className="text-5xl lg:text-6xl font-light leading-tight">
+                {philosophy.title}
+              </h2>
+              <p className="text-xl font-light text-white/70 leading-relaxed">
+                {philosophy.body}
+              </p>
+              <p className="text-sm text-white/50">{philosophy.detail}</p>
+              <div className="space-y-3">
+                {philosophy.pillars.map((pillar) => (
+                  <div
+                    key={pillar}
+                    className="flex items-center gap-4 rounded-2xl border border-white/15 bg-white/5 px-5 py-4 transition-all duration-300 hover:border-white/30 hover:bg-white/10"
+                  >
+                    <Users className="h-5 w-5 text-violet-300" />
+                    <p className="text-white/80">{pillar}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {process.steps.map((step) => {
+                const Icon = processIcons[step.key] || BookOpen;
+                return (
+                  <div
+                    key={step.title}
+                    className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
+                  >
+                    <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+                      {step.tag}
+                    </p>
+                    <div className="mt-4 flex items-center gap-3">
+                      <div className="rounded-2xl bg-white/10 p-3 text-white/80 transition group-hover:bg-white/20">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <h3 className="text-lg font-light">{step.title}</h3>
+                    </div>
+                    <p className="mt-4 text-sm text-white/60">{step.body}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl space-y-6">
+            <p className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40">
+              {reasons.eyebrow}
+            </p>
+            <h2 className="text-5xl lg:text-6xl font-light text-zinc-950 dark:text-white leading-tight">
+              {reasons.title}
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {reasons.items.map((item) => {
+              const Icon = reasonIcons[item.key] || Sparkles;
+              return (
+                <div
+                  key={item.title}
+                  className="group rounded-3xl border border-zinc-200/70 bg-white p-8 shadow-[0_25px_80px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_35px_100px_rgba(0,0,0,0.1)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
+                >
+                  <div className="mb-4 inline-flex rounded-2xl bg-zinc-900/90 p-3 text-white transition group-hover:bg-zinc-900 dark:bg-white/10 dark:text-white">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-xl font-light text-zinc-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-zinc-500 dark:text-white/60">
+                    {item.body}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-zinc-50 py-24 px-6 dark:bg-zinc-900 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl space-y-6">
+            <p className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/40">
+              {metrics.eyebrow}
+            </p>
+            <h2 className="text-5xl lg:text-6xl font-light text-zinc-950 dark:text-white leading-tight">
+              {metrics.title}
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {metrics.items.map((metric) => (
+              <div
+                key={metric.label}
+                className="rounded-3xl border border-zinc-200/80 bg-white p-8 text-center shadow-[0_20px_80px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_35px_100px_rgba(0,0,0,0.1)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
+              >
+                <p className="text-5xl font-light text-zinc-950 dark:text-white">
+                  {metric.value}
+                </p>
+                <p className="mt-3 text-xs uppercase tracking-[0.3em] text-zinc-500 dark:text-white/60">
+                  {metric.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-24 px-6 text-white lg:px-12">
+        <div
+          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto max-w-5xl text-center space-y-6">
+          <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+            {cta.eyebrow}
+          </p>
+          <h2 className="text-5xl lg:text-6xl font-light leading-tight">
+            {cta.title}
+          </h2>
+          <p className="text-xl text-white/70 font-light leading-relaxed">
+            {cta.body}
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
+            <Link
+              href={`/${locale}/contact`}
+              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition-all hover:scale-[1.02] hover:shadow-[0_30px_60px_rgba(255,255,255,0.3)]"
+            >
+              {cta.primary}
+              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </Link>
+            <a
+              href="mailto:hello@arsystudio.com"
+              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10 hover:border-white/60"
+            >
+              {cta.secondary}
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

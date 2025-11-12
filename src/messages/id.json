@@ -123,102 +123,188 @@
   },
   "About": {
     "hero": {
-      "eyebrow": "Potret",
-      "title": "Kami agensi digital yang terpikat pada kejernihan puitis.",
-      "body": "Arsy Studio adalah praktik independen yang memadukan riset, craft editorial, dan engineering untuk membantu brand bergerak presisi.",
-      "subhead": "Kami merayakan luxury yang lembut: tipografi taktil, motion sinematik, dan infrastruktur yang tetap kencang walau ceritanya kaya.",
-      "primaryCta": "Jadwalkan chemistry call",
-      "secondaryCta": "Unduh catatan studio",
-      "caption": "Ritual creative review",
-      "captionBody": "Ritme mingguan bersama founder, CMO, dan product lead."
+      "eyebrow": "Tentang kami",
+      "title": "Kami lebih dari sekadar studio digital.",
+      "body": "Kami adalah tim kreatif yang memadukan desain, teknologi, dan cerita agar brand terasa hidup di dunia digital. Setiap proyek kami mulai dengan memahami manusia di balik idenya.",
+      "detail": "Kami percaya pengalaman digital yang bermakna lahir dari keseimbangan antara fungsi dan emosi.",
+      "secondary": "Kami selalu dekat dengan orang yang akan memakai produk agar setiap interaksi terasa penuh perhatian.",
+      "highlights": {
+        "balance": { "label": "Fokus craft", "value": "Fungsi x emosi" },
+        "approach": { "label": "Model kerja", "value": "2 peluncuran sekaligus" }
+      },
+      "card": {
+        "tag": "Ritual studio",
+        "title": "Lahir di Bandung, menjangkau dunia.",
+        "body": "Partner, engineer, dan penulis duduk di meja yang sama di setiap review."
+      }
     },
-    "story": {
-      "eyebrow": "Alur kami",
-      "title": "Lahir di Jakarta, berkarya lintas zona.",
-      "body": "Kami bekerja seperti atelier: edisi terbatas, detail buatan tangan, fokus brutal pada kualitas.",
-      "timeline": {
-        "origin": {
-          "year": "2016",
-          "title": "Awal",
-          "body": "Arsy berawal dari dua orang yang membangun situs naratif untuk grup hospitality."
+    "who": {
+      "eyebrow": "Siapa kami",
+      "title": "Studio multidisiplin dengan sentuhan manusiawi.",
+      "body": "Studio ini lahir dari keyakinan bahwa teknologi bisa terasa manusiawi. Kami tumbuh di energi kreatif Bandung dan berkembang bersama brand yang percaya pada proses kolaboratif.",
+      "cards": {
+        "roots": {
+          "title": "Akar di Bandung",
+          "body": "Besar di kota penuh energi kreatif, kehangatan itu kami bawa ke setiap kemitraan."
         },
-        "scale": {
-          "year": "2019",
-          "title": "Resonansi",
-          "body": "Merambah strategi, product design, dan headless engineering untuk tim venture-backed."
+        "craft": {
+          "title": "Merancang, membangun, merawat",
+          "body": "Kami merancang, membangun, dan merawat produk digital agar bisnis terhubung dengan audiens secara hangat, intuitif, dan berkarakter."
         },
-        "future": {
-          "year": "Hari ini",
-          "title": "Era presisi",
-          "body": "Tim senior lintas Jakarta & Singapura yang melayani founder dari Asia hingga Eropa."
+        "relationships": {
+          "title": "Hubungan jangka panjang",
+          "body": "Kami tidak hanya mengerjakan proyek. Kami membangun kepercayaan agar kolaborasi tetap jujur dan panjang."
         }
       }
     },
-    "values": {
-      "items": {
-        "care": {
-          "tag": "Nilai 01",
-          "title": "Perhatian sebagai craft",
-          "body": "Kami menjaga voice, ritme, dan micro-interaction karena luxury adalah kumpulan keputusan kecil."
-        },
-        "clarity": {
-          "tag": "Nilai 02",
-          "title": "Jernih tanpa bising",
-          "body": "Setiap deck, komponen, dan percakapan dirancang untuk menghapus friksi tim Anda."
-        },
-        "momentum": {
-          "tag": "Nilai 03",
-          "title": "Momentum yang tenang",
-          "body": "Pengiriman ritmis dan transparan sehingga keputusan bisa dibuat cepat tanpa panik."
-        }
+    "philosophy": {
+      "eyebrow": "Filosofi kami",
+      "title": "Proses teliti, hasil penuh jiwa.",
+      "body": "Setiap keputusan desain, setiap baris kode, dan setiap detail interaksi kami buat dengan maksud yang jelas.",
+      "detail": "Kami tidak terburu-buru mengejar tren. Kami menciptakan sesuatu yang relevan, fungsional, dan punya arah.",
+      "pillars": {
+        "intent": "Setiap artefak dibuat penuh maksud, dari arsitektur sistem hingga microcopy.",
+        "clarity": "Kesempurnaan berarti menghadirkan kejelasan yang terasa effortless, bukan hiasan."
       }
     },
     "process": {
-      "eyebrow": "Cara bekerja",
-      "title": "Imersif, kolaboratif, obsesif.",
+      "eyebrow": "Cara kami bekerja",
+      "title": "Ritme mendengar, merancang, menjaga.",
       "steps": {
         "listen": {
-          "detail": "Fase 01",
-          "title": "Mendengar & menulis naskah",
-          "body": "Interview mendalam, pemetaan arketipe, dan eksplorasi tone menjadi naskah utama."
+          "tag": "01",
+          "title": "Mendengar & memahami",
+          "body": "Kami mulai dari cerita, mendengarkan kebutuhan, memahami audiens, dan menggali makna di balik ide."
         },
-        "design": {
-          "detail": "Fase 02",
-          "title": "Merancang & mengatur koreografi",
-          "body": "Sistem visual, prototipe, dan studi motion disatukan dengan rencana teknis."
+        "craft": {
+          "tag": "02",
+          "title": "Merancang & membangun",
+          "body": "Kami menerjemahkan ide menjadi bentuk visual dan fungsional, menyeimbangkan estetika dan performa."
         },
-        "evolve": {
-          "detail": "Fase 03",
-          "title": "Mengembangkan & merilis",
-          "body": "Development, QA, serta orkestrasi integrasi sebelum perilisan yang terasa teatrikal."
+        "sustain": {
+          "tag": "03",
+          "title": "Menjaga & mengembangkan",
+          "body": "Setelah peluncuran kami tetap ada, memastikan semuanya berjalan mulus dan berevolusi bersama bisnismu."
         }
       }
     },
-    "leadership": {
-      "eyebrow": "People",
-      "title": "Dipimpin partner senior.",
-      "body": "Akses langsung ke pembuatnya menjaga keputusan tetap tajam.",
-      "cta": "Kenali tim",
-      "team": {
-        "amira": {
-          "name": "Amira Rahmania",
-          "title": "Managing Partner · Experience",
-          "bio": "Memimpin storytelling, sistem editorial, dan eksperimen studio."
+    "reasons": {
+      "eyebrow": "Kenapa memilih kami",
+      "title": "Manusiawi, teliti, kolaboratif.",
+      "items": {
+        "human": {
+          "title": "Pendekatan manusiawi",
+          "body": "Kami memahami bahwa di balik setiap produk ada manusia yang menggunakannya."
         },
-        "rafi": {
-          "name": "Rafi Azhar",
-          "title": "Technical Director",
-          "bio": "Merancang stack headless, ritual performance, dan budaya QA."
+        "quality": {
+          "title": "Kualitas tanpa kompromi",
+          "body": "Setiap detail kami kerjakan dengan teliti, dari arsitektur sistem hingga mikrointeraksi."
+        },
+        "collaboration": {
+          "title": "Kolaborasi terbuka",
+          "body": "Klien terlibat aktif di setiap tahap agar keputusan selalu transparan."
         }
       }
     },
-    "capabilities": {
-      "eyebrow": "Kapabilitas",
-      "title": "Strategi, desain, dan engineering di bawah satu atap.",
-      "list": {
-        "experience": "Strategi pengalaman, UX writing, art direction",
-        "platforms": "Headless CMS, eCommerce, marketing automation",
-        "scale": "Performa, aksesibilitas, lokalisasi, eksperimen"
+    "metrics": {
+      "eyebrow": "Angka di balik cerita",
+      "title": "Bukti perjalanan kami.",
+      "items": {
+        "years": { "value": "8+", "label": "Tahun pengalaman" },
+        "projects": { "value": "200+", "label": "Proyek terselesaikan" },
+        "clients": { "value": "100+", "label": "Klien puas" },
+        "vision": { "value": "1", "label": "Visi: pengalaman digital yang berarti" }
+      }
+    },
+    "cta": {
+      "eyebrow": "Mari berkenalan",
+      "title": "Ceritakan hal besar berikutnya yang ingin kamu bangun.",
+      "body": "Kami senang bekerja dengan orang yang punya visi. Ceritakan ide, brand, atau tantanganmu dan kami bantu menerjemahkannya ke pengalaman digital yang hidup.",
+      "primary": "Mulai percakapan",
+      "secondary": "Email studio"
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "eyebrow": "Hubungi studio",
+      "title": "Buat peluncuranmu terasa tak terelakkan.",
+      "body": "Bagikan deck, brief yang belum rapi, atau sekadar intuisi. Kami akan merespons dengan rencana yang jelas dalam 24 jam.",
+      "detail": "Kami hanya menangani dua engagement bersamaan agar setiap build terasa sinematik dan terkontrol.",
+      "primaryCta": "Jadwalkan discovery call",
+      "secondaryCta": "Email studio",
+      "primaryHref": "https://cal.com/arsy-studio/discovery",
+      "secondaryHref": "mailto:hello@arsystudio.com",
+      "directLabel": "Akses langsung",
+      "cardSubcopy": "Kirimkan deck, tantangan, atau sekadar intuisi awal.",
+      "highlights": {
+        "response": { "label": "Waktu respons", "value": "<24 jam" },
+        "timezone": { "label": "Zona waktu", "value": "Jakarta • Singapura" }
+      }
+    },
+    "channels": {
+      "eyebrow": "Kanal",
+      "title": "Pilih jalur komunikasi yang paling pas.",
+      "subtitle": "Setiap percakapan langsung ditangani partner dan director.",
+      "items": {
+        "email": {
+          "tag": "01",
+          "title": "Kirim email",
+          "body": "Bagikan konteks, timeline, dan ambisi. Kami akan mengirim POV dan langkah lanjutan.",
+          "action": "hello@arsystudio.com",
+          "href": "mailto:hello@arsystudio.com"
+        },
+        "whatsapp": {
+          "tag": "02",
+          "title": "WhatsApp studio",
+          "body": "Ideal untuk cek cepat, voice note, atau perkenalan antar tim.",
+          "action": "+62 812-8898-1122",
+          "href": "https://wa.me/6281288981122"
+        },
+        "workshop": {
+          "tag": "03",
+          "title": "Minta sesi workshop",
+          "body": "Sesi kerja 45 menit untuk memetakan scope, tim, dan metrik sukses.",
+          "action": "Book chemistry call",
+          "href": "https://cal.com/arsy-studio/discovery"
+        }
+      }
+    },
+    "availability": {
+      "eyebrow": "Ritme studio",
+      "title": "Hanya dua build sekaligus, selalu dipimpin senior.",
+      "body": "Sprint berlangsung 6-8 minggu dengan riset, desain, dan engineering berjalan paralel.",
+      "detail": "Butuh format lain? Kami bisa merancang pola kolaborasi khusus.",
+      "slots": {
+        "builds": {
+          "label": "Flagship build",
+          "value": "Slot berikutnya: April 2025"
+        },
+        "partnerships": {
+          "label": "Retainer partnership",
+          "value": "1 slot tersedia"
+        },
+        "audits": {
+          "label": "Audit produk / UX",
+          "value": "Tersedia dalam 2 minggu"
+        }
+      }
+    },
+    "panel": {
+      "eyebrow": "Signature Services",
+      "title": "Ceritakan rasa seperti apa yang kamu inginkan di internet.",
+      "body": "Kami hanya menjalankan dua peluncuran sekaligus agar kualitas terjaga. Kirimkan hunch, deck, atau tantanganmu.",
+      "primaryCta": "Mulai brief",
+      "secondaryCta": "WhatsApp tim kami",
+      "reasons": {
+        "build": "Menyusun flagship, produk, atau peluncuran fund",
+        "refresh": "Menyegarkan properti tanpa kehilangan ekuitas",
+        "partner": "Mencari partner desain + engineering jangka panjang"
+      },
+      "person": {
+        "role": "Studio line",
+        "name": "Salma N.",
+        "title": "Client Partner",
+        "email": "hello@arsystudio.com"
       }
     }
   },
@@ -261,6 +347,8 @@
     "title": "Arsy Studio - Agensi digital butik",
     "description": "Arsy Studio merancang, menulis, dan mengembangkan pengalaman web premium untuk brand modern.",
     "aboutTitle": "Tentang - Arsy Studio",
-    "aboutDescription": "Kenali tim, filosofi, dan proses Arsy Studio."
+    "aboutDescription": "Kenali tim, filosofi, dan proses Arsy Studio.",
+    "contactTitle": "Kontak - Arsy Studio",
+    "contactDescription": "Bagikan brief, ide awal, atau tantanganmu dan kami akan membalas dengan rencana khusus dalam 24 jam."
   }
 }
