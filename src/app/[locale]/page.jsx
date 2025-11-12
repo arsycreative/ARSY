@@ -8,6 +8,8 @@ import { StudioPulse } from "@/components/home/studio-pulse";
 import { AboutPreview } from "@/components/home/about-preview";
 import { ContactPanel } from "@/components/home/contact-panel";
 import HeroSection from "@/components/home/hero";
+import { PhilosophySection } from "@/components/home/PhilosophySection";
+import ManifestoSection from "@/components/home/ManifestoSection";
 
 const caseImages = {
   atlas:
@@ -115,6 +117,18 @@ export default function HomePage({ params }) {
           cta: t("aboutPreview.cta"),
         }}
       />
+
+      <PhilosophySection
+        copy={{
+          eyebrow: "Our Philosophy",
+          title: "Collaboration & Precision",
+          subtitle:
+            "Kami percaya hasil terbaik lahir dari kolaborasi dan perhatian pada detail.",
+          expertiseTitle: "Keahlian Kami",
+          processTitle: "Proses Kami",
+        }}
+      />
+
       <ContactPanel
         copy={{
           eyebrow: t("contact.eyebrow"),
@@ -131,10 +145,22 @@ export default function HomePage({ params }) {
           },
         }}
       />
+
+      <ManifestoSection
+        copy={{
+          eyebrow: "Manifesto",
+          title:
+            "Karya digital harus memancarkan rasa hormat: pada brand, pengguna, dan waktu.",
+          lead: "Kami memilih kualitas di atas kuantitas. Tidak semua proyek cocok—yang kami ambil, kami rawat hingga halus.",
+          ctaTitle: "Bicara objektif, eksekusi presisi.",
+          ctaBody:
+            "Jika Anda menghargai detail dan konsistensi, kita sejalan. Mari buat sesuatu yang bertahan.",
+          primaryCta: "Mulai Diskusi",
+        }}
+      />
     </>
   );
 }
-
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
