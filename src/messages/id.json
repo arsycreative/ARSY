@@ -1,17 +1,266 @@
 {
   "Home": {
-    "eyebrow": "Studio Kreatif",
-    "headline": "Merancang pengalaman digital yang penuh makna.",
-    "subhead": "Arsy Studio bekerja bersama tim ambisius untuk menghadirkan produk, brand, dan situs yang terasa alami digunakan.",
-    "body": "Dari riset hingga peluncuran, kami memadukan strategi, desain, dan rekayasa agar Anda bisa melaju dengan percaya diri.",
-    "primaryCta": "Mulai proyek",
-    "secondaryCta": "Lihat karya kami"
+    "hero": {
+      "eyebrow": "Atelier digital",
+      "title": "Pengalaman web berkelas untuk brand berani dan cerdas.",
+      "body": "Kami mendampingi founder dan CMO menyusun flagship interaktif di mana desain, copy, dan engineering bergerak serempak.",
+      "subcopy": "Setiap proyek dipimpin partner senior, riset menyeluruh, dan dikembangkan in-house agar peluncuran terasa sinematik namun terkontrol.",
+      "primaryCta": "Atur discovery call",
+      "secondaryCta": "Lihat cara kami bekerja",
+      "caption": "Sesi prototyping imersif",
+      "captionBody": "Diabadikan di residensi Arsy Studio Jakarta.",
+      "lottieLabel": "Telemetri realtime",
+      "metrics": {
+        "partners": { "label": "Peluncuran mitra", "value": "38" },
+        "conversion": { "label": "Rerata kenaikan konversi", "value": "+34%" },
+        "timeline": { "label": "Siklus studio", "value": "6-8 minggu" }
+      },
+      "marquee": {
+        "one": "Ruang strategi dipandu partner",
+        "two": "CMS tailor-made + integrasi",
+        "three": "Riset, art direction, engineering",
+        "four": "Tim inti Jakarta & Singapura"
+      }
+    },
+    "services": {
+      "eyebrow": "Layanan utama",
+      "title": "Program website khusus dengan presisi editorial.",
+      "body": "Kami menata storytelling, interaksi, dan infrastruktur agar flagship terasa mahal namun mudah dinavigasi.",
+      "cards": {
+        "alchemy": {
+          "tag": "Experience design",
+          "title": "Experience alchemy",
+          "body": "Workshop narasi, art direction interaktif, dan front-end premium yang diterjemahkan menjadi sistem hidup.",
+          "detail": "Storytelling brand · 3D & motion · Microcopy"
+        },
+        "systems": {
+          "tag": "Engineering",
+          "title": "Systems engineering",
+          "body": "Teknologi composable, headless build, dan lapisan automasi yang membuat marketing, produk, dan operasional selaras.",
+          "detail": "Next.js · Penyesuaian CMS · Performance QA"
+        },
+        "partnership": {
+          "tag": "Kemitraan",
+          "title": "Kemitraan berkelanjutan",
+          "body": "Retainer yang menjaga kesehatan produk, mengirimkan peningkatan, dan memupuk eksperimen setelah go-live.",
+          "detail": "Optimasi · Analytics · Ritual growth"
+        }
+      }
+    },
+    "cases": {
+      "eyebrow": "Peluncuran pilihan",
+      "title": "Sedikit proyek, dampak mendalam.",
+      "body": "Cuplikan build yang memadukan riset, art direction, dan disiplin teknis.",
+      "cta": "Lihat detail",
+      "items": {
+        "atlas": {
+          "title": "Atlas Maritime",
+          "summary": "Situs sinematik untuk dana logistik laut dengan visualisasi data realtime dan pusat briefing investor.",
+          "result": "+22% panggilan investor di bulan pertama.",
+          "industry": "Keuangan"
+        },
+        "coast": {
+          "title": "Coastline Rituals",
+          "summary": "Kolektif skincare luxury dengan storytelling scroll-triggered, inventori live, dan commerce editorial.",
+          "result": "Rata-rata nilai transaksi naik 31%.",
+          "industry": "Kecantikan"
+        },
+        "atelier": {
+          "title": "Atelier Nomad",
+          "summary": "Portfolio interaktif untuk studio interior yang memadukan ruang CG, film, dan concierge brief tool.",
+          "result": "Kalender penuh dalam 6 minggu.",
+          "industry": "Desain"
+        }
+      }
+    },
+    "studio": {
+      "eyebrow": "Studio pulse",
+      "title": "Proses teliti, detail penuh rasa.",
+      "body": "Discovery bercerita, prototyping langsung di kode, dan peluncuran yang terasa seperti opening night.",
+      "detail": "Klien bergabung dalam direction room mingguan bersama para director.",
+      "highlights": {
+        "method": {
+          "tag": "01",
+          "title": "Metode narrative-first",
+          "body": "Setiap sprint diawali alur cerita agar antarmuka terasa berdialog, bukan sekadar transaksional."
+        },
+        "stack": {
+          "tag": "02",
+          "title": "Stack modern & QA",
+          "body": "Next.js, Radix, dan CMS tailor-made yang diaudit untuk aksesibilitas, kecepatan, dan kemudahan perawatan."
+        },
+        "relationship": {
+          "tag": "03",
+          "title": "Relasi langsung",
+          "body": "Anda berbicara dengan pembuatnya, tanpa lapisan birokrasi jadi keputusan lebih tajam."
+        }
+      }
+    },
+    "aboutPreview": {
+      "eyebrow": "Dalam studio",
+      "title": "Tim butik dari Jakarta hingga Singapura.",
+      "body": "Dua belas spesialis strategi, desain, dan engineering yang merakit situs terasa mahal namun manusiawi.",
+      "cta": "Jelajahi filosofi kami"
+    },
+    "contact": {
+      "eyebrow": "Hubungi kami",
+      "title": "Ceritakan rasa seperti apa yang Anda inginkan di internet.",
+      "body": "Kami hanya menjalankan dua peluncuran sekaligus agar kualitas terjaga. Kirimkan hunch, deck, atau tantangan Anda.",
+      "primaryCta": "Mulai brief",
+      "secondaryCta": "WhatsApp tim kami",
+      "reasons": {
+        "build": "Membangun flagship, produk, atau fund baru",
+        "launch": "Menyegarkan properti tanpa kehilangan ekuitas",
+        "scale": "Mencari partner desain-engineering jangka panjang"
+      },
+      "person": {
+        "role": "Studio line",
+        "name": "Salma N.",
+        "title": "Client Partner",
+        "email": "hello@arsystudio.com"
+      }
+    }
+  },
+  "About": {
+    "hero": {
+      "eyebrow": "Potret",
+      "title": "Kami agensi digital yang terpikat pada kejernihan puitis.",
+      "body": "Arsy Studio adalah praktik independen yang memadukan riset, craft editorial, dan engineering untuk membantu brand bergerak presisi.",
+      "subhead": "Kami merayakan luxury yang lembut: tipografi taktil, motion sinematik, dan infrastruktur yang tetap kencang walau ceritanya kaya.",
+      "primaryCta": "Jadwalkan chemistry call",
+      "secondaryCta": "Unduh catatan studio",
+      "caption": "Ritual creative review",
+      "captionBody": "Ritme mingguan bersama founder, CMO, dan product lead."
+    },
+    "story": {
+      "eyebrow": "Alur kami",
+      "title": "Lahir di Jakarta, berkarya lintas zona.",
+      "body": "Kami bekerja seperti atelier: edisi terbatas, detail buatan tangan, fokus brutal pada kualitas.",
+      "timeline": {
+        "origin": {
+          "year": "2016",
+          "title": "Awal",
+          "body": "Arsy berawal dari dua orang yang membangun situs naratif untuk grup hospitality."
+        },
+        "scale": {
+          "year": "2019",
+          "title": "Resonansi",
+          "body": "Merambah strategi, product design, dan headless engineering untuk tim venture-backed."
+        },
+        "future": {
+          "year": "Hari ini",
+          "title": "Era presisi",
+          "body": "Tim senior lintas Jakarta & Singapura yang melayani founder dari Asia hingga Eropa."
+        }
+      }
+    },
+    "values": {
+      "items": {
+        "care": {
+          "tag": "Nilai 01",
+          "title": "Perhatian sebagai craft",
+          "body": "Kami menjaga voice, ritme, dan micro-interaction karena luxury adalah kumpulan keputusan kecil."
+        },
+        "clarity": {
+          "tag": "Nilai 02",
+          "title": "Jernih tanpa bising",
+          "body": "Setiap deck, komponen, dan percakapan dirancang untuk menghapus friksi tim Anda."
+        },
+        "momentum": {
+          "tag": "Nilai 03",
+          "title": "Momentum yang tenang",
+          "body": "Pengiriman ritmis dan transparan sehingga keputusan bisa dibuat cepat tanpa panik."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Cara bekerja",
+      "title": "Imersif, kolaboratif, obsesif.",
+      "steps": {
+        "listen": {
+          "detail": "Fase 01",
+          "title": "Mendengar & menulis naskah",
+          "body": "Interview mendalam, pemetaan arketipe, dan eksplorasi tone menjadi naskah utama."
+        },
+        "design": {
+          "detail": "Fase 02",
+          "title": "Merancang & mengatur koreografi",
+          "body": "Sistem visual, prototipe, dan studi motion disatukan dengan rencana teknis."
+        },
+        "evolve": {
+          "detail": "Fase 03",
+          "title": "Mengembangkan & merilis",
+          "body": "Development, QA, serta orkestrasi integrasi sebelum perilisan yang terasa teatrikal."
+        }
+      }
+    },
+    "leadership": {
+      "eyebrow": "People",
+      "title": "Dipimpin partner senior.",
+      "body": "Akses langsung ke pembuatnya menjaga keputusan tetap tajam.",
+      "cta": "Kenali tim",
+      "team": {
+        "amira": {
+          "name": "Amira Rahmania",
+          "title": "Managing Partner · Experience",
+          "bio": "Memimpin storytelling, sistem editorial, dan eksperimen studio."
+        },
+        "rafi": {
+          "name": "Rafi Azhar",
+          "title": "Technical Director",
+          "bio": "Merancang stack headless, ritual performance, dan budaya QA."
+        }
+      }
+    },
+    "capabilities": {
+      "eyebrow": "Kapabilitas",
+      "title": "Strategi, desain, dan engineering di bawah satu atap.",
+      "list": {
+        "experience": "Strategi pengalaman, UX writing, art direction",
+        "platforms": "Headless CMS, eCommerce, marketing automation",
+        "scale": "Performa, aksesibilitas, lokalisasi, eksperimen"
+      }
+    }
+  },
+  "Navigation": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "services": "Layanan",
+    "contact": "Kontak",
+    "cta": "Book a call"
+  },
+  "Footer": {
+    "tagline": "Project enquiries",
+    "studio": "Arsy Studio",
+    "description": "Partner web development butik yang merancang flagship digital imersif.",
+    "actions": {
+      "primary": "Tulis email",
+      "secondary": "Tentang studio"
+    },
+    "contact": {
+      "title": "Studio line",
+      "email": "hello@arsystudio.com",
+      "phone": "+62 812-8898-1122",
+      "address": "Jl. Senopati 08, Jakarta - kolaborasi global."
+    },
+    "rights": "Seluruh hak cipta dilindungi.",
+    "policies": {
+      "privacy": "Privasi",
+      "terms": "Syarat"
+    }
   },
   "LocaleSwitcher": {
-    "switchTo": "en"
+    "switchTo": "Ganti ke {locale}",
+    "loading": "Switching...",
+    "locales": {
+      "en": "English",
+      "id": "Indonesia"
+    }
   },
   "Metadata": {
-    "title": "Arsy Studio",
-    "description": "Studio digital yang menciptakan pengalaman web penuh perhatian."
+    "title": "Arsy Studio - Agensi digital butik",
+    "description": "Arsy Studio merancang, menulis, dan mengembangkan pengalaman web premium untuk brand modern.",
+    "aboutTitle": "Tentang - Arsy Studio",
+    "aboutDescription": "Kenali tim, filosofi, dan proses Arsy Studio."
   }
 }

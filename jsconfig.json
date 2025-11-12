@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2020",
+    "allowJs": true,
+    "checkJs": false
+  },
+  "exclude": ["node_modules"]
 }

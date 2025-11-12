@@ -1,17 +1,266 @@
 {
   "Home": {
-    "eyebrow": "Creative Studio",
-    "headline": "Designing thoughtful digital experiences.",
-    "subhead": "Arsy Studio partners with ambitious teams to craft products, brands, and websites that feel effortless to use.",
-    "body": "From research to final launch, we combine strategy, design, and engineering to help you move faster with confidence.",
-    "primaryCta": "Start a project",
-    "secondaryCta": "See our work"
+    "hero": {
+      "eyebrow": "Digital atelier",
+      "title": "Web experiences crafted for daring, thoughtful brands.",
+      "body": "We partner with founders and CMOs to shape interactive flagships where design, engineering, and copy move in unison.",
+      "subcopy": "Every engagement is senior-led, research-rich, and engineered in-house so your launch feels cinematic and controlled.",
+      "primaryCta": "Plan a discovery call",
+      "secondaryCta": "See how we work",
+      "caption": "Immersive prototyping session",
+      "captionBody": "Captured inside Arsy Studio's Jakarta residency.",
+      "lottieLabel": "Realtime telemetry",
+      "metrics": {
+        "partners": { "label": "Partner launches", "value": "38" },
+        "conversion": { "label": "Avg. conversion lift", "value": "+34%" },
+        "timeline": { "label": "Studio sprints", "value": "6-8 weeks" }
+      },
+      "marquee": {
+        "one": "Strategy rooms led by partners",
+        "two": "Bespoke CMS + integrations",
+        "three": "Research, art direction, engineering",
+        "four": "Jakarta & Singapore based core team"
+      }
+    },
+    "services": {
+      "eyebrow": "Signature services",
+      "title": "Tailored website programs with editorial precision.",
+      "body": "We choreograph storytelling, interaction, and infrastructure so your flagship feels lavish yet effortless.",
+      "cards": {
+        "alchemy": {
+          "tag": "Experience design",
+          "title": "Experience alchemy",
+          "body": "Narrative workshops, interactive art direction, and premium front-end craft turned into a living system.",
+          "detail": "Brand storytelling · 3D & motion · Microcopy"
+        },
+        "systems": {
+          "tag": "Engineering",
+          "title": "Systems engineering",
+          "body": "Composable tech, headless builds, and automation layers that keep marketing, product, and ops in sync.",
+          "detail": "Next.js · CMS tailoring · Performance QA"
+        },
+        "partnership": {
+          "tag": "Partnership",
+          "title": "Continuing partnership",
+          "body": "A retainership that monitors health, ships enhancements, and keeps experiments humming after launch.",
+          "detail": "Optimisation · Analytics · Growth rituals"
+        }
+      }
+    },
+    "cases": {
+      "eyebrow": "Selected launches",
+      "title": "Fewer projects, deeper impact.",
+      "body": "A glimpse at builds that combine research, art direction, and technical rigor.",
+      "cta": "View detail",
+      "items": {
+        "atlas": {
+          "title": "Atlas Maritime",
+          "summary": "Crafted a cinematic site for an ocean logistics fund with live data visualisation and investor briefing centre.",
+          "result": "+22% investor calls in month one.",
+          "industry": "Finance"
+        },
+        "coast": {
+          "title": "Coastline Rituals",
+          "summary": "Luxury skincare collective with scroll-triggered storytelling, live inventory, and editorial commerce.",
+          "result": "Average order value lifted by 31%.",
+          "industry": "Beauty"
+        },
+        "atelier": {
+          "title": "Atelier Nomad",
+          "summary": "Interactive portfolio for an interior studio blending CG rooms, film, and a concierge brief tool.",
+          "result": "Booked-out quarter within 6 weeks.",
+          "industry": "Design"
+        }
+      }
+    },
+    "studio": {
+      "eyebrow": "Studio pulse",
+      "title": "Meticulous process, soulful detail.",
+      "body": "We run discovery in narrative form, prototype in code, and stage every launch like opening night.",
+      "detail": "Clients join weekly direction rooms with direct access to directors.",
+      "highlights": {
+        "method": {
+          "tag": "01",
+          "title": "Narrative-first method",
+          "body": "Every sprint begins with a story arc so the interface feels conversational instead of transactional."
+        },
+        "stack": {
+          "tag": "02",
+          "title": "Modern stack & QA",
+          "body": "Next.js, Radix, and bespoke CMS layers audited for accessibility, speed, and maintainability."
+        },
+        "relationship": {
+          "tag": "03",
+          "title": "Direct relationship",
+          "body": "You speak with the makers shipping your product - no middle layer, no diluted feedback."
+        }
+      }
+    },
+    "aboutPreview": {
+      "eyebrow": "Inside the studio",
+      "title": "A boutique team designing from Jakarta to Singapore.",
+      "body": "Twelve specialists in strategy, design, and engineering crafting sites that feel expensive yet human.",
+      "cta": "Tour our philosophy"
+    },
+    "contact": {
+      "eyebrow": "Talk to us",
+      "title": "Tell us what you want the internet to feel like.",
+      "body": "We take on two launches at a time to preserve care. Share your hunch, deck, or challenge.",
+      "primaryCta": "Start the brief",
+      "secondaryCta": "WhatsApp the team",
+      "reasons": {
+        "build": "Launching a new flagship, product, or fund",
+        "launch": "Refreshing an existing property without losing equity",
+        "scale": "Embedding a long-term design-engineering partner"
+      },
+      "person": {
+        "role": "Studio line",
+        "name": "Salma N.",
+        "title": "Client Partner",
+        "email": "hello@arsystudio.com"
+      }
+    }
+  },
+  "About": {
+    "hero": {
+      "eyebrow": "Portrait",
+      "title": "We are a digital agency obsessed with poetic clarity.",
+      "body": "Arsy Studio is an independent practice blending research, editorial craft, and engineering to help brands move with precision.",
+      "subhead": "We champion soft-spoken luxury: tactile typography, cinematic motion, and infrastructure that stays fast even when the story is rich.",
+      "primaryCta": "Schedule chemistry call",
+      "secondaryCta": "Download studio notes",
+      "caption": "Creative review ritual",
+      "captionBody": "Weekly cadence with founders, CMOs, and product leads."
+    },
+    "story": {
+      "eyebrow": "Our arc",
+      "title": "Born in Jakarta, collaborating globally.",
+      "body": "We operate like an atelier: limited editions, handcrafted detail, and brutal focus on quality.",
+      "timeline": {
+        "origin": {
+          "year": "2016",
+          "title": "Origins",
+          "body": "Arsy launched as a two-person experiment building narrative sites for hospitality groups."
+        },
+        "scale": {
+          "year": "2019",
+          "title": "Resonance",
+          "body": "Expanded into strategy, product design, and headless engineering for venture-backed teams."
+        },
+        "future": {
+          "year": "Today",
+          "title": "Precision era",
+          "body": "Tight senior team spanning Jakarta & Singapore serving founders from Asia to Europe."
+        }
+      }
+    },
+    "values": {
+      "items": {
+        "care": {
+          "tag": "Value 01",
+          "title": "Care as craft",
+          "body": "We obsess over voice, rhythm, and micro-interactions because luxury is a series of small decisions."
+        },
+        "clarity": {
+          "tag": "Value 02",
+          "title": "Clarity over noise",
+          "body": "Every deck, component, and handshake is designed to remove friction for your team."
+        },
+        "momentum": {
+          "tag": "Value 03",
+          "title": "Momentum with calm",
+          "body": "We keep delivery rhythmic and transparent so you can make confident decisions fast."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "Immersive, collaborative, obsessive.",
+      "steps": {
+        "listen": {
+          "detail": "Phase 01",
+          "title": "Listen & script",
+          "body": "In-depth interviews, brand archetype mapping, and tone exploration become the script for the build."
+        },
+        "design": {
+          "detail": "Phase 02",
+          "title": "Design & choreograph",
+          "body": "Visual systems, prototypes, and motion studies converge with technical planning."
+        },
+        "evolve": {
+          "detail": "Phase 03",
+          "title": "Evolve & launch",
+          "body": "Development, QA, and orchestration of every integration followed by cinematic release."
+        }
+      }
+    },
+    "leadership": {
+      "eyebrow": "People",
+      "title": "Led by senior partners.",
+      "body": "Direct access to the people who make the work keeps decisions sharp.",
+      "cta": "Meet the team",
+      "team": {
+        "amira": {
+          "name": "Amira Rahmania",
+          "title": "Managing Partner · Experience",
+          "bio": "Guides storytelling, editorial systems, and experimentation labs."
+        },
+        "rafi": {
+          "name": "Rafi Azhar",
+          "title": "Technical Director",
+          "bio": "Architects headless stacks, performance rituals, and QA culture."
+        }
+      }
+    },
+    "capabilities": {
+      "eyebrow": "Capabilities",
+      "title": "Strategy, design, and engineering led under one roof.",
+      "list": {
+        "experience": "Experience strategy, UX writing, art direction",
+        "platforms": "Headless CMS, eCommerce, marketing automation",
+        "scale": "Performance, accessibility, localisation, experimentation"
+      }
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "cta": "Book a call"
+  },
+  "Footer": {
+    "tagline": "Project enquiries",
+    "studio": "Arsy Studio",
+    "description": "Boutique web development partner designing immersive digital flagships.",
+    "actions": {
+      "primary": "Write to us",
+      "secondary": "About the studio"
+    },
+    "contact": {
+      "title": "Studio line",
+      "email": "hello@arsystudio.com",
+      "phone": "+62 812-8898-1122",
+      "address": "Jl. Senopati 08, Jakarta - collaborating worldwide."
+    },
+    "rights": "All rights reserved.",
+    "policies": {
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
   },
   "LocaleSwitcher": {
-    "switchTo": "id"
+    "switchTo": "Switch to {locale}",
+    "loading": "Switching...",
+    "locales": {
+      "en": "English",
+      "id": "Indonesia"
+    }
   },
   "Metadata": {
-    "title": "Arsy Studio",
-    "description": "Digital studio crafting considerate web experiences."
+    "title": "Arsy Studio - Boutique digital agency",
+    "description": "Arsy Studio designs, writes, and engineers premium web experiences for modern brands.",
+    "aboutTitle": "About - Arsy Studio",
+    "aboutDescription": "Discover the team, philosophy, and process behind Arsy Studio."
   }
 }
