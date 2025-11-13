@@ -232,6 +232,11 @@
       "detail": "Two launches at a time. Senior partners in every room. No handoffs.",
       "cta": "Plan a discovery call",
       "secondary": "See our capabilities",
+      "card": {
+        "label": "Partner access",
+        "title": "Direct rooms, shared rituals.",
+        "body": "Work directly with the partners and makers shipping your flagship."
+      },
       "stats": {
         "timeline": { "label": "Timeline", "value": "6-8 weeks" },
         "coverage": { "label": "Coverage", "value": "Strategy → QA" },
@@ -424,8 +429,148 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
     "contact": "Contact",
     "cta": "Book a call"
+  },
+  "BlogPage": {
+    "hero": {
+      "eyebrow": "Dispatch",
+      "title": "Notes on design, engineering, and brand rhythm.",
+      "body": "A running log of ideas from inside the studio — spanning research rituals, technical decisions, and founder learnings.",
+      "cta": "Talk to the studio",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1800&auto=format&fit=crop&q=80"
+    },
+    "categoriesTitle": "Categories",
+    "categoriesSubtitle": "Curated readings for thoughtful builders.",
+    "categories": {
+      "all": "All",
+      "insight": "Insights",
+      "events": "Events",
+      "news": "News"
+    },
+    "posts": {
+      "ai-selection": {
+        "title": "Choosing the right AI studio for your flagship.",
+        "meta": "September 18, 2025 · Insight",
+        "category": "insight",
+        "categoryLabel": "Insight",
+        "excerpt": "Founders are rewriting their roadmap with AI components, but the question remains: who engineers the system while preserving the brand's tactility?",
+        "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Read article"
+      },
+      "software-house": {
+        "title": "Software house agency: bridging ideas and systems.",
+        "meta": "September 16, 2025 · Insight",
+        "category": "insight",
+        "categoryLabel": "Insight",
+        "excerpt": "Blending service design, engineering, and growth rituals keeps experiments steady while brands explore new markets.",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Read article"
+      },
+      "ux-export": {
+        "title": "Why Indonesian UX studios are shaping global launches.",
+        "meta": "September 15, 2025 · News",
+        "category": "news",
+        "categoryLabel": "News",
+        "excerpt": "From craft typography to modern stacks, studios across Jakarta and Bandung export cultural sensitivity into global products.",
+        "image": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Read article"
+      },
+      "events-series": {
+        "title": "Inside our founder forum series.",
+        "meta": "September 10, 2025 · Events",
+        "category": "events",
+        "categoryLabel": "Events",
+        "excerpt": "We gathered product leads and CMOs to trade notes about hybrid launches, in-person experiences, and the state of headless CMS.",
+        "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Read article"
+      }
+    }
+  },
+  "PortfolioPage": {
+    "hero": {
+      "eyebrow": "Selected work",
+      "title": "Portfolio built with calm precision.",
+      "body": "A boutique mix of web platforms, mobile apps, and embedded teams crafted for founders who expect cinematic polish.",
+      "detail": "Every build is senior-led, research-driven, and released in concert with your teams.",
+      "primary": "Plan a discovery call",
+      "secondary": "View the work",
+      "card": {
+        "label": "Snapshot",
+        "title": "65+ launches",
+        "body": "From fintech platforms to luxury retail, each project blends story, design, and engineering."
+      },
+      "highlights": {
+        "timeline": { "label": "Average timeline", "value": "6-8 weeks" },
+        "industries": { "label": "Industries", "value": "Finance · Luxury · Tech" }
+      }
+    },
+    "filters": {
+      "all": "All",
+      "web": "Web Experiences",
+      "mobile": "Mobile Apps",
+      "team": "Design & Branding"
+    },
+    "projects": {
+      "ppid": {
+        "title": "PPID Kemendagri",
+        "tag": "Mobile · Web",
+        "description": "National public information platform built as a twin mobile + web experience so citizens can access updates from any province.",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&auto=format&fit=crop&q=80",
+        "cta": "View study",
+        "category": "mobile"
+      },
+      "bmw": {
+        "title": "BMW Group Indonesia",
+        "tag": "Design & Branding",
+        "description": "Embedded engineering squad delivering automation and analytics inside BMW’s internal tooling stack.",
+        "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600&auto=format&fit=crop&q=80",
+        "cta": "View study",
+        "category": "team"
+      },
+      "amura": {
+        "title": "Amura Beauty",
+        "tag": "Web Experience",
+        "description": "Commerce flagship for a skincare collective with tactile storytelling, shoppable editorials, and localized checkout.",
+        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600&auto=format&fit=crop&q=80",
+        "cta": "View study",
+        "category": "web"
+      },
+      "kideco": {
+        "title": "KIDECO Energy",
+        "tag": "Web Experience",
+        "description": "Sustainability reporting hub for one of Indonesia’s largest energy groups, pairing data visualisation with investor tooling.",
+        "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&auto=format&fit=crop&q=80",
+        "cta": "View study",
+        "category": "web"
+      },
+      "bpjs": {
+        "title": "BPJS Ketenagakerjaan",
+        "tag": "Web Platform",
+        "description": "End-to-end redesign of the national social security portal with accessibility, search, and guided workflows.",
+        "image": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1600&auto=format&fit=crop&q=80",
+        "cta": "View study",
+        "category": "web"
+      },
+      "diri": {
+        "title": "Diri Care",
+        "tag": "Mobile Experience",
+        "description": "Personal care companion app connecting users with treatments, concierge support, and personalised regimens.",
+        "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600&auto=format&fit=crop&q=80",
+        "cta": "View study",
+        "category": "mobile"
+      }
+    },
+    "empty": "No projects found for this category.",
+    "cta": {
+      "eyebrow": "Have a vision?",
+      "title": "Let’s choreograph the next flagship together.",
+      "body": "Share the hunch, deck, or product challenge and we’ll respond with a tailored plan in under 24 hours.",
+      "primary": "Start the brief",
+      "secondary": "Email the studio"
+    }
   },
   "Footer": {
     "tagline": "Project enquiries",
@@ -462,6 +607,10 @@
     "aboutDescription": "Discover the team, philosophy, and process behind Arsy Studio.",
     "servicesTitle": "Services - Arsy Studio",
     "servicesDescription": "Explore Arsy Studio's premium web, product, and brand programs tailored for ambitious launches.",
+    "portfolioTitle": "Portfolio - Arsy Studio",
+    "portfolioDescription": "Browse the selected portfolio of Arsy Studio showcasing web, mobile, and embedded team launches.",
+    "blogTitle": "Blog - Arsy Studio",
+    "blogDescription": "Stories and insights from Arsy Studio on design, engineering, and brand strategy.",
     "contactTitle": "Contact - Arsy Studio",
     "contactDescription": "Share your hunch, deck, or product brief and receive a bespoke plan from Arsy Studio within 24 hours."
   }

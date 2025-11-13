@@ -33,6 +33,11 @@ export default function ServicesPage({ params }) {
       label: t(`hero.stats.${key}.label`),
       value: t(`hero.stats.${key}.value`),
     })),
+    card: {
+      label: t("hero.card.label"),
+      title: t("hero.card.title"),
+      body: t("hero.card.body"),
+    },
   };
 
   const offeringsRaw = t.raw("offerings.items");
@@ -84,50 +89,72 @@ export default function ServicesPage({ params }) {
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-0 opacity-60 blur-3xl"
+          className="absolute inset-0 opacity-60 blur-3xl"
           aria-hidden="true"
         >
-          <div className="absolute -top-16 right-16 h-80 w-80 rounded-full bg-violet-500/30" />
-          <div className="absolute bottom-0 left-10 h-96 w-96 rounded-full bg-purple-500/20" />
+          <div className="absolute -top-24 right-10 h-72 w-72 rounded-full bg-violet-500/30" />
+          <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-purple-500/20" />
         </div>
-        <div className="relative z-10 mx-auto max-w-6xl space-y-10 text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/50">
-            {hero.eyebrow}
-          </p>
-          <h1 className="text-5xl font-light leading-tight lg:text-6xl">
-            {hero.title}
-          </h1>
-          <p className="text-xl font-light leading-relaxed text-white/70">
-            {hero.body}
-          </p>
-          <p className="text-sm text-white/50">{hero.detail}</p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <Link
-              href={`/${locale}/contact`}
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition-all hover:scale-[1.02] hover:shadow-[0_30px_60px_rgba(255,255,255,0.3)]"
-            >
-              {hero.cta}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
-            <a
-              href="#offerings"
-              className="inline-flex items-center gap-3 rounded-full border border-white/40 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10 hover:border-white/60"
-            >
-              {hero.secondary}
-            </a>
-          </div>
-          <div className="mx-auto grid max-w-4xl gap-4 pt-10 sm:grid-cols-3">
-            {hero.stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-3xl border border-white/10 bg-white/5 px-6 py-5 text-left transition hover:border-white/30 hover:bg-white/10"
-              >
-                <p className="text-xs uppercase tracking-[0.3em] text-white/50">
-                  {stat.label}
-                </p>
-                <p className="text-2xl font-light text-white">{stat.value}</p>
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/60">
+                <Sparkles className="h-3 w-3 text-violet-400" />
+                {hero.eyebrow}
               </div>
-            ))}
+              <div className="space-y-6">
+                <h1 className="text-5xl font-light leading-tight lg:text-6xl">
+                  {hero.title}
+                </h1>
+                <p className="text-xl font-light leading-relaxed text-white/70">
+                  {hero.body}
+                </p>
+                <p className="text-sm text-white/50">{hero.detail}</p>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href={`/${locale}/contact`}
+                  className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition-all hover:scale-[1.02]"
+                >
+                  {hero.cta}
+                  <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </Link>
+                <a
+                  href="#offerings"
+                  className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10"
+                >
+                  {hero.secondary}
+                </a>
+              </div>
+            </div>
+
+            <div className="space-y-8 rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-3xl">
+              <div className="space-y-2">
+                <p className="text-xs uppercase tracking-[0.3em] text-white/40">
+                  {hero.card.label}
+                </p>
+                <p className="text-3xl font-light text-white">
+                  {hero.card.title}
+                </p>
+                <p className="text-white/60">{hero.card.body}</p>
+              </div>
+              <div className="h-px bg-white/10" />
+              <div className="space-y-4">
+                {hero.stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                  >
+                    <span className="text-xs uppercase tracking-[0.3em] text-white/40">
+                      {stat.label}
+                    </span>
+                    <span className="text-lg font-light text-white">
+                      {stat.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

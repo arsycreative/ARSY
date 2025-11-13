@@ -82,6 +82,8 @@ export default async function LocaleLayout({ children, params }) {
     { label: navigationCopy("home"), href: "/" },
     { label: navigationCopy("about"), href: "/about" },
     { label: navigationCopy("services"), href: "/services" },
+    { label: navigationCopy("portfolio"), href: "/portfolio" },
+    { label: navigationCopy("blog"), href: "/blog" },
     { label: navigationCopy("contact"), href: "/contact" },
   ];
 

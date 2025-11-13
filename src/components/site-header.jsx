@@ -134,7 +134,7 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
           <div className="relative flex items-center justify-between px-4 py-3 sm:px-6">
             {/* Logo */}
             <Link
-              href={`/${locale ?? ""}`}
+              href="/"
               className="flex items-center gap-2 rounded-full p-1.5 "
               aria-label="Go to homepage"
             >

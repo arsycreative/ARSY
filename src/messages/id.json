@@ -232,6 +232,11 @@
       "detail": "Hanya dua peluncuran sekaligus. Partner senior hadir di setiap sesi. Tanpa estafet.",
       "cta": "Rencanakan discovery call",
       "secondary": "Lihat kapabilitas",
+      "card": {
+        "label": "Akses partner",
+        "title": "Ruang langsung, ritus bersama.",
+        "body": "Bekerja langsung dengan partner dan maker yang menggarap flagship-mu."
+      },
       "stats": {
         "timeline": { "label": "Timeline", "value": "6-8 minggu" },
         "coverage": { "label": "Cakupan", "value": "Strategi → QA" },
@@ -424,8 +429,148 @@
     "home": "Beranda",
     "about": "Tentang",
     "services": "Layanan",
+    "portfolio": "Portofolio",
+    "blog": "Blog",
     "contact": "Kontak",
     "cta": "Book a call"
+  },
+  "BlogPage": {
+    "hero": {
+      "eyebrow": "Catatan studio",
+      "title": "Catatan tentang desain, engineering, dan ritme brand.",
+      "body": "Rangkuman ide dari dalam studio — mulai dari ritual riset, keputusan teknis, hingga pelajaran bersama founder.",
+      "cta": "Hubungi studio",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1800&auto=format&fit=crop&q=80"
+    },
+    "categoriesTitle": "Kategori",
+    "categoriesSubtitle": "Kumpulan bacaan untuk para builder yang berpikir jauh.",
+    "categories": {
+      "all": "Semua",
+      "insight": "Wawasan",
+      "events": "Acara",
+      "news": "Berita"
+    },
+    "posts": {
+      "ai-selection": {
+        "title": "Memilih studio AI yang tepat untuk flagship Anda.",
+        "meta": "18 September 2025 · Wawasan",
+        "category": "insight",
+        "categoryLabel": "Wawasan",
+        "excerpt": "Founder menulis ulang roadmap dengan komponen AI, namun pertanyaannya tetap: siapa yang merangkai sistem sambil menjaga rasa brand?",
+        "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Baca artikel"
+      },
+      "software-house": {
+        "title": "Software house agency: menjembatani ide dan sistem.",
+        "meta": "16 September 2025 · Wawasan",
+        "category": "insight",
+        "categoryLabel": "Wawasan",
+        "excerpt": "Memadukan service design, engineering, dan growth ritual menjaga eksperimen stabil ketika brand memasuki pasar baru.",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Baca artikel"
+      },
+      "ux-export": {
+        "title": "Kenapa studio UX Indonesia semakin dilirik dunia.",
+        "meta": "15 September 2025 · Berita",
+        "category": "news",
+        "categoryLabel": "Berita",
+        "excerpt": "Dari tipografi craft hingga stack modern, studio di Jakarta dan Bandung mengekspor sensitivitas budaya ke produk global.",
+        "image": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Baca artikel"
+      },
+      "events-series": {
+        "title": "Di balik forum founder yang kami selenggarakan.",
+        "meta": "10 September 2025 · Acara",
+        "category": "events",
+        "categoryLabel": "Acara",
+        "excerpt": "Kami mengundang product lead dan CMO untuk bertukar catatan soal peluncuran hybrid, pengalaman offline, dan kondisi headless CMS.",
+        "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Baca artikel"
+      }
+    }
+  },
+  "PortfolioPage": {
+    "hero": {
+      "eyebrow": "Karya pilihan",
+      "title": "Portofolio yang dibangun dengan presisi tenang.",
+      "body": "Perpaduan butik antara platform web, aplikasi mobile, dan embedded team untuk founder yang menginginkan hasil sinematik.",
+      "detail": "Setiap build dipimpin senior, kaya riset, dan diluncurkan selaras dengan tim Anda.",
+      "primary": "Rencanakan discovery call",
+      "secondary": "Lihat proyek",
+      "card": {
+        "label": "Snapshot",
+        "title": "65+ peluncuran",
+        "body": "Dari fintech hingga luxury retail, setiap proyek memadukan cerita, desain, dan engineering."
+      },
+      "highlights": {
+        "timeline": { "label": "Rata-rata timeline", "value": "6-8 minggu" },
+        "industries": { "label": "Industri", "value": "Finansial · Luxury · Tech" }
+      }
+    },
+    "filters": {
+      "all": "Semua",
+      "web": "Situs Web",
+      "mobile": "Aplikasi Mobile",
+      "team": "Design & Branding"
+    },
+    "projects": {
+      "ppid": {
+        "title": "PPID Kemendagri",
+        "tag": "Mobile · Web",
+        "description": "Platform informasi publik nasional dengan pengalaman mobile dan web agar warga mudah mengakses pembaruan dari tiap provinsi.",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Lihat studi",
+        "category": "mobile"
+      },
+      "bmw": {
+        "title": "BMW Group Indonesia",
+        "tag": "Design & Branding",
+        "description": "Squad engineering ter-embed yang menghadirkan otomasi dan analytics untuk tooling internal BMW.",
+        "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Lihat studi",
+        "category": "team"
+      },
+      "amura": {
+        "title": "Amura Beauty",
+        "tag": "Situs Web",
+        "description": "Flagship commerce untuk kolektif skincare dengan storytelling taktil, editorial shoppable, dan checkout lokal.",
+        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Lihat studi",
+        "category": "web"
+      },
+      "kideco": {
+        "title": "KIDECO Energy",
+        "tag": "Situs Web",
+        "description": "Hub pelaporan sustainability untuk grup energi besar Indonesia, memadukan visualisasi data dan tooling investor.",
+        "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Lihat studi",
+        "category": "web"
+      },
+      "bpjs": {
+        "title": "BPJS Ketenagakerjaan",
+        "tag": "Platform Web",
+        "description": "Redesain end-to-end portal jaminan sosial nasional dengan aksesibilitas, pencarian, dan alur panduan.",
+        "image": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Lihat studi",
+        "category": "web"
+      },
+      "diri": {
+        "title": "Diri Care",
+        "tag": "Aplikasi Mobile",
+        "description": "Aplikasi pendamping perawatan personal yang menghubungkan pengguna dengan treatment, concierge, dan regimen personal.",
+        "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600&auto=format&fit=crop&q=80",
+        "cta": "Lihat studi",
+        "category": "mobile"
+      }
+    },
+    "empty": "Belum ada proyek untuk kategori ini.",
+    "cta": {
+      "eyebrow": "Punya visi?",
+      "title": "Mari orkestrasi flagship berikutnya.",
+      "body": "Bagikan hunch, deck, atau tantangan produk dan kami akan kembali dengan rencana khusus kurang dari 24 jam.",
+      "primary": "Mulai brief",
+      "secondary": "Email studio"
+    }
   },
   "Footer": {
     "tagline": "Project enquiries",
@@ -462,6 +607,10 @@
     "aboutDescription": "Kenali tim, filosofi, dan proses Arsy Studio.",
     "servicesTitle": "Layanan - Arsy Studio",
     "servicesDescription": "Jelajahi program web, produk, dan brand premium dari Arsy Studio untuk peluncuran ambisius.",
+    "portfolioTitle": "Portofolio - Arsy Studio",
+    "portfolioDescription": "Telusuri portofolio pilihan Arsy Studio yang menampilkan proyek web, mobile, dan embedded team.",
+    "blogTitle": "Blog - Arsy Studio",
+    "blogDescription": "Cerita dan wawasan Arsy Studio tentang desain, engineering, dan strategi brand.",
     "contactTitle": "Kontak - Arsy Studio",
     "contactDescription": "Bagikan brief, ide awal, atau tantanganmu dan kami akan membalas dengan rencana khusus dalam 24 jam."
   }
