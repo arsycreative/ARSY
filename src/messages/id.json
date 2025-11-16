@@ -131,7 +131,10 @@
       "secondary": "Kami selalu dekat dengan orang yang akan memakai produk agar setiap interaksi terasa penuh perhatian.",
       "highlights": {
         "balance": { "label": "Fokus craft", "value": "Fungsi x emosi" },
-        "approach": { "label": "Model kerja", "value": "2 peluncuran sekaligus" }
+        "approach": {
+          "label": "Model kerja",
+          "value": "2 peluncuran sekaligus"
+        }
       },
       "card": {
         "tag": "Ritual studio",
@@ -214,7 +217,10 @@
         "years": { "value": "8+", "label": "Tahun pengalaman" },
         "projects": { "value": "200+", "label": "Proyek terselesaikan" },
         "clients": { "value": "100+", "label": "Klien puas" },
-        "vision": { "value": "1", "label": "Visi: pengalaman digital yang berarti" }
+        "vision": {
+          "value": "1",
+          "label": "Visi: pengalaman digital yang berarti"
+        }
       }
     },
     "cta": {
@@ -349,6 +355,7 @@
       "title": "Buat peluncuranmu terasa tak terelakkan.",
       "body": "Bagikan deck, brief yang belum rapi, atau sekadar intuisi. Kami akan merespons dengan rencana yang jelas dalam 24 jam.",
       "detail": "Kami hanya menangani dua engagement bersamaan agar setiap build terasa sinematik dan terkontrol.",
+      "image": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
       "primaryCta": "Jadwalkan discovery call",
       "secondaryCta": "Email studio",
       "primaryHref": "https://cal.com/arsy-studio/discovery",
@@ -497,6 +504,7 @@
       "title": "Portofolio yang dibangun dengan presisi tenang.",
       "body": "Perpaduan butik antara platform web, aplikasi mobile, dan embedded team untuk founder yang menginginkan hasil sinematik.",
       "detail": "Setiap build dipimpin senior, kaya riset, dan diluncurkan selaras dengan tim Anda.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&auto=format&fit=crop&q=80",
       "primary": "Rencanakan discovery call",
       "secondary": "Lihat proyek",
       "card": {
@@ -506,7 +514,10 @@
       },
       "highlights": {
         "timeline": { "label": "Rata-rata timeline", "value": "6-8 minggu" },
-        "industries": { "label": "Industri", "value": "Finansial · Luxury · Tech" }
+        "industries": {
+          "label": "Industri",
+          "value": "Finansial · Luxury · Tech"
+        }
       }
     },
     "filters": {
@@ -596,10 +607,10 @@
   },
   "LocaleSwitcher": {
     "switchTo": "Ganti ke {locale}",
-    "loading": "Switching...",
+    "loading": "..",
     "locales": {
-      "en": "English",
-      "id": "Indonesia"
+      "en": "EN",
+      "id": "ID"
     }
   },
   "Metadata": {

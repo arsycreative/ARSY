@@ -11,7 +11,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="group flex h-10 w-10 items-center justify-center rounded-full border border-zinc-300 bg-white/80 text-xs font-medium text-zinc-900 transition hover:border-zinc-900 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white"
+      className="group flex h-8.5 w-8.5 items-center justify-center rounded-full border border-zinc-300 bg-white/80 text-xs font-medium text-zinc-900 transition hover:border-zinc-900 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white"
       aria-label="Toggle theme"
     >
       {/* Render both icons; hide/show via CSS so SSR/CSR markup stays identical */}

@@ -10,6 +10,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { ContactPanel } from "@/components/home/contact-panel";
+import Image from "next/image";
 
 const channelIcons = {
   email: Mail,
@@ -28,6 +29,7 @@ export default function ContactPage({ params }) {
     title: t("hero.title"),
     body: t("hero.body"),
     detail: t("hero.detail"),
+    image: t("hero.image"),
     primaryCta: t("hero.primaryCta"),
     secondaryCta: t("hero.secondaryCta"),
     primaryHref: t("hero.primaryHref"),
@@ -84,86 +86,59 @@ export default function ContactPage({ params }) {
 
   return (
     <>
-      <section className="relative overflow-hidden py-32 px-6 lg:px-12 text-white">
-        <div
-          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 opacity-60 blur-3xl"
-          aria-hidden="true"
-        >
-          <div className="absolute -top-24 right-10 h-72 w-72 rounded-full bg-violet-500/30" />
-          <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-purple-500/20" />
+      <section className="relative overflow-hidden bg-zinc-950 text-white px-6 lg:px-12">
+        <div className="absolute inset-0">
+          {heroCopy.image ? (
+            <>
+              <Image
+                src={heroCopy.image}
+                alt={heroCopy.title}
+                fill
+                className="object-cover opacity-70"
+                priority
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-black via-black/60 to-transparent" />
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black" />
+          )}
         </div>
-        <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
-            <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/60">
-                <Sparkles className="h-3 w-3 text-violet-400" />
-                {heroCopy.eyebrow}
-              </div>
-              <div className="space-y-6">
-                <h1 className="text-5xl font-light leading-tight text-white lg:text-6xl">
-                  {heroCopy.title}
-                </h1>
-                <p className="text-xl font-light leading-relaxed text-white/70">
-                  {heroCopy.body}
-                </p>
-                <p className="text-sm font-light text-white/50">
-                  {heroCopy.detail}
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href={heroCopy.primaryHref}
-                  target={heroPrimaryExternal ? "_blank" : undefined}
-                  rel={heroPrimaryExternal ? "noreferrer" : undefined}
-                  className="group relative inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition-transform hover:scale-[1.02]"
-                >
-                  <PhoneCall className="h-4 w-4" />
-                  {heroCopy.primaryCta}
-                  <span className="absolute inset-0 -z-10 rounded-full bg-linear-to-r from-violet-100 to-white opacity-0 transition-opacity group-hover:opacity-100" />
-                </a>
-                <a
-                  href={heroCopy.secondaryHref}
-                  target={heroSecondaryExternal ? "_blank" : undefined}
-                  rel={heroSecondaryExternal ? "noreferrer" : undefined}
-                  className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white hover:bg-white/10"
-                >
-                  <Mail className="h-4 w-4" />
-                  {heroCopy.secondaryCta}
-                </a>
-              </div>
+        <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-0 py-20">
+          <div className="space-y-8 max-w-3xl">
+            <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/70">
+              <Sparkles className="h-3 w-3" />
+              {heroCopy.eyebrow}
             </div>
-
-            <div className="space-y-8 rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-3xl">
-              <div className="space-y-2">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/40">
-                  {heroCopy.directLabel}
-                </p>
-                <p className="text-3xl font-light text-white">
-                  {directEmail}
-                </p>
-                <p className="text-white/60">{heroCopy.cardSubcopy}</p>
-              </div>
-              <div className="h-px bg-white/10" />
-              <div className="space-y-4">
-                {heroCopy.highlights.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
-                  >
-                    <span className="text-xs uppercase tracking-[0.3em] text-white/40">
-                      {item.label}
-                    </span>
-                    <span className="text-lg font-light text-white">
-                      {item.value}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <h1 className="text-5xl font-light leading-tight text-white lg:text-6xl">
+              {heroCopy.title}
+            </h1>
+            <p className="text-xl font-light leading-relaxed text-white/70">
+              {heroCopy.body}
+            </p>
+            <p className="text-sm font-light text-white/50">
+              {heroCopy.detail}
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href={heroCopy.primaryHref}
+              target={heroPrimaryExternal ? "_blank" : undefined}
+              rel={heroPrimaryExternal ? "noreferrer" : undefined}
+              className="group relative inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition-transform hover:scale-[1.02]"
+            >
+              <PhoneCall className="h-4 w-4" />
+              {heroCopy.primaryCta}
+              <span className="absolute inset-0 -z-10 rounded-full bg-linear-to-r from-violet-100 to-white opacity-0 transition-opacity group-hover:opacity-100" />
+            </a>
+            <a
+              href={heroCopy.secondaryHref}
+              target={heroSecondaryExternal ? "_blank" : undefined}
+              rel={heroSecondaryExternal ? "noreferrer" : undefined}
+              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white hover:bg-white/10"
+            >
+              <Mail className="h-4 w-4" />
+              {heroCopy.secondaryCta}
+            </a>
           </div>
         </div>
       </section>
@@ -185,7 +160,9 @@ export default function ContactPage({ params }) {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {channels.map((channel) => {
               const Icon = channelIcons[channel.icon] || Mail;
-              const target = channel.href.startsWith("http") ? "_blank" : undefined;
+              const target = channel.href.startsWith("http")
+                ? "_blank"
+                : undefined;
               const rel = target ? "noreferrer" : undefined;
 
               return (

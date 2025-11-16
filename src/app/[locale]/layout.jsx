@@ -12,6 +12,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { AppProviders } from "@/components/providers/app-providers";
 import SiteHeader from "@/components/site-header";
+import { FaPhone } from "react-icons/fa6";
 import SiteFooter from "@/components/site-footer";
 
 export function generateStaticParams() {
@@ -126,6 +127,15 @@ export default async function LocaleLayout({ children, params }) {
             <SiteHeader locale={locale} navLinks={navLinks} />
             <main className="flex-1">{children}</main>
             <SiteFooter footer={footer} />
+            <a
+              href="https://wa.me/6281288981122"
+              target="_blank"
+              rel="noreferrer"
+              className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#32d951] text-white shadow-[0_15px_45px_rgba(50,217,81,0.35)] transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              aria-label="Chat on WhatsApp"
+            >
+              <FaPhone className="h-5 w-5" />
+            </a>
           </div>
         </div>
       </AppProviders>

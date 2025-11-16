@@ -172,8 +172,11 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
 
             {/* Actions */}
             <div className="flex items-center gap-2">
-              <LocaleSwitcher />
-              <ThemeToggle />
+              <div className="flex items-center gap-2">
+                <LocaleSwitcher />
+                <span className="h-6 w-px bg-zinc-200 dark:bg-white/20" />
+                <ThemeToggle />
+              </div>
 
               <button
                 type="button"

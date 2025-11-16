@@ -131,7 +131,10 @@
       "secondary": "We stay close to the humans who will use what we build so every interaction feels considered.",
       "highlights": {
         "balance": { "label": "Craft focus", "value": "Function x emotion" },
-        "approach": { "label": "Working model", "value": "2 concurrent launches" }
+        "approach": {
+          "label": "Working model",
+          "value": "2 concurrent launches"
+        }
       },
       "card": {
         "tag": "Studio ritual",
@@ -214,7 +217,10 @@
         "years": { "value": "8+", "label": "Years of practice" },
         "projects": { "value": "200+", "label": "Projects delivered" },
         "clients": { "value": "100+", "label": "Clients partnered" },
-        "vision": { "value": "1", "label": "Vision: meaningful digital experiences" }
+        "vision": {
+          "value": "1",
+          "label": "Vision: meaningful digital experiences"
+        }
       }
     },
     "cta": {
@@ -349,6 +355,7 @@
       "title": "Let's make your launch feel inevitable.",
       "body": "Share the deck, the half-written brief, or even just a hunch. We'll respond with a clear path forward within 24 hours.",
       "detail": "We cap ourselves at two concurrent engagements so every build feels cinematic and controlled.",
+      "image": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
       "primaryCta": "Book a discovery call",
       "secondaryCta": "Email the studio",
       "primaryHref": "https://cal.com/arsy-studio/discovery",
@@ -497,6 +504,7 @@
       "title": "Portfolio built with calm precision.",
       "body": "A boutique mix of web platforms, mobile apps, and embedded teams crafted for founders who expect cinematic polish.",
       "detail": "Every build is senior-led, research-driven, and released in concert with your teams.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&auto=format&fit=crop&q=80",
       "primary": "Plan a discovery call",
       "secondary": "View the work",
       "card": {
@@ -506,7 +514,10 @@
       },
       "highlights": {
         "timeline": { "label": "Average timeline", "value": "6-8 weeks" },
-        "industries": { "label": "Industries", "value": "Finance · Luxury · Tech" }
+        "industries": {
+          "label": "Industries",
+          "value": "Finance · Luxury · Tech"
+        }
       }
     },
     "filters": {
@@ -596,10 +607,10 @@
   },
   "LocaleSwitcher": {
     "switchTo": "Switch to {locale}",
-    "loading": "Switching...",
+    "loading": "..",
     "locales": {
-      "en": "English",
-      "id": "Indonesia"
+      "en": "EN",
+      "id": "ID"
     }
   },
   "Metadata": {
