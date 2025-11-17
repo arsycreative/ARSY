@@ -29,7 +29,6 @@ export default function HomePage({ params }) {
     eyebrow: t("hero.eyebrow"),
     title: t("hero.title"),
     body: t("hero.body"),
-    subcopy: t("hero.subcopy"),
     primaryCta: t("hero.primaryCta"),
     secondaryCta: t("hero.secondaryCta"),
     caption: t("hero.caption"),
@@ -104,7 +103,6 @@ export default function HomePage({ params }) {
           eyebrow: t("studio.eyebrow"),
           title: t("studio.title"),
           body: t("studio.body"),
-          detail: t("studio.detail"),
         }}
         highlights={studioHighlights}
       />

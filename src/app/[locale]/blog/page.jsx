@@ -43,7 +43,7 @@ export default function BlogPage({ params }) {
             className="object-cover opacity-70"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-black via-black/60 to-transparent" />
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-0 py-20">
           <div className="space-y-6 max-w-3xl">

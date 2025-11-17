@@ -15,7 +15,6 @@ export function StudioPulse({ copy, highlights }) {
             <p className="text-xl text-white/60 font-light leading-relaxed">
               {copy.body}
             </p>
-            <p className="text-sm text-white/40 font-light">{copy.detail}</p>
           </div>
 
           <div className="space-y-6">

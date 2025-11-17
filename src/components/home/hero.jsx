@@ -110,7 +110,6 @@ export default function HeroSection({ copy, metrics }) {
               <p className="text-xl text-white/60 font-light leading-relaxed max-w-xl">
                 {copy.body}
               </p>
-              <p className="text-sm text-white/40 font-light">{copy.subcopy}</p>
             </div>
 
             <div className="flex flex-wrap gap-4">

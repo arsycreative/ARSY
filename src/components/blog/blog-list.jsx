@@ -40,7 +40,7 @@ export function BlogList({ categories = [], posts = [] }) {
             key={post.slug}
             className="flex flex-col gap-8 rounded-[2.5rem] border border-zinc-200/80 bg-white p-8 shadow-[0_35px_95px_rgba(0,0,0,0.05)] transition hover:-translate-y-1 hover:shadow-[0_45px_120px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-white/5 md:flex-row"
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-zinc-100 dark:border-white/10 md:w-1/2">
+            <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl border border-zinc-100 dark:border-white/10 md:w-1/2">
               <Image
                 src={post.image}
                 alt={post.title}

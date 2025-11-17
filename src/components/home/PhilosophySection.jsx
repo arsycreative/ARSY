@@ -15,7 +15,7 @@ export function PhilosophySection({ copy }) {
   ];
 
   return (
-    <section className="relative py-32 px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
+    <section className="relative py-32 px-6 lg:px-12 overflow-hidden bg-linear-to-br from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-violet-500/5 dark:bg-violet-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-3xl" />
@@ -42,7 +42,7 @@ export function PhilosophySection({ copy }) {
           {/* Left: Expertise */}
           <div className="space-y-8">
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-lg">
+              <div className="shrink-0 w-12 h-12 rounded-2xl bg-linear-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-lg">
                 <Lightbulb className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -73,7 +73,7 @@ export function PhilosophySection({ copy }) {
           {/* Right: Process */}
           <div className="space-y-8">
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg">
+              <div className="shrink-0 w-12 h-12 rounded-2xl bg-linear-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg">
                 <Target className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -100,7 +100,7 @@ export function PhilosophySection({ copy }) {
 
         {/* Bottom Statement */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10 dark:from-violet-500/20 dark:via-purple-500/20 dark:to-indigo-500/20 rounded-3xl blur-xl" />
+          <div className="absolute inset-0 bg-linear-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10 dark:from-violet-500/20 dark:via-purple-500/20 dark:to-indigo-500/20 rounded-3xl blur-xl" />
           <div className="relative p-12 lg:p-16 rounded-3xl border border-zinc-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-xl text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Users className="h-6 w-6 text-violet-500" />

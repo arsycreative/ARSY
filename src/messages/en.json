@@ -4,7 +4,6 @@
       "eyebrow": "Digital atelier",
       "title": "Web experiences crafted for daring, thoughtful brands.",
       "body": "We build digital flagships for ambitious brands — blending design, technology, and storytelling into one seamless experience.",
-      "subcopy": "Every engagement is senior-led, research-rich, and engineered in-house so your launch feels cinematic and controlled.",
       "primaryCta": "Plan a discovery call",
       "secondaryCta": "See how we work",
       "caption": "Immersive prototyping session",
@@ -76,8 +75,7 @@
     "studio": {
       "eyebrow": "Studio Pulse",
       "title": "Meticulous process, soulful detail.",
-      "body": "We explore ideas through stories, prototype through code, and launch every project like opening night.",
-      "detail": "We share progress updates throughout each phase, keeping every milestone clear and aligned.",
+      "body": "We share progress updates throughout each phase, keeping every milestone clear and aligned.",
       "highlights": {
         "planning": {
           "tag": "01",
