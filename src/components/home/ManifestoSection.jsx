@@ -61,7 +61,7 @@ export default function ManifestoSection({ copy = {} }) {
         }}
       />
 
-      <div className="relative mx-auto max-w-7xl py-24 ">
+      <div className="relative mx-auto max-w-7xl py-24 px-6 lg:px-12">
         {/* Eyebrow */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-white/70 px-4 py-2 backdrop-blur dark:border-white/10 dark:bg-white/5">
