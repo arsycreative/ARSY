@@ -6,18 +6,22 @@ import { ServicesSection } from "@/components/home/services";
 import { CasesCarousel } from "@/components/home/cases-carousel";
 import { StudioPulse } from "@/components/home/studio-pulse";
 import { AboutPreview } from "@/components/home/about-preview";
-import { ContactPanel } from "@/components/home/contact-panel";
+import { TestimonialSection } from "@/components/home/testimonial-section";
 import HeroSection from "@/components/home/hero";
 import { PhilosophySection } from "@/components/home/PhilosophySection";
 import ManifestoSection from "@/components/home/ManifestoSection";
 
 const caseImages = {
   atlas:
-    "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=900&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=1200&q=80&auto=format&fit=crop",
   coast:
-    "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=1200&q=80&auto=format&fit=crop",
   atelier:
     "https://images.unsplash.com/photo-1642054220942-d3c7dd1466cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+  solstice:
+    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80&auto=format&fit=crop",
+  noir:
+    "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80&auto=format&fit=crop",
 };
 
 export default function HomePage({ params }) {
@@ -57,7 +61,7 @@ export default function HomePage({ params }) {
     icon: card.icon,
   }));
 
-  const cases = ["atlas", "coast", "atelier"].map((key) => ({
+  const cases = ["atlas", "coast", "atelier", "solstice", "noir"].map((key) => ({
     title: t(`cases.items.${key}.title`),
     summary: t(`cases.items.${key}.summary`),
     result: t(`cases.items.${key}.result`),
@@ -71,8 +75,30 @@ export default function HomePage({ params }) {
     tag: t(`studio.highlights.${key}.tag`),
   }));
 
-  const contactReasons = ["build", "launch", "scale"].map((key) =>
-    t(`contact.reasons.${key}`)
+  const testimonials = ["lumina", "seraya", "noir"].map((key) => ({
+    company: t(`testimonials.items.${key}.company`),
+    quote: t(`testimonials.items.${key}.quote`),
+    author: t(`testimonials.items.${key}.author`),
+    role: t(`testimonials.items.${key}.role`),
+    metricLabel: t(`testimonials.items.${key}.metricLabel`),
+    metricValue: t(`testimonials.items.${key}.metricValue`),
+  }));
+
+  const manifestoTitle = (
+    <>
+      {t("manifesto.title.primary")}
+      <span className="mt-3 block bg-linear-to-r from-violet-500 via-purple-500 to-indigo-600 bg-clip-text text-transparent">
+        {t("manifesto.title.secondary")}
+      </span>
+    </>
+  );
+
+  const manifestoPrinciples = ["clarity", "design", "strategy"].map((key) =>
+    t(`manifesto.principles.${key}`)
+  );
+
+  const manifestoLocations = ["jakarta", "singapore", "remote"].map((key) =>
+    t(`manifesto.meta.locations.${key}`)
   );
 
   return (
@@ -127,33 +153,29 @@ export default function HomePage({ params }) {
         }}
       />
 
-      <ContactPanel
+      <TestimonialSection
         copy={{
-          eyebrow: t("contact.eyebrow"),
-          title: t("contact.title"),
-          body: t("contact.body"),
-          primaryCta: t("contact.primaryCta"),
-          secondaryCta: t("contact.secondaryCta"),
-          reasons: contactReasons,
-          person: {
-            role: t("contact.person.role"),
-            name: t("contact.person.name"),
-            title: t("contact.person.title"),
-            email: t("contact.person.email"),
-          },
+          eyebrow: t("testimonials.eyebrow"),
+          title: t("testimonials.title"),
+          cta: t("testimonials.cta"),
+          ctaHref: "/contact",
         }}
+        testimonials={testimonials}
       />
 
       <ManifestoSection
         copy={{
-          eyebrow: "Manifesto",
-          title:
-            "Karya digital harus memancarkan rasa hormat: pada brand, pengguna, dan waktu.",
-          lead: "Kami memilih kualitas di atas kuantitas. Tidak semua proyek cocok—yang kami ambil, kami rawat hingga halus.",
-          ctaTitle: "Bicara objektif, eksekusi presisi.",
-          ctaBody:
-            "Jika Anda menghargai detail dan konsistensi, kita sejalan. Mari buat sesuatu yang bertahan.",
-          primaryCta: "Mulai Diskusi",
+          eyebrow: t("manifesto.eyebrow"),
+          title: manifestoTitle,
+          lead: t("manifesto.lead"),
+          principles: manifestoPrinciples,
+          ctaTitle: t("manifesto.ctaTitle"),
+          ctaBody: t("manifesto.ctaBody"),
+          primaryCta: t("manifesto.primaryCta"),
+          secondaryCta: t("manifesto.secondaryCta"),
+          principleLabel: t("manifesto.principleLabel"),
+          metaStatement: t("manifesto.meta.statement"),
+          metaLocations: manifestoLocations,
         }}
       />
     </>

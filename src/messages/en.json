@@ -69,6 +69,18 @@
           "summary": "Interactive portfolio for an interior studio blending CG rooms, film, and a concierge brief tool.",
           "result": "Booked-out quarter within 6 weeks.",
           "industry": "Design"
+        },
+        "solstice": {
+          "title": "Solstice Mobility",
+          "summary": "Modular product site for an EV startup with immersive configurator, charging map, and investor narrative.",
+          "result": "Waitlist filled 4x faster.",
+          "industry": "Mobility"
+        },
+        "noir": {
+          "title": "Noir Residences",
+          "summary": "Cinematic hospitality platform with multi-property booking, ambient motion, and private guest portal.",
+          "result": "Direct bookings up 58%.",
+          "industry": "Hospitality"
         }
       }
     },
@@ -100,22 +112,62 @@
       "body": "Twelve specialists in strategy, design, and engineering crafting sites that feel expensive yet human.",
       "cta": "Tour our philosophy"
     },
-    "contact": {
-      "eyebrow": "Talk to us",
-      "title": "Tell us what you want the internet to feel like.",
-      "body": "We take on two launches at a time to preserve care. Share your hunch, deck, or challenge.",
-      "primaryCta": "Start the brief",
-      "secondaryCta": "WhatsApp the team",
-      "reasons": {
-        "build": "Launching a new flagship, product, or fund",
-        "launch": "Refreshing an existing property without losing equity",
-        "scale": "Embedding a long-term design-engineering partner"
+    "testimonials": {
+      "eyebrow": "Client reflections",
+      "title": "Partners choose us when every micro-detail matters.",
+      "body": "From fintech founders to boutique hospitality groups, we embed with leadership to choreograph every touchpoint.",
+      "cta": "Discuss your launch",
+      "items": {
+        "lumina": {
+          "company": "Lumina Capital",
+          "quote": "Arsy Studio treated our relaunch like choreography. They translated dense regulation into a luxurious flow without adding friction.",
+          "author": "Maya Karim",
+          "role": "Chief Brand Officer",
+          "metricLabel": "Signup uplift",
+          "metricValue": "+42%"
+        },
+        "seraya": {
+          "company": "Seraya Atelier",
+          "quote": "The team built an editorial commerce system with motion states that feel like touching fabric. They anticipated every scenario.",
+          "author": "Evelyn Hart",
+          "role": "Founder",
+          "metricLabel": "Time to publish",
+          "metricValue": "−60%"
+        },
+        "noir": {
+          "company": "Noir Hospitality",
+          "quote": "We needed a site that sells suites without shouting. Arsy delivered a cinematic CMS that our concierge updates effortlessly.",
+          "author": "Darren Lim",
+          "role": "Managing Partner",
+          "metricLabel": "Direct bookings",
+          "metricValue": "+3.5x"
+        }
+      }
+    },
+    "manifesto": {
+      "eyebrow": "Studio Manifesto",
+      "title": {
+        "primary": "Respect guides every build.",
+        "secondary": "For the brand, the people, and their time."
       },
-      "person": {
-        "role": "Studio line",
-        "name": "Salma N.",
-        "title": "Client Partner",
-        "email": "hello@arsystudio.com"
+      "lead": "We take on fewer engagements so every detail can be tuned until it feels effortlessly premium.",
+      "principles": {
+        "clarity": "Clarity before speed.",
+        "design": "Design guides behavior, not decoration.",
+        "strategy": "Technology follows strategy — never the other way around."
+      },
+      "ctaTitle": "Ready to shape something lasting?",
+      "ctaBody": "If you value detail, consistency, and care, we’re already aligned.",
+      "primaryCta": "Start a conversation",
+      "secondaryCta": "See services",
+      "principleLabel": "Principle",
+      "meta": {
+        "statement": "Quality > Quantity • Focused capacity",
+        "locations": {
+          "jakarta": "Jakarta",
+          "singapore": "Singapore",
+          "remote": "Remote-first"
+        }
       }
     }
   },

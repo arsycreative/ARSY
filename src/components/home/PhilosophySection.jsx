@@ -97,25 +97,6 @@ export function PhilosophySection({ copy }) {
             </div>
           </div>
         </div>
-
-        {/* Bottom Statement */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-linear-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10 dark:from-violet-500/20 dark:via-purple-500/20 dark:to-indigo-500/20 rounded-3xl blur-xl" />
-          <div className="relative p-12 lg:p-16 rounded-3xl border border-zinc-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-xl text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Users className="h-6 w-6 text-violet-500" />
-              <span className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/50 font-light">
-                Our Commitment
-              </span>
-            </div>
-            <p className="text-2xl lg:text-3xl font-light text-zinc-950 dark:text-white leading-relaxed max-w-4xl mx-auto">
-              Kami memastikan setiap hasil bukan hanya memenuhi ekspektasi,
-              <span className="block mt-2 text-violet-600 dark:text-violet-400">
-                tapi juga membawa nilai nyata bagi brand dan penggunanya.
-              </span>
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

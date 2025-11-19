@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
@@ -11,7 +12,7 @@ export default function ManifestoSection({ copy = {} }) {
     title = (
       <>
         Setiap solusi digital kami
-        <span className="block mt-3 bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-600 bg-clip-text text-transparent">
+        <span className="block mt-3 bg-linear-to-r from-violet-500 via-purple-500 to-indigo-600 bg-clip-text text-transparent">
           harus berkelas, efektif, dan bernilai jangka panjang.
         </span>
       </>
@@ -25,6 +26,10 @@ export default function ManifestoSection({ copy = {} }) {
     ctaTitle = "Siap membangun sesuatu yang bertahan?",
     ctaBody = "Mari wujudkan produk yang rapi, konsisten, dan menyatu dengan brand Anda.",
     primaryCta = "Mulai Diskusi",
+    secondaryCta = "Lihat Layanan",
+    metaStatement = "Kualitas > Kuantitas • Focused capacity",
+    metaLocations = ["Jakarta", "Singapore", "Remote-first"],
+    principleLabel = "Principle",
   } = copy;
 
   return (
@@ -41,16 +46,6 @@ export default function ManifestoSection({ copy = {} }) {
             "radial-gradient(60% 50% at 70% 0%, rgba(124,58,237,.20), transparent 60%), radial-gradient(40% 35% at 0% 100%, rgba(59,130,246,.10), transparent 60%)",
         }}
       />
-      {/* Hairline grid (light/dark) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px)",
-          backgroundSize: "88px 88px",
-        }}
-      />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 hidden dark:block"
@@ -61,7 +56,7 @@ export default function ManifestoSection({ copy = {} }) {
         }}
       />
 
-      <div className="relative mx-auto max-w-7xl py-24 px-6 lg:px-12">
+      <div className="relative mx-auto max-w-7xl py-24 ">
         {/* Eyebrow */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-white/70 px-4 py-2 backdrop-blur dark:border-white/10 dark:bg-white/5">
@@ -89,7 +84,7 @@ export default function ManifestoSection({ copy = {} }) {
         </div>
 
         {/* Divider */}
-        <div className="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10" />
+        <div className="my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10" />
 
         {/* Principles */}
         <div className="grid gap-6 lg:grid-cols-3">
@@ -103,7 +98,7 @@ export default function ManifestoSection({ copy = {} }) {
                   <span className="block h-1.5 w-1.5 rounded-full bg-violet-500" />
                 </span>
                 <span className="text-xs uppercase tracking-[0.25em] text-zinc-500 dark:text-white/50">
-                  Principle {String(i + 1).padStart(2, "0")}
+                  {principleLabel} {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
               <p className="text-lg leading-relaxed text-zinc-700 dark:text-white/80">
@@ -128,8 +123,8 @@ export default function ManifestoSection({ copy = {} }) {
             <div className="flex flex-wrap items-center gap-3">
               <Link
                 href="#contact"
-                className={`group inline-flex items-center gap-3 rounded-full border border-zinc-300 bg-gradient-to-r ${ACCENT} px-7 py-3 text-sm font-medium text-white shadow-[0_18px_45px_rgba(124,58,237,.25)] transition-transform hover:scale-[1.02] dark:border-transparent`}
-                aria-label="Mulai Diskusi"
+                className={`group inline-flex items-center gap-3 rounded-full border border-zinc-300 bg-linear-to-r ${ACCENT} px-7 py-3 text-sm font-medium text-white shadow-[0_18px_45px_rgba(124,58,237,.25)] transition-transform hover:scale-[1.02] dark:border-transparent`}
+                aria-label={primaryCta}
               >
                 {primaryCta}
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -137,9 +132,9 @@ export default function ManifestoSection({ copy = {} }) {
               <Link
                 href="#services"
                 className="inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-white px-7 py-3 text-sm font-medium text-zinc-900 transition hover:bg-zinc-50 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15"
-                aria-label="Lihat Layanan"
+                aria-label={secondaryCta}
               >
-                Lihat Layanan
+                {secondaryCta}
               </Link>
             </div>
           </div>
@@ -148,13 +143,16 @@ export default function ManifestoSection({ copy = {} }) {
         {/* Meta row (opsional) */}
         <div className="mt-20 pt-8 border-t border-zinc-200 text-sm text-zinc-500 dark:border-white/10 dark:text-white/50">
           <div className="flex flex-wrap items-center justify-between gap-6">
-            <p>Kualitas &gt; Kuantitas • Focused capacity</p>
+            <p>{metaStatement}</p>
             <div className="flex items-center gap-6">
-              <span>Jakarta</span>
-              <span className="h-1 w-1 rounded-full bg-zinc-300 dark:bg-white/30" />
-              <span>Singapore</span>
-              <span className="h-1 w-1 rounded-full bg-zinc-300 dark:bg-white/30" />
-              <span>Remote-first</span>
+              {metaLocations.map((location, index) => (
+                <Fragment key={`${location}-${index}`}>
+                  <span>{location}</span>
+                  {index < metaLocations.length - 1 && (
+                    <span className="h-1 w-1 rounded-full bg-zinc-300 dark:bg-white/30" />
+                  )}
+                </Fragment>
+              ))}
             </div>
           </div>
         </div>

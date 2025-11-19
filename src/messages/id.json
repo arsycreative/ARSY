@@ -61,14 +61,26 @@
         "coast": {
           "title": "Coastline Rituals",
           "summary": "Kolektif skincare luxury dengan storytelling scroll-triggered, inventori live, dan commerce editorial.",
-          "result": "Rata-rata nilai transaksi naik 31%.",
+          "result": "Nilai order rata-rata naik 31%.",
           "industry": "Kecantikan"
         },
         "atelier": {
           "title": "Atelier Nomad",
-          "summary": "Portfolio interaktif untuk studio interior yang memadukan ruang CG, film, dan concierge brief tool.",
-          "result": "Kalender penuh dalam 6 minggu.",
+          "summary": "Portofolio interaktif untuk studio interior yang memadukan ruang CG, film, dan concierge brief tool.",
+          "result": "Full booking dalam 6 minggu.",
           "industry": "Desain"
+        },
+        "solstice": {
+          "title": "Solstice Mobility",
+          "summary": "Situs produk modular untuk startup EV dengan konfigurator imersif, peta charging, dan narasi investor.",
+          "result": "Daftar tunggu terisi 4x lebih cepat.",
+          "industry": "Mobilitas"
+        },
+        "noir": {
+          "title": "Noir Residences",
+          "summary": "Platform hospitality sinematik dengan booking multi properti, motion atmosferik, dan portal tamu privat.",
+          "result": "Booking langsung naik 58%.",
+          "industry": "Hospitality"
         }
       }
     },
@@ -100,22 +112,62 @@
       "body": "Dua belas spesialis strategi, desain, dan engineering yang merakit situs terasa mahal namun manusiawi.",
       "cta": "Jelajahi filosofi kami"
     },
-    "contact": {
-      "eyebrow": "Hubungi kami",
-      "title": "Ceritakan rasa seperti apa yang Anda inginkan di internet.",
-      "body": "Kami hanya menjalankan dua peluncuran sekaligus agar kualitas terjaga. Kirimkan hunch, deck, atau tantangan Anda.",
-      "primaryCta": "Mulai brief",
-      "secondaryCta": "WhatsApp tim kami",
-      "reasons": {
-        "build": "Membangun flagship, produk, atau fund baru",
-        "launch": "Menyegarkan properti tanpa kehilangan ekuitas",
-        "scale": "Mencari partner desain-engineering jangka panjang"
+    "testimonials": {
+      "eyebrow": "Cerita klien",
+      "title": "Mereka memilih kami saat detail menjadi pertaruhan.",
+      "body": "Dari founder fintech sampai grup hospitality butik, kami menyatu dengan tim inti untuk mengatur setiap titik interaksi.",
+      "cta": "Bicarakan peluncuranmu",
+      "items": {
+        "lumina": {
+          "company": "Lumina Capital",
+          "quote": "Arsy Studio memperlakukan relaunch kami seperti koreografi. Regulasi yang kompleks diterjemahkan menjadi alur mewah tanpa gesekan.",
+          "author": "Maya Karim",
+          "role": "Chief Brand Officer",
+          "metricLabel": "Kenaikan pendaftaran",
+          "metricValue": "+42%"
+        },
+        "seraya": {
+          "company": "Seraya Atelier",
+          "quote": "Tim ini membangun sistem editorial commerce dengan motion yang terasa seperti menyentuh kain. Semua skenario sudah dipikirkan.",
+          "author": "Evelyn Hart",
+          "role": "Founder",
+          "metricLabel": "Waktu terbit konten",
+          "metricValue": "-60%"
+        },
+        "noir": {
+          "company": "Noir Hospitality",
+          "quote": "Kami butuh situs yang menjual suite tanpa terasa berlebihan. Arsy menghadirkan CMS sinematik yang mudah dipakai concierge kami.",
+          "author": "Darren Lim",
+          "role": "Managing Partner",
+          "metricLabel": "Booking langsung",
+          "metricValue": "x3,5"
+        }
+      }
+    },
+    "manifesto": {
+      "eyebrow": "Manifesto Studio",
+      "title": {
+        "primary": "Rasa hormat memandu setiap karya digital.",
+        "secondary": "Untuk brand, manusia, dan waktunya."
       },
-      "person": {
-        "role": "Studio line",
-        "name": "Salma N.",
-        "title": "Client Partner",
-        "email": "hello@arsystudio.com"
+      "lead": "Kami sengaja membatasi proyek agar setiap detail bisa dipoles hingga terasa mahal namun alami.",
+      "principles": {
+        "clarity": "Kejelasan didahulukan daripada kecepatan.",
+        "design": "Desain mengarahkan perilaku, bukan sekadar dekorasi.",
+        "strategy": "Teknologi mengikuti strategi — bukan sebaliknya."
+      },
+      "ctaTitle": "Siap membangun sesuatu yang tahan lama?",
+      "ctaBody": "Jika kamu menghargai detail dan konsistensi, kita berada di jalur yang sama.",
+      "primaryCta": "Mulai diskusi",
+      "secondaryCta": "Lihat layanan",
+      "principleLabel": "Prinsip",
+      "meta": {
+        "statement": "Kualitas > Kuantitas • Kapasitas fokus",
+        "locations": {
+          "jakarta": "Jakarta",
+          "singapore": "Singapura",
+          "remote": "Remote-first"
+        }
       }
     }
   },
