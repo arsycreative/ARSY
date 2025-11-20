@@ -118,14 +118,16 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
         }`}
       >
         <div
-          className={`relative overflow-hidden rounded-2xl backdrop-blur supports-backdrop-filter:bg-white/70 dark:supports-backdrop-filter:bg-zinc-950/70 transition-colors duration-500 ${
+          className={`relative overflow-hidden rounded-2xl transition-colors duration-500 ${
             scrolled
-              ? "border-zinc-200/60 shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:border-white/15"
-              : "border-zinc-200/40 dark:border-white/10"
-          }`}
+              ? "backdrop-blur supports-backdrop-filter:bg-white/70 dark:supports-backdrop-filter:bg-zinc-950/70 border-zinc-200/60 shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:border-white/15"
+              : "bg-transparent border-transparent"
+          } border`}
         >
           <div
-            className="pointer-events-none absolute -inset-px rounded-2xl opacity-60 [mask:linear-gradient(#000,transparent_60%)]"
+            className={`pointer-events-none absolute -inset-px rounded-2xl transition-opacity ${
+              scrolled ? "opacity-60" : "opacity-0"
+            } [mask:linear-gradient(#000,transparent_60%)]`}
             aria-hidden="true"
           >
             <div className="absolute inset-0 rounded-2xl bg-[conic-gradient(at_10%_10%,#a78bfa,transparent_25%,#60a5fa_40%,transparent_60%,#c084fc_75%,transparent)] blur-[10px]" />
@@ -139,7 +141,11 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
               aria-label="Go to homepage"
             >
               <span className="inline-block h-8 w-8 rounded-full bg-linear-to-br from-violet-500 via-purple-500 to-indigo-600" />
-              <span className="hidden text-sm font-medium sm:inline">
+              <span
+                className={`hidden text-sm font-medium sm:inline ${
+                  scrolled ? "text-zinc-900 dark:text-white" : "text-white"
+                }`}
+              >
                 Arsy Studio
               </span>
             </Link>
@@ -154,9 +160,13 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
                   key={item.href}
                   href={item.href}
                   className={`relative text-sm transition-colors ${
-                    isActive(item.href)
-                      ? "text-zinc-950 dark:text-white"
-                      : "text-zinc-600 hover:text-zinc-950 dark:text-white/60 dark:hover:text-white"
+                    scrolled
+                      ? isActive(item.href)
+                        ? "text-zinc-950 dark:text-white"
+                        : "text-zinc-700 hover:text-zinc-950 dark:text-white/70 dark:hover:text-white"
+                      : isActive(item.href)
+                        ? "text-white"
+                        : "text-white/80 hover:text-white"
                   }`}
                 >
                   <span>{item.label}</span>

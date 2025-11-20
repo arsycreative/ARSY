@@ -112,6 +112,10 @@
       "body": "Twelve specialists in strategy, design, and engineering crafting sites that feel expensive yet human.",
       "cta": "Tour our philosophy"
     },
+    "techStack": {
+      "eyebrow": "Toolset",
+      "title": "Frameworks we rely on daily."
+    },
     "testimonials": {
       "eyebrow": "Client reflections",
       "title": "Partners choose us when every micro-detail matters.",
@@ -147,8 +151,7 @@
     "manifesto": {
       "eyebrow": "Studio Manifesto",
       "title": {
-        "primary": "Respect guides every build.",
-        "secondary": "For the brand, the people, and their time."
+        "primary": "Respect guides every build."
       },
       "lead": "We take on fewer engagements so every detail can be tuned until it feels effortlessly premium.",
       "principles": {

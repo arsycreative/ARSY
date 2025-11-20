@@ -112,6 +112,10 @@
       "body": "Dua belas spesialis strategi, desain, dan engineering yang merakit situs terasa mahal namun manusiawi.",
       "cta": "Jelajahi filosofi kami"
     },
+    "techStack": {
+      "eyebrow": "Perangkat",
+      "title": "Teknologi andalan kami sehari-hari."
+    },
     "testimonials": {
       "eyebrow": "Cerita klien",
       "title": "Mereka memilih kami saat detail menjadi pertaruhan.",
@@ -147,8 +151,7 @@
     "manifesto": {
       "eyebrow": "Manifesto Studio",
       "title": {
-        "primary": "Rasa hormat memandu setiap karya digital.",
-        "secondary": "Untuk brand, manusia, dan waktunya."
+        "primary": "Rasa hormat memandu setiap karya digital."
       },
       "lead": "Kami sengaja membatasi proyek agar setiap detail bisa dipoles hingga terasa mahal namun alami.",
       "principles": {

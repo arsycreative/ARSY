@@ -3,9 +3,8 @@
 import { ArrowUpRight, Quote, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 
 export function TestimonialSection({ copy = {}, testimonials = [] }) {
   if (!testimonials.length) return null;
@@ -56,34 +55,37 @@ export function TestimonialSection({ copy = {}, testimonials = [] }) {
         </div>
 
         <Swiper
-          modules={[Pagination, Autoplay]}
+          modules={[Autoplay]}
           slidesPerView={1}
-          spaceBetween={24}
+          spaceBetween={32}
+          centeredSlides
+          grabCursor
           loop
-          autoplay={{ delay: 6000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
+          autoplay={{ delay: 7000, disableOnInteraction: false }}
           breakpoints={{
-            1024: { slidesPerView: 1.5, spaceBetween: 32 },
+            1024: { slidesPerView: 1.35, spaceBetween: 48 },
           }}
           className="overflow-visible!"
         >
           {testimonials.map((item, index) => (
-            <SwiperSlide key={`${item.company}-${index}`}>
-              <article className="relative h-full rounded-4xl border border-white/10 bg-white/5 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl transition hover:border-white/20">
-                <Quote className="mt-6 h-10 w-10 text-violet-300" />
-                <p className="mt-6 text-2xl font-light leading-tight text-white">
-                  {item.quote}
-                </p>
-                <div className="mt-8 flex items-center justify-between border-t border-white/15 pt-6 text-sm text-white/70">
-                  <div>
-                    <p className="text-base font-semibold text-white">
-                      {item.author}
-                    </p>
-                    <p className="text-white/60">{item.role}</p>
+            <SwiperSlide key={`${item.author}-${index}`}>
+              <article className="group relative flex h-full flex-col gap-8 overflow-hidden rounded-[36px] border border-white/10 bg-white/5 px-6 py-10 shadow-[0_45px_140px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-transform duration-500 hover:-translate-y-1 sm:px-12 sm:py-14">
+                <div className="pointer-events-none absolute inset-0 rounded-[36px] border border-white/10" />
+                <div className="pointer-events-none absolute inset-0 rounded-[36px] bg-[radial-gradient(circle_at_15%_10%,rgba(255,255,255,0.14),transparent_55%),radial-gradient(circle_at_90%_20%,rgba(255,255,255,0.10),transparent_50%)] opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
+                <div className="pointer-events-none absolute -right-16 top-10 h-52 w-52 rounded-full bg-white/10 blur-3xl opacity-0 transition-all duration-500 group-hover:opacity-100" />
+                <div className="relative flex flex-col gap-6">
+                  <Quote className="h-10 w-10 text-white/30 transition-colors duration-500 group-hover:text-violet-400" />
+                  <p className="text-xl font-light leading-relaxed text-white/90 sm:text-2xl">
+                    {item.quote}
+                  </p>
+                  <div className="mt-4 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="space-y-1">
+                      <p className="text-base font-medium tracking-wide text-white">
+                        {item.author}
+                      </p>
+                      <p className="text-white/60">{item.role}</p>
+                    </div>
                   </div>
-                  <span className="rounded-full border border-white/15 px-4 py-1 text-[11px] uppercase tracking-[0.4em] text-white/60">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
                 </div>
               </article>
             </SwiperSlide>

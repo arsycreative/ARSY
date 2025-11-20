@@ -7,6 +7,7 @@ import { CasesCarousel } from "@/components/home/cases-carousel";
 import { StudioPulse } from "@/components/home/studio-pulse";
 import { AboutPreview } from "@/components/home/about-preview";
 import { TestimonialSection } from "@/components/home/testimonial-section";
+import { TechStackSection } from "@/components/home/tech-stack";
 import HeroSection from "@/components/home/hero";
 import { PhilosophySection } from "@/components/home/PhilosophySection";
 import ManifestoSection from "@/components/home/ManifestoSection";
@@ -20,8 +21,7 @@ const caseImages = {
     "https://images.unsplash.com/photo-1642054220942-d3c7dd1466cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
   solstice:
     "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80&auto=format&fit=crop",
-  noir:
-    "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80&auto=format&fit=crop",
+  noir: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80&auto=format&fit=crop",
 };
 
 export default function HomePage({ params }) {
@@ -61,13 +61,15 @@ export default function HomePage({ params }) {
     icon: card.icon,
   }));
 
-  const cases = ["atlas", "coast", "atelier", "solstice", "noir"].map((key) => ({
-    title: t(`cases.items.${key}.title`),
-    summary: t(`cases.items.${key}.summary`),
-    result: t(`cases.items.${key}.result`),
-    industry: t(`cases.items.${key}.industry`),
-    image: caseImages[key],
-  }));
+  const cases = ["atlas", "coast", "atelier", "solstice", "noir"].map(
+    (key) => ({
+      title: t(`cases.items.${key}.title`),
+      summary: t(`cases.items.${key}.summary`),
+      result: t(`cases.items.${key}.result`),
+      industry: t(`cases.items.${key}.industry`),
+      image: caseImages[key],
+    })
+  );
 
   const studioHighlights = ["planning", "design", "launch"].map((key) => ({
     title: t(`studio.highlights.${key}.title`),
@@ -84,14 +86,7 @@ export default function HomePage({ params }) {
     metricValue: t(`testimonials.items.${key}.metricValue`),
   }));
 
-  const manifestoTitle = (
-    <>
-      {t("manifesto.title.primary")}
-      <span className="mt-3 block bg-linear-to-r from-violet-500 via-purple-500 to-indigo-600 bg-clip-text text-transparent">
-        {t("manifesto.title.secondary")}
-      </span>
-    </>
-  );
+  const manifestoTitle = <>{t("manifesto.title.primary")}</>;
 
   const manifestoPrinciples = ["clarity", "design", "strategy"].map((key) =>
     t(`manifesto.principles.${key}`)
@@ -100,6 +95,25 @@ export default function HomePage({ params }) {
   const manifestoLocations = ["jakarta", "singapore", "remote"].map((key) =>
     t(`manifesto.meta.locations.${key}`)
   );
+
+  const techItems = [
+    { name: "Next.js", icon: "next" },
+    { name: "React", icon: "react" },
+    { name: "AWS", icon: "aws" },
+    { name: "Supabase", icon: "supabase" },
+    { name: "MySQL", icon: "mysql" },
+    { name: "MongoDB", icon: "mongodb" },
+    { name: "Tailwind CSS", icon: "tailwind" },
+    { name: "Docker", icon: "docker" },
+    { name: "Contentful", icon: "contentful" },
+    { name: "Sanity", icon: "sanity" },
+    { name: "Vercel", icon: "vercel" },
+    { name: "Prisma", icon: "prisma" },
+    { name: "GraphQL", icon: "graphql" },
+    { name: "Figma", icon: "figma" },
+    { name: "After Effects", icon: "aftereffects" },
+    { name: "Notion", icon: "notion" },
+  ];
 
   return (
     <>
@@ -131,6 +145,13 @@ export default function HomePage({ params }) {
           body: t("studio.body"),
         }}
         highlights={studioHighlights}
+      />
+      <TechStackSection
+        copy={{
+          eyebrow: t("techStack.eyebrow"),
+          title: t("techStack.title"),
+        }}
+        items={techItems}
       />
       <AboutPreview
         locale={locale}

@@ -84,7 +84,7 @@ export default function ManifestoSection({ copy = {} }) {
         </div>
 
         {/* Divider */}
-        <div className="my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10" />
+        <div className="my-12 h-px w-full bg-linear-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10" />
 
         {/* Principles */}
         <div className="grid gap-6 lg:grid-cols-3">
@@ -109,13 +109,14 @@ export default function ManifestoSection({ copy = {} }) {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 rounded-2xl border border-zinc-200 bg-white/80 p-6 sm:p-8 backdrop-blur dark:border-white/10 dark:bg-white/5">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="relative mt-16 overflow-hidden rounded-2xl border border-zinc-200 bg-linear-to-r from-zinc-950 via-zinc-900 to-zinc-800 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.25)] sm:p-8 dark:border-white/10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent_55%)] opacity-70" />
+          <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
-              <div className="text-[11px] uppercase tracking-[0.3em] text-zinc-500 dark:text-white/50">
+              <div className="text-[11px] uppercase tracking-[0.3em] text-white/60">
                 {ctaTitle}
               </div>
-              <div className="mt-2 text-2xl font-light leading-snug sm:text-3xl text-zinc-900 dark:text-white">
+              <div className="mt-2 text-2xl font-light leading-snug text-white sm:text-3xl">
                 {ctaBody}
               </div>
             </div>
@@ -123,7 +124,7 @@ export default function ManifestoSection({ copy = {} }) {
             <div className="flex flex-wrap items-center gap-3">
               <Link
                 href="#contact"
-                className={`group inline-flex items-center gap-3 rounded-full border border-zinc-300 bg-linear-to-r ${ACCENT} px-7 py-3 text-sm font-medium text-white shadow-[0_18px_45px_rgba(124,58,237,.25)] transition-transform hover:scale-[1.02] dark:border-transparent`}
+                className={`group inline-flex items-center gap-3 rounded-full border border-white/20 bg-linear-to-r ${ACCENT} px-7 py-3 text-sm font-medium text-white shadow-[0_18px_45px_rgba(124,58,237,.35)] transition-transform hover:scale-[1.02]`}
                 aria-label={primaryCta}
               >
                 {primaryCta}
@@ -131,7 +132,7 @@ export default function ManifestoSection({ copy = {} }) {
               </Link>
               <Link
                 href="#services"
-                className="inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-white px-7 py-3 text-sm font-medium text-zinc-900 transition hover:bg-zinc-50 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15"
+                className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-7 py-3 text-sm font-medium text-white transition hover:bg-white/20"
                 aria-label={secondaryCta}
               >
                 {secondaryCta}
@@ -141,7 +142,7 @@ export default function ManifestoSection({ copy = {} }) {
         </div>
 
         {/* Meta row (opsional) */}
-        <div className="mt-20 pt-8 border-t border-zinc-200 text-sm text-zinc-500 dark:border-white/10 dark:text-white/50">
+        <div className="mt-16 pt-8 border-t border-zinc-200 text-sm text-zinc-500 dark:border-white/10 dark:text-white/50">
           <div className="flex flex-wrap items-center justify-between gap-6">
             <p>{metaStatement}</p>
             <div className="flex items-center gap-6">
