@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export function CasesCarousel({ copy, cases }) {
@@ -15,7 +16,13 @@ export function CasesCarousel({ copy, cases }) {
   return (
     <section className="bg-zinc-50 py-32 px-6 dark:bg-zinc-900 lg:px-12">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 max-w-3xl">
+        <motion.div
+          className="mb-16 max-w-3xl"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="mb-4 text-xs font-light uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40">
             {copy.eyebrow}
           </div>
@@ -25,9 +32,15 @@ export function CasesCarousel({ copy, cases }) {
           <p className="text-xl font-light leading-relaxed text-zinc-600 dark:text-white/60">
             {copy.body}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-6 lg:grid-cols-12">
+        <motion.div
+          className="grid gap-6 lg:grid-cols-12"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
           {cases.map((item, idx) => (
             <div
               key={item.title}
@@ -36,29 +49,29 @@ export function CasesCarousel({ copy, cases }) {
               }`}
               tabIndex={0}
             >
-              <div className="absolute inset-0">
+              <div className="absolute inset-0 will-change-transform">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover transition duration-1200 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-b from-zinc-900/10 via-zinc-950/50 to-black/80 opacity-70 transition group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-linear-to-b from-zinc-900/10 via-zinc-950/50 to-black/80 opacity-70 transition-opacity duration-700 ease-out group-hover:opacity-90" />
               </div>
 
               <div className="relative flex h-full flex-col justify-end p-8">
-                <h3 className="mt-4 text-3xl font-light text-white opacity-0 translate-y-2 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <h3 className="mt-4 text-3xl font-light text-white opacity-0 translate-y-1 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100 will-change-transform">
                   {item.title}
                 </h3>
                 <div className="mt-4 max-w-xl">
-                  <p className="text-base leading-relaxed text-white/70 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100">
+                  <p className="text-base leading-relaxed text-white/70 opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100 group-focus-within:opacity-100">
                     {item.summary}
                   </p>
                 </div>
                 <button
                   type="button"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.3em] text-white/70 transition hover:text-white focus:outline-none focus-visible:text-white"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.3em] text-white/70 transition-colors duration-500 hover:text-white focus:outline-none focus-visible:text-white"
                 >
                   {copy.cta}
                   <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -66,7 +79,7 @@ export function CasesCarousel({ copy, cases }) {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

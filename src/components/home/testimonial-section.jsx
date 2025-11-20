@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { motion } from "framer-motion";
 
 export function TestimonialSection({ copy = {}, testimonials = [] }) {
   if (!testimonials.length) return null;
@@ -31,7 +32,13 @@ export function TestimonialSection({ copy = {}, testimonials = [] }) {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl space-y-12">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <motion.div
+          className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <div className="space-y-6 max-w-3xl">
             <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/60">
               <Sparkles className="h-3 w-3 text-violet-300" />
@@ -52,7 +59,7 @@ export function TestimonialSection({ copy = {}, testimonials = [] }) {
               <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-1 group-hover:translate-x-1" />
             </Link>
           )}
-        </div>
+        </motion.div>
 
         <Swiper
           modules={[Autoplay]}
@@ -60,7 +67,9 @@ export function TestimonialSection({ copy = {}, testimonials = [] }) {
           spaceBetween={32}
           centeredSlides
           grabCursor
-          loop
+          loop={false}
+          initialSlide={0}
+          rewind
           autoplay={{ delay: 7000, disableOnInteraction: false }}
           breakpoints={{
             1024: { slidesPerView: 1.35, spaceBetween: 48 },

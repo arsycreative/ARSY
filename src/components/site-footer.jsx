@@ -1,8 +1,9 @@
 "use client";
 
 import { Mail, Phone, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Link, usePathname } from "@/i18n/navigation";
 
-export default function SiteFooter({ footer = {} }) {
+export default function SiteFooter({ footer = {}, navLinks = [] }) {
   const year = new Date().getFullYear();
 
   const studio = footer?.studio || "ARSY STUDIO";
@@ -23,6 +24,10 @@ export default function SiteFooter({ footer = {} }) {
     { label: "Journal", href: "/journal" },
   ];
 
+  const pathname = usePathname?.() || "";
+  const links = navLinks?.length ? navLinks : primaryLinks;
+  const isActive = (href = "") => pathname === href || (href && pathname?.startsWith(href + "/"));
+
   return (
     <footer className="relative bg-zinc-950 text-white">
       <div className="mx-auto max-w-7xl py-20">
@@ -36,29 +41,39 @@ export default function SiteFooter({ footer = {} }) {
                 <div className="absolute inset-0 h-12 w-12 rounded-full bg-linear-to-br from-violet-500 to-purple-500 blur opacity-40" />
               </div>
               <div className="leading-tight">
-                <span className="block text-base font-semibold tracking-[0.25em]">
+                <span className="block text-base font-semibold tracking-[0.2em]">
                   {studio}
                 </span>
-                <span className="block text-[0.65rem] uppercase tracking-[0.35em] text-white/50">
+                <span className="block text-[0.7rem] uppercase tracking-[0.3em] text-white/50">
                   {tagline}
                 </span>
               </div>
             </div>
-            <p className="max-w-md text-sm font-light text-white/60 lg:max-w-sm">
+            <p className="max-w-md text-base font-light text-white/60 lg:max-w-sm">
               {description}
             </p>
           </div>
 
           {/* Navigation */}
-          <nav className="flex flex-wrap justify-center gap-6 text-sm text-white/70 lg:justify-end">
-            {primaryLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="transition-colors hover:text-white"
+          <nav className="flex flex-wrap justify-center gap-6 text-sm lg:text-base text-white/70 lg:justify-end">
+            {links.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative transition-colors ${
+                  isActive(item.href)
+                    ? "text-white"
+                    : "hover:text-white"
+                }`}
               >
-                {link.label}
-              </a>
+                <span>{item.label}</span>
+                {isActive(item.href) && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute -bottom-1 left-0 h-0.5 w-full bg-linear-to-r from-violet-500 via-purple-500 to-indigo-500"
+                  />
+                )}
+              </Link>
             ))}
           </nav>
         </div>
@@ -92,7 +107,7 @@ export default function SiteFooter({ footer = {} }) {
               rel="noreferrer"
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all hover:border-white/20 hover:bg-white/10"
             >
-              <Linkedin className="h-4 w-4 text-white/70" />
+              <Linkedin className="h-5 w-5 text-white/70" />
             </a>
             <a
               href={footer?.social?.twitter || "#"}
@@ -101,7 +116,7 @@ export default function SiteFooter({ footer = {} }) {
               rel="noreferrer"
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all hover:border-white/20 hover:bg-white/10"
             >
-              <Twitter className="h-4 w-4 text-white/70" />
+              <Twitter className="h-5 w-5 text-white/70" />
             </a>
             <a
               href={footer?.social?.instagram || "#"}
@@ -110,7 +125,7 @@ export default function SiteFooter({ footer = {} }) {
               rel="noreferrer"
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all hover:border-white/20 hover:bg-white/10"
             >
-              <Instagram className="h-4 w-4 text-white/70" />
+              <Instagram className="h-5 w-5 text-white/70" />
             </a>
           </div>
         </div>

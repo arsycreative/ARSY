@@ -126,7 +126,7 @@ export default async function LocaleLayout({ children, params }) {
           <div className="relative z-10 flex min-h-screen flex-col">
             <SiteHeader locale={locale} navLinks={navLinks} />
             <main className="flex-1">{children}</main>
-            <SiteFooter footer={footer} />
+            <SiteFooter footer={footer} navLinks={navLinks} />
             <a
               href="https://wa.me/6281288981122"
               target="_blank"

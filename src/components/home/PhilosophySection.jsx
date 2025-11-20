@@ -1,6 +1,7 @@
 "use client";
 
 import { Lightbulb, Users, Target, Compass } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function PhilosophySection({ copy }) {
   const expertiseItems = [
@@ -22,7 +23,13 @@ export function PhilosophySection({ copy }) {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="max-w-3xl mb-20">
+        <motion.div
+          className="max-w-3xl mb-20"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-zinc-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-xl mb-6">
             <Compass className="h-4 w-4 text-violet-500" />
             <span className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/50 font-light">
@@ -36,7 +43,7 @@ export function PhilosophySection({ copy }) {
             {copy.subtitle ||
               "Kami percaya hasil terbaik lahir dari kolaborasi dan perhatian pada detail. Fokus kami ada pada menciptakan pengalaman digital yang berfungsi, menarik, dan relevan dengan kebutuhan pengguna."}
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
           {/* Left: Expertise */}
@@ -57,15 +64,19 @@ export function PhilosophySection({ copy }) {
 
             <div className="grid grid-cols-2 gap-3 pl-16">
               {expertiseItems.map((item, idx) => (
-                <div
+                <motion.div
                   key={idx}
                   className="group flex items-center gap-2 p-3 rounded-xl border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-violet-300 dark:hover:border-violet-500/50 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all"
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.5, delay: idx * 0.04 }}
                 >
                   <div className="h-1.5 w-1.5 rounded-full bg-violet-500 group-hover:scale-125 transition-transform" />
                   <span className="text-sm text-zinc-700 dark:text-white/70 group-hover:text-zinc-950 dark:group-hover:text-white font-light transition-colors">
                     {item}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

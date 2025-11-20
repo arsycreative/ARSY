@@ -18,6 +18,7 @@ import {
   SiTailwindcss,
   SiVercel,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const ICONS = {
   next: SiNextdotjs,
@@ -57,15 +58,27 @@ export function TechStackSection({ copy = {}, items = [] }) {
       `}</style>
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(147,124,255,0.2),transparent_55%)]" />
       <div className="relative space-y-10">
-        <div className="mx-auto max-w-7xl space-y-3">
+        <motion.div
+          className="mx-auto max-w-7xl space-y-3"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <p className="text-xs uppercase tracking-[0.4em] text-white/60">
             {copy.eyebrow}
           </p>
           <h2 className="text-5xl font-light leading-tight text-white lg:text-6xl">
             {copy.title}
           </h2>
-        </div>
-        <div className="relative -mx-6 overflow-hidden py-8 lg:-mx-12">
+        </motion.div>
+        <motion.div
+          className="relative -mx-6 overflow-hidden py-8 lg:-mx-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <div className="pointer-events-none absolute inset-0 " />
           <div
             className="flex w-[260%] gap-4 will-change-transform sm:w-[240%] sm:gap-16"
@@ -89,7 +102,7 @@ export function TechStackSection({ copy = {}, items = [] }) {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

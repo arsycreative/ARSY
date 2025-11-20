@@ -8,6 +8,7 @@ import {
   Sparkles,
   Workflow,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const iconMap = {
   web: Globe,
@@ -22,7 +23,13 @@ export function ServicesSection({ copy, cards }) {
   return (
     <section className="py-32 px-6 lg:px-12 bg-white dark:bg-zinc-950">
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-3xl mb-20">
+        <motion.div
+          className="max-w-3xl mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40 mb-4 font-light">
             {copy.eyebrow}
           </div>
@@ -32,15 +39,19 @@ export function ServicesSection({ copy, cards }) {
           <p className="text-xl text-zinc-600 dark:text-white/60 font-light leading-relaxed">
             {copy.body}
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {cards.map((card, idx) => {
             const Icon = iconMap[card.icon] || Code2;
             return (
-              <div
+              <motion.div
                 key={idx}
                 className="group relative p-8 rounded-3xl border border-zinc-200 dark:border-white/10 bg-linear-to-br from-zinc-50 to-white dark:from-white/5 dark:to-white/2 hover:border-zinc-300 dark:hover:border-white/20 transition-all hover:shadow-2xl hover:-translate-y-1"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: idx * 0.08, ease: "easeOut" }}
               >
                 <div className="absolute inset-0 bg-linear-to-br from-violet-500/0 to-purple-500/0 group-hover:from-violet-500/5 group-hover:to-purple-500/5 rounded-3xl transition-all" />
 
@@ -71,7 +82,7 @@ export function ServicesSection({ copy, cards }) {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

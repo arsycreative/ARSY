@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
@@ -58,20 +59,32 @@ export default function ManifestoSection({ copy = {} }) {
 
       <div className="relative mx-auto max-w-7xl py-24 ">
         {/* Eyebrow */}
-        <div className="mb-8">
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <div className="inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-white/70 px-4 py-2 backdrop-blur dark:border-white/10 dark:bg-white/5">
             <span className="relative inline-grid h-2 w-2 place-items-center">
-              <span className="absolute h-2 w-2 rounded-full bg-violet-500/80 animate-ping" />
+              <span className="absolute h-2 w-2 rounded-full bg-violet-400/40" />
               <span className="relative h-2 w-2 rounded-full bg-violet-600" />
             </span>
             <span className="text-[11px] uppercase tracking-[0.35em] text-zinc-600 dark:text-white/60">
               {eyebrow}
             </span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Heading + Lead */}
-        <div className="max-w-4xl">
+        <motion.div
+          className="max-w-4xl"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h2
             id="manifesto-heading"
             className="text-4xl leading-tight font-light sm:text-5xl lg:text-6xl"
@@ -81,7 +94,7 @@ export default function ManifestoSection({ copy = {} }) {
           <p className="mt-6 text-lg leading-relaxed text-zinc-600 dark:text-white/70">
             {lead}
           </p>
-        </div>
+        </motion.div>
 
         {/* Divider */}
         <div className="my-12 h-px w-full bg-linear-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10" />
@@ -89,9 +102,13 @@ export default function ManifestoSection({ copy = {} }) {
         {/* Principles */}
         <div className="grid gap-6 lg:grid-cols-3">
           {principles.map((line, i) => (
-            <div
+            <motion.div
               key={i}
               className="relative rounded-2xl border border-zinc-200 bg-white/70 p-6 backdrop-blur dark:border-white/10 dark:bg-white/5"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: i * 0.06, ease: "easeOut" }}
             >
               <div className="mb-4 flex items-center gap-3">
                 <span className="inline-grid h-6 w-6 place-items-center rounded-full bg-zinc-50 ring-1 ring-zinc-200 dark:bg-white/10 dark:ring-white/10">
@@ -104,12 +121,18 @@ export default function ManifestoSection({ copy = {} }) {
               <p className="text-lg leading-relaxed text-zinc-700 dark:text-white/80">
                 {line}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="relative mt-16 overflow-hidden rounded-2xl border border-zinc-200 bg-linear-to-r from-zinc-950 via-zinc-900 to-zinc-800 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.25)] sm:p-8 dark:border-white/10">
+        <motion.div
+          className="relative mt-16 overflow-hidden rounded-2xl border border-zinc-200 bg-linear-to-r from-zinc-950 via-zinc-900 to-zinc-800 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.25)] sm:p-8 dark:border-white/10"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent_55%)] opacity-70" />
           <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
@@ -139,7 +162,7 @@ export default function ManifestoSection({ copy = {} }) {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Meta row (opsional) */}
         <div className="mt-16 pt-8 border-t border-zinc-200 text-sm text-zinc-500 dark:border-white/10 dark:text-white/50">

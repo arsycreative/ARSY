@@ -3,13 +3,20 @@
 import { ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function AboutPreview({ copy, locale }) {
   return (
     <section className="py-32 px-6 lg:px-12 bg-white dark:bg-zinc-950">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative aspect-4/3 rounded-3xl overflow-hidden border border-zinc-200 dark:border-white/10 shadow-2xl">
+          <motion.div
+            className="relative aspect-4/3 rounded-3xl overflow-hidden border border-zinc-200 dark:border-white/10 shadow-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             <Image
               src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1600&q=90&auto=format&fit=crop"
               alt="Studio"
@@ -19,9 +26,15 @@ export function AboutPreview({ copy, locale }) {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-linear-to-t from-zinc-950/50 to-transparent" />
-          </div>
+          </motion.div>
 
-          <div className="space-y-8">
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+          >
             <div className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40 font-light">
               {copy.eyebrow}
             </div>
@@ -38,7 +51,7 @@ export function AboutPreview({ copy, locale }) {
               {copy.cta}
               <ChevronRight className="h-4 w-4" />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

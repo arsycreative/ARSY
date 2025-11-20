@@ -146,13 +146,7 @@ export default function HomePage({ params }) {
         }}
         highlights={studioHighlights}
       />
-      <TechStackSection
-        copy={{
-          eyebrow: t("techStack.eyebrow"),
-          title: t("techStack.title"),
-        }}
-        items={techItems}
-      />
+
       <AboutPreview
         locale={locale}
         copy={{
@@ -162,7 +156,13 @@ export default function HomePage({ params }) {
           cta: t("aboutPreview.cta"),
         }}
       />
-
+      <TechStackSection
+        copy={{
+          eyebrow: t("techStack.eyebrow"),
+          title: t("techStack.title"),
+        }}
+        items={techItems}
+      />
       <PhilosophySection
         copy={{
           eyebrow: "Our Philosophy",

@@ -120,9 +120,9 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
         <div
           className={`relative overflow-hidden rounded-2xl transition-colors duration-500 ${
             scrolled
-              ? "backdrop-blur supports-backdrop-filter:bg-white/70 dark:supports-backdrop-filter:bg-zinc-950/70 border-zinc-200/60 shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:border-white/15"
-              : "bg-transparent border-transparent"
-          } border`}
+              ? "backdrop-blur supports-backdrop-filter:bg-white/70 dark:supports-backdrop-filter:bg-zinc-950/70 shadow-[0_8px_32px_rgba(0,0,0,0.12)]"
+              : "bg-transparent"
+          }`}
         >
           <div
             className={`pointer-events-none absolute -inset-px rounded-2xl transition-opacity ${

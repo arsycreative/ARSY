@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function HeroSection({ copy, metrics }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -92,27 +93,57 @@ export default function HeroSection({ copy, metrics }) {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-0 py-32">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left content */}
-          <div className="space-y-12">
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl">
+          <motion.div
+            className="space-y-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+            >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400/80"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
+                <span className="absolute inline-flex h-full w-full rounded-full bg-violet-400/40" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-violet-500" />
               </span>
               <span className="text-xs uppercase tracking-[0.3em] text-white/70 font-light">
                 {copy.eyebrow}
               </span>
-            </div>
+            </motion.div>
 
             <div className="space-y-6">
-              <h1 className="text-6xl lg:text-7xl font-light text-white leading-[1.1] tracking-tight">
+              <motion.h1
+                className="text-6xl lg:text-7xl font-light text-white leading-[1.1] tracking-tight"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+              >
                 {copy.title}
-              </h1>
-              <p className="text-xl text-white/60 font-light leading-relaxed max-w-xl">
+              </motion.h1>
+              <motion.p
+                className="text-xl text-white/60 font-light leading-relaxed max-w-xl"
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.7, delay: 0.18 }}
+              >
                 {copy.body}
-              </p>
+              </motion.p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <motion.div
+              className="flex flex-wrap gap-4"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.26 }}
+            >
               <button className="group relative px-8 py-4 bg-white text-zinc-950 rounded-full font-medium overflow-hidden transition-all hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(255,255,255,0.12)]">
                 <span className="relative z-10 flex items-center gap-2">
                   {copy.primaryCta}
@@ -122,10 +153,16 @@ export default function HeroSection({ copy, metrics }) {
               <button className="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/5 transition-all backdrop-blur-xl">
                 {copy.secondaryCta}
               </button>
-            </div>
+            </motion.div>
 
             {/* Metrics */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
+            <motion.div
+              className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
               {metrics.map((metric, idx) => (
                 <div key={idx} className="space-y-2">
                   <div className="text-3xl font-light text-white tracking-tight">
@@ -136,8 +173,8 @@ export default function HeroSection({ copy, metrics }) {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right content - Visual showcase */}
           <div className="relative">
