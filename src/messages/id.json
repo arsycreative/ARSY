@@ -9,11 +9,6 @@
       "caption": "Sesi prototyping imersif",
       "captionBody": "Diabadikan di residensi Arsy Studio Jakarta.",
       "lottieLabel": "Telemetri realtime",
-      "metrics": {
-        "partners": { "label": "Peluncuran mitra", "value": "38" },
-        "conversion": { "label": "Rerata kenaikan konversi", "value": "+34%" },
-        "timeline": { "label": "Siklus studio", "value": "6-8 minggu" }
-      },
       "marquee": {
         "one": "Ruang strategi dipandu partner",
         "two": "CMS tailor-made + integrasi",

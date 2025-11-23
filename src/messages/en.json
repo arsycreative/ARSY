@@ -9,11 +9,6 @@
       "caption": "Immersive prototyping session",
       "captionBody": "Captured inside Arsy Studio's Jakarta residency.",
       "lottieLabel": "Realtime telemetry",
-      "metrics": {
-        "partners": { "label": "Partner launches", "value": "38" },
-        "conversion": { "label": "Avg. conversion lift", "value": "+34%" },
-        "timeline": { "label": "Studio sprints", "value": "6-8 weeks" }
-      },
       "marquee": {
         "one": "Strategy rooms led by partners",
         "two": "Bespoke CMS + integrations",

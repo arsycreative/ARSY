@@ -122,8 +122,6 @@ export default function AboutPage({ params }) {
             <p className="text-xl font-light text-white/70 leading-relaxed">
               {hero.body}
             </p>
-            <p className="text-sm text-white/50">{hero.detail}</p>
-            <p className="text-sm text-white/40">{hero.secondary}</p>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -133,12 +131,6 @@ export default function AboutPage({ params }) {
               {cta.primary}
               <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
-            <a
-              href="#studio"
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10"
-            >
-              {cta.secondary}
-            </a>
           </div>
         </div>
       </section>

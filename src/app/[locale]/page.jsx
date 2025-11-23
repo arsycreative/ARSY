@@ -40,11 +40,6 @@ export default function HomePage({ params }) {
     lottieLabel: t("hero.lottieLabel"),
   };
 
-  const heroMetrics = ["partners", "conversion", "timeline"].map((key) => ({
-    label: t(`hero.metrics.${key}.label`),
-    value: t(`hero.metrics.${key}.value`),
-  }));
-
   const marqueePhrases = ["one", "two", "three", "four"].map((key) =>
     t(`hero.marquee.${key}`)
   );
@@ -126,7 +121,7 @@ export default function HomePage({ params }) {
 
   return (
     <>
-      <HeroSection copy={heroCopy} metrics={heroMetrics} />
+      <HeroSection copy={heroCopy} />
       <div className="mt-10">
         <StudioMarquee phrases={marqueePhrases} />
       </div>

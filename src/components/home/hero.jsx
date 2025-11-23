@@ -5,7 +5,7 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function HeroSection({ copy, metrics }) {
+export default function HeroSection({ copy }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLit, setIsLit] = useState(false);
   const heroRef = useRef(null);
