@@ -1,6 +1,4 @@
 "use client";
-
-import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -28,8 +26,6 @@ export default function ManifestoSection({ copy = {} }) {
     ctaBody = "Mari wujudkan produk yang rapi, konsisten, dan menyatu dengan brand Anda.",
     primaryCta = "Mulai Diskusi",
     secondaryCta = "Lihat Layanan",
-    metaStatement = "Kualitas > Kuantitas • Focused capacity",
-    metaLocations = ["Jakarta", "Singapore", "Remote-first"],
     principleLabel = "Principle",
   } = copy;
 
@@ -47,17 +43,7 @@ export default function ManifestoSection({ copy = {} }) {
             "radial-gradient(60% 50% at 70% 0%, rgba(124,58,237,.20), transparent 60%), radial-gradient(40% 35% at 0% 100%, rgba(59,130,246,.10), transparent 60%)",
         }}
       />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 hidden dark:block"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
-          backgroundSize: "88px 88px",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-7xl py-24 ">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-24">
         {/* Eyebrow */}
         <motion.div
           className="mb-8"
@@ -164,22 +150,6 @@ export default function ManifestoSection({ copy = {} }) {
           </div>
         </motion.div>
 
-        {/* Meta row (opsional) */}
-        <div className="mt-16 pt-8 border-t border-zinc-200 text-sm text-zinc-500 dark:border-white/10 dark:text-white/50">
-          <div className="flex flex-wrap items-center justify-between gap-6">
-            <p>{metaStatement}</p>
-            <div className="flex items-center gap-6">
-              {metaLocations.map((location, index) => (
-                <Fragment key={`${location}-${index}`}>
-                  <span>{location}</span>
-                  {index < metaLocations.length - 1 && (
-                    <span className="h-1 w-1 rounded-full bg-zinc-300 dark:bg-white/30" />
-                  )}
-                </Fragment>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

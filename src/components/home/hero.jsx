@@ -90,7 +90,7 @@ export default function HeroSection({ copy, metrics }) {
       {/* Grid overlay (unchanged) */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[100px_100px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-0 py-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-32">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left content */}
           <motion.div

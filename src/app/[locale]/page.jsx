@@ -91,9 +91,18 @@ export default function HomePage({ params }) {
   const manifestoPrinciples = ["clarity", "design", "strategy"].map((key) =>
     t(`manifesto.principles.${key}`)
   );
+  const philosophyExpertiseItems = [
+    "responsiveWeb",
+    "mobileApps",
 
-  const manifestoLocations = ["jakarta", "singapore", "remote"].map((key) =>
-    t(`manifesto.meta.locations.${key}`)
+    "uiux",
+    "cms",
+    "ecommerce",
+    "customWeb",
+  ].map((key) => t(`philosophy.expertise.items.${key}`));
+
+  const philosophyProcessParagraphs = ["one", "two"].map((key) =>
+    t(`philosophy.process.paragraphs.${key}`)
   );
 
   const techItems = [
@@ -165,12 +174,14 @@ export default function HomePage({ params }) {
       />
       <PhilosophySection
         copy={{
-          eyebrow: "Our Philosophy",
-          title: "Collaboration & Precision",
-          subtitle:
-            "Kami percaya hasil terbaik lahir dari kolaborasi dan perhatian pada detail.",
-          expertiseTitle: "Keahlian Kami",
-          processTitle: "Proses Kami",
+          eyebrow: t("philosophy.eyebrow"),
+          title: t("philosophy.title"),
+          subtitle: t("philosophy.subtitle"),
+          expertiseTitle: t("philosophy.expertise.title"),
+          expertiseBody: t("philosophy.expertise.body"),
+          expertiseItems: philosophyExpertiseItems,
+          processTitle: t("philosophy.process.title"),
+          processParagraphs: philosophyProcessParagraphs,
         }}
       />
 
@@ -195,8 +206,6 @@ export default function HomePage({ params }) {
           primaryCta: t("manifesto.primaryCta"),
           secondaryCta: t("manifesto.secondaryCta"),
           principleLabel: t("manifesto.principleLabel"),
-          metaStatement: t("manifesto.meta.statement"),
-          metaLocations: manifestoLocations,
         }}
       />
     </>

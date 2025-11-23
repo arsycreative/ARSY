@@ -26,11 +26,6 @@ export function TestimonialSection({ copy = {}, testimonials = [] }) {
         className="pointer-events-none absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl"
         aria-hidden="true"
       />
-      <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:72px_72px]"
-        aria-hidden="true"
-      />
-
       <div className="relative z-10 mx-auto max-w-7xl space-y-12">
         <motion.div
           className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"

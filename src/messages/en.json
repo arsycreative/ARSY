@@ -87,7 +87,7 @@
     "studio": {
       "eyebrow": "Studio Pulse",
       "title": "Meticulous process, soulful detail.",
-      "body": "We share progress updates throughout each phase, keeping every milestone clear and aligned.",
+      "body": "Quick check-ins each phase keep milestones aligned.",
       "highlights": {
         "planning": {
           "tag": "01",
@@ -108,18 +108,48 @@
     },
     "aboutPreview": {
       "eyebrow": "Inside the studio",
-      "title": "A boutique team designing from Jakarta to Singapore.",
-      "body": "Twelve specialists in strategy, design, and engineering crafting sites that feel expensive yet human.",
+      "title": "Certified hands, simple guarantees.",
+      "body": "Every build is handled by trusted specialists, covered by quality checks, after-sales care, and a refund promise.",
+      "points": {
+        "certified": "Trusted specialists build every experience.",
+        "quality": "Layered quality checks keep the finish immaculate.",
+        "support": "After-sales care that actually sticks around.",
+        "refund": "Refund promise if the site ever disappoints."
+      },
       "cta": "Tour our philosophy"
     },
     "techStack": {
       "eyebrow": "Toolset",
       "title": "Frameworks we rely on daily."
     },
+    "philosophy": {
+      "eyebrow": "Our philosophy",
+      "title": "Collaboration & precision.",
+      "subtitle": "We believe remarkable work comes from shared focus and care for every detail. Each touchpoint must stay useful, elegant, and rooted in your audience.",
+      "expertise": {
+        "title": "What we handle",
+        "body": "A few disciplines we lead every week:",
+        "items": {
+          "uiux": "UI/UX design",
+          "responsiveWeb": "Responsive websites & web apps",
+          "cms": "Custom CMS builds",
+          "ecommerce": "Premium eCommerce",
+          "customWeb": "Bespoke web applications",
+          "mobileApps": "Mobile app design & development"
+        }
+      },
+      "process": {
+        "title": "How we work",
+        "paragraphs": {
+          "one": "Every engagement begins with listening. We study the business, the people who use it, and the tension we must solve before sketching solutions.",
+          "two": "Strategy, design, and engineering stay connected so launches feel refined and stay maintainable long after handoff."
+        }
+      }
+    },
     "testimonials": {
       "eyebrow": "Client reflections",
-      "title": "Partners choose us when every micro-detail matters.",
-      "body": "From fintech founders to boutique hospitality groups, we embed with leadership to choreograph every touchpoint.",
+      "title": "Clients choose us for neat work.",
+      "body": "From apps to hotels, we guide each step together.",
       "cta": "Discuss your launch",
       "items": {
         "lumina": {
@@ -163,15 +193,7 @@
       "ctaBody": "If you value detail, consistency, and care, we’re already aligned.",
       "primaryCta": "Start a conversation",
       "secondaryCta": "See services",
-      "principleLabel": "Principle",
-      "meta": {
-        "statement": "Quality > Quantity • Focused capacity",
-        "locations": {
-          "jakarta": "Jakarta",
-          "singapore": "Singapore",
-          "remote": "Remote-first"
-        }
-      }
+      "principleLabel": "Principle"
     }
   },
   "About": {

@@ -1,19 +1,23 @@
 "use client";
 
-import { Lightbulb, Users, Target, Compass } from "lucide-react";
+import { Lightbulb, Target, Compass } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function PhilosophySection({ copy }) {
-  const expertiseItems = [
-    "Desain UI/UX",
-    "Riset Pengguna",
-    "Website & Web App Responsif",
-    "Microsite Campaign",
-    "CMS Development",
-    "eCommerce",
-    "Aplikasi Web Kustom",
-    "Aplikasi Mobile",
-  ];
+  const {
+    eyebrow = "Our Philosophy",
+    title = "Collaboration & Precision",
+    subtitle =
+      "We believe every outcome should balance craft and performance for the people who use it.",
+    expertiseTitle = "Our Expertise",
+    expertiseBody = "A few disciplines we lead every day:",
+    expertiseItems = [],
+    processTitle = "Our Process",
+    processParagraphs = [
+      "We start by listening—understanding the business and the people it serves.",
+      "Teams stay connected from strategy through build so every detail feels intentional.",
+    ],
+  } = copy || {};
 
   return (
     <section className="relative py-32 px-6 lg:px-12 overflow-hidden bg-linear-to-br from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
@@ -33,15 +37,14 @@ export function PhilosophySection({ copy }) {
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-zinc-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-xl mb-6">
             <Compass className="h-4 w-4 text-violet-500" />
             <span className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/50 font-light">
-              {copy.eyebrow || "Our Philosophy"}
+              {eyebrow}
             </span>
           </div>
           <h2 className="text-5xl lg:text-6xl font-light text-zinc-950 dark:text-white mb-8 leading-tight">
-            {copy.title || "Collaboration & Precision"}
+            {title}
           </h2>
           <p className="text-xl text-zinc-600 dark:text-white/60 font-light leading-relaxed">
-            {copy.subtitle ||
-              "Kami percaya hasil terbaik lahir dari kolaborasi dan perhatian pada detail. Fokus kami ada pada menciptakan pengalaman digital yang berfungsi, menarik, dan relevan dengan kebutuhan pengguna."}
+            {subtitle}
           </p>
         </motion.div>
 
@@ -54,10 +57,10 @@ export function PhilosophySection({ copy }) {
               </div>
               <div>
                 <h3 className="text-2xl font-light text-zinc-950 dark:text-white mb-4">
-                  {copy.expertiseTitle || "Keahlian Kami"}
+                  {expertiseTitle}
                 </h3>
                 <p className="text-zinc-600 dark:text-white/60 font-light leading-relaxed mb-6">
-                  Beberapa bidang yang kami kuasai meliputi:
+                  {expertiseBody}
                 </p>
               </div>
             </div>
@@ -89,20 +92,17 @@ export function PhilosophySection({ copy }) {
               </div>
               <div>
                 <h3 className="text-2xl font-light text-zinc-950 dark:text-white mb-4">
-                  {copy.processTitle || "Proses Kami"}
+                  {processTitle}
                 </h3>
                 <div className="space-y-4">
-                  <p className="text-zinc-600 dark:text-white/60 font-light leading-relaxed">
-                    Setiap proyek dimulai dari pemahaman mendalam tentang bisnis
-                    dan penggunanya. Kami mendengarkan, menganalisis, lalu
-                    merancang strategi dan solusi yang tepat — sebelum
-                    mengeksekusinya dengan presisi dan perhatian penuh.
-                  </p>
-                  <p className="text-zinc-600 dark:text-white/60 font-light leading-relaxed">
-                    Dengan pendekatan ini, kami memastikan setiap hasil bukan
-                    hanya memenuhi ekspektasi, tapi juga membawa nilai nyata
-                    bagi brand dan penggunanya.
-                  </p>
+                  {processParagraphs.map((paragraph, idx) => (
+                    <p
+                      key={`process-${idx}`}
+                      className="text-zinc-600 dark:text-white/60 font-light leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>

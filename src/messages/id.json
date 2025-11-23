@@ -87,7 +87,7 @@
     "studio": {
       "eyebrow": "Ritme Studio",
       "title": "Proses yang teliti, detail yang penuh jiwa.",
-      "body": "Kami mengirim pembaruan perkembangan di setiap fase, memastikan setiap langkah jelas dan sejalan.",
+      "body": "Update singkat tiap fase bikin langkah tetap sejalan.",
       "highlights": {
         "planning": {
           "tag": "01",
@@ -108,18 +108,48 @@
     },
     "aboutPreview": {
       "eyebrow": "Dalam studio",
-      "title": "Tim butik dari Jakarta hingga Singapura.",
-      "body": "Dua belas spesialis strategi, desain, dan engineering yang merakit situs terasa mahal namun manusiawi.",
+      "title": "Tangan ahli, janji sederhana.",
+      "body": "Setiap website ditangani spesialis tersertifikasi dengan dukungan dan garansi jelas.",
+      "points": {
+        "certified": "Dikerjakan tim bersertifikat dan berpengalaman.",
+        "quality": "Ada kontrol kualitas di setiap tahap.",
+        "support": "After-sales support yang sigap dan hangat.",
+        "refund": "Garansi uang kembali bila hasilnya tidak memuaskan."
+      },
       "cta": "Jelajahi filosofi kami"
     },
     "techStack": {
       "eyebrow": "Perangkat",
       "title": "Teknologi andalan kami sehari-hari."
     },
+    "philosophy": {
+      "eyebrow": "Filosofi kami",
+      "title": "Kolaborasi & presisi.",
+      "subtitle": "Kami percaya karya terbaik lahir dari fokus bersama dan perhatian pada detail kecil. Setiap sentuhan harus berguna, elegan, dan relevan bagi audiensmu.",
+      "expertise": {
+        "title": "Yang kami tangani",
+        "body": "Beberapa disiplin yang kami kerjakan tiap minggu:",
+        "items": {
+          "uiux": "Desain UI/UX",
+          "responsiveWeb": "Website & web app responsif",
+          "cms": "CMS kustom",
+          "ecommerce": "eCommerce premium",
+          "customWeb": "Aplikasi web khusus",
+          "mobileApps": "Desain & pengembangan aplikasi mobile"
+        }
+      },
+      "process": {
+        "title": "Cara kami bekerja",
+        "paragraphs": {
+          "one": "Setiap proyek dimulai dengan mendengar. Kami pelajari bisnismu, pengguna, dan masalah yang harus dipecahkan sebelum menyusun solusi.",
+          "two": "Strategi, desain, dan engineering tetap terhubung agar peluncuran terasa rapi dan mudah dirawat setelah handover."
+        }
+      }
+    },
     "testimonials": {
       "eyebrow": "Cerita klien",
-      "title": "Mereka memilih kami saat detail menjadi pertaruhan.",
-      "body": "Dari founder fintech sampai grup hospitality butik, kami menyatu dengan tim inti untuk mengatur setiap titik interaksi.",
+      "title": "Klien memilih kami karena rapi.",
+      "body": "Dari aplikasi sampai hotel, kami dampingi langkah demi langkah.",
       "cta": "Bicarakan peluncuranmu",
       "items": {
         "lumina": {
@@ -163,15 +193,7 @@
       "ctaBody": "Jika kamu menghargai detail dan konsistensi, kita berada di jalur yang sama.",
       "primaryCta": "Mulai diskusi",
       "secondaryCta": "Lihat layanan",
-      "principleLabel": "Prinsip",
-      "meta": {
-        "statement": "Kualitas > Kuantitas • Kapasitas fokus",
-        "locations": {
-          "jakarta": "Jakarta",
-          "singapore": "Singapura",
-          "remote": "Remote-first"
-        }
-      }
+      "principleLabel": "Prinsip"
     }
   },
   "About": {

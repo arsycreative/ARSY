@@ -30,7 +30,7 @@ export default function SiteFooter({ footer = {}, navLinks = [] }) {
 
   return (
     <footer className="relative bg-zinc-950 text-white">
-      <div className="mx-auto max-w-7xl py-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20">
         {/* Top Section */}
         <div className="flex flex-col items-center justify-between gap-10 border-b border-white/10 pb-10 lg:flex-row">
           {/* Brand */}
