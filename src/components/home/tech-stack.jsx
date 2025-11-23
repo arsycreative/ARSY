@@ -91,10 +91,10 @@ export function TechStackSection({ copy = {}, items = [] }) {
               return (
                 <div
                   key={`${name}-${index}`}
-                  className="flex min-h-[140px] min-w-[150px] items-center justify-center px-3 sm:min-w-[220px] sm:px-6"
+                  className="group flex min-h-[140px] min-w-[150px] items-center justify-center px-3 sm:min-w-[220px] sm:px-6"
                 >
                   <Icon
-                    className="text-white drop-shadow-[0_12px_25px_rgba(0,0,0,0.35)]"
+                    className="text-white drop-shadow-[0_12px_25px_rgba(0,0,0,0.35)] transition-all duration-500 group-hover:scale-110 group-hover:text-violet-300"
                     style={{ width: "4.5rem", height: "4.5rem" }}
                   />
                   <span className="sr-only">{name}</span>

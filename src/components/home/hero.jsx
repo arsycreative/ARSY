@@ -155,25 +155,6 @@ export default function HeroSection({ copy, metrics }) {
               </button>
             </motion.div>
 
-            {/* Metrics */}
-            <motion.div
-              className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10"
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              {metrics.map((metric, idx) => (
-                <div key={idx} className="space-y-2">
-                  <div className="text-3xl font-light text-white tracking-tight">
-                    {metric.value}
-                  </div>
-                  <div className="text-xs uppercase tracking-[0.3em] text-white/40 font-light">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
           </motion.div>
 
           {/* Right content - Visual showcase */}
