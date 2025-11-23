@@ -119,25 +119,21 @@
     },
     "philosophy": {
       "eyebrow": "Filosofi kami",
-      "title": "Kolaborasi & presisi.",
-      "subtitle": "Kami percaya karya terbaik lahir dari fokus bersama dan perhatian pada detail kecil. Setiap sentuhan harus berguna, elegan, dan relevan bagi audiensmu.",
-      "expertise": {
-        "title": "Yang kami tangani",
-        "body": "Beberapa disiplin yang kami kerjakan tiap minggu:",
-        "items": {
-          "uiux": "Desain UI/UX",
-          "responsiveWeb": "Website & web app responsif",
-          "cms": "CMS kustom",
-          "ecommerce": "eCommerce premium",
-          "customWeb": "Aplikasi web khusus",
-          "mobileApps": "Desain & pengembangan aplikasi mobile"
+      "title": "Visi & misi.",
+      "vision": {
+        "title": "Visi",
+        "lines": {
+          "lineOne": "Menjadi mitra kreatif terpercaya",
+          "lineTwo": "dalam transformasi digital bisnis",
+          "lineThree": "di Indonesia."
         }
       },
-      "process": {
-        "title": "Cara kami bekerja",
-        "paragraphs": {
-          "one": "Setiap proyek dimulai dengan mendengar. Kami pelajari bisnismu, pengguna, dan masalah yang harus dipecahkan sebelum menyusun solusi.",
-          "two": "Strategi, desain, dan engineering tetap terhubung agar peluncuran terasa rapi dan mudah dirawat setelah handover."
+      "mission": {
+        "title": "Misi",
+        "items": {
+          "one": "Menyediakan solusi digital berkualitas dengan pendekatan kreatif dan user-centered.",
+          "two": "Memberikan layanan terbaik yang sesuai dengan kebutuhan dan tujuan klien.",
+          "three": "Mendorong pertumbuhan bisnis melalui inovasi dan teknologi."
         }
       }
     },
@@ -194,9 +190,9 @@
   "About": {
     "hero": {
       "eyebrow": "Tentang kami",
-      "title": "Kami lebih dari sekadar studio digital.",
-      "body": "Kami adalah tim kreatif yang memadukan desain, teknologi, dan cerita agar brand terasa hidup di dunia digital. Setiap proyek kami mulai dengan memahami manusia di balik idenya.",
-      "detail": "Kami percaya pengalaman digital yang bermakna lahir dari keseimbangan antara fungsi dan emosi.",
+      "title": "Studio digital dengan akar Bandung.",
+      "body": "Kami memadukan desain, engineering, dan cerita agar brand terasa hidup. Semua dimulai dengan memahami orang di balik idenya.",
+      "detail": "Pengalaman terbaik lahir dari seimbangnya fungsi dan rasa.",
       "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1800&auto=format&fit=crop&q=80",
       "secondary": "Kami selalu dekat dengan orang yang akan memakai produk agar setiap interaksi terasa penuh perhatian.",
       "highlights": {
@@ -214,20 +210,20 @@
     },
     "who": {
       "eyebrow": "Siapa kami",
-      "title": "Studio multidisiplin dengan sentuhan manusiawi.",
-      "body": "Studio ini lahir dari keyakinan bahwa teknologi bisa terasa manusiawi. Kami tumbuh di energi kreatif Bandung dan berkembang bersama brand yang percaya pada proses kolaboratif.",
+      "title": "Studio kecil dengan sentuhan manusia.",
+      "body": "Kami tumbuh dari energi kreatif Bandung dan percaya teknologi tetap bisa terasa hangat dan kolaboratif.",
       "cards": {
         "roots": {
           "title": "Akar di Bandung",
-          "body": "Besar di kota penuh energi kreatif, kehangatan itu kami bawa ke setiap kemitraan."
+          "body": "Lahir di Bandung yang penuh energi kreatif, kehangatan itu selalu kami bawa."
         },
         "craft": {
           "title": "Merancang, membangun, merawat",
-          "body": "Kami merancang, membangun, dan merawat produk digital agar bisnis terhubung dengan audiens secara hangat, intuitif, dan berkarakter."
+          "body": "Kami membentuk produk digital agar brandmu tersambung dengan cara hangat dan intuitif."
         },
         "relationships": {
           "title": "Hubungan jangka panjang",
-          "body": "Kami tidak hanya mengerjakan proyek. Kami membangun kepercayaan agar kolaborasi tetap jujur dan panjang."
+          "body": "Kami fokus membangun kepercayaan supaya kolaborasi tetap jujur dan awet."
         }
       }
     },
@@ -248,36 +244,32 @@
         "listen": {
           "tag": "01",
           "title": "Mendengar & memahami",
-          "body": "Kami mulai dari cerita, mendengarkan kebutuhan, memahami audiens, dan menggali makna di balik ide."
+          "body": "Kami mulai dengan mendengar cerita dan audiensmu."
         },
         "craft": {
           "tag": "02",
           "title": "Merancang & membangun",
-          "body": "Kami menerjemahkan ide menjadi bentuk visual dan fungsional, menyeimbangkan estetika dan performa."
+          "body": "Ide kami ubah jadi antarmuka yang rapi dan fungsional."
         },
         "sustain": {
           "tag": "03",
           "title": "Menjaga & mengembangkan",
-          "body": "Setelah peluncuran kami tetap ada, memastikan semuanya berjalan mulus dan berevolusi bersama bisnismu."
+          "body": "Setelah rilis kami tetap dampingi agar semua stabil."
         }
       }
     },
     "reasons": {
       "eyebrow": "Kenapa memilih kami",
-      "title": "Manusiawi, teliti, kolaboratif.",
+      "title": "Pendekatan hangat, proses transparan.",
       "items": {
-        "human": {
-          "title": "Pendekatan manusiawi",
-          "body": "Kami memahami bahwa di balik setiap produk ada manusia yang menggunakannya."
-        },
-        "quality": {
-          "title": "Kualitas tanpa kompromi",
-          "body": "Setiap detail kami kerjakan dengan teliti, dari arsitektur sistem hingga mikrointeraksi."
-        },
-        "collaboration": {
-          "title": "Kolaborasi terbuka",
-          "body": "Klien terlibat aktif di setiap tahap agar keputusan selalu transparan."
-        }
+        "one": "Dikerjakan oleh profesional dan berpengalaman.",
+        "two": "Desain eksklusif dan modern.",
+        "three": "Teknologi terkini.",
+        "four": "Komunikasi cepat dan responsif.",
+        "five": "Disesuaikan dengan kebutuhan klien.",
+        "six": "After-sales support.",
+        "seven": "Garansi kualitas.",
+        "eight": "Proses transparan dan fleksibel."
       }
     },
     "metrics": {
@@ -297,8 +289,7 @@
       "eyebrow": "Mari berkenalan",
       "title": "Ceritakan hal besar berikutnya yang ingin kamu bangun.",
       "body": "Kami senang bekerja dengan orang yang punya visi. Ceritakan ide, brand, atau tantanganmu dan kami bantu menerjemahkannya ke pengalaman digital yang hidup.",
-      "primary": "Mulai percakapan",
-      "secondary": "Email studio"
+      "primary": "Mulai percakapan"
     }
   },
   "ServicesPage": {

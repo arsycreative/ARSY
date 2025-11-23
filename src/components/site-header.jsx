@@ -81,7 +81,7 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
     pathname === href || (href && pathname?.startsWith(href + "/"));
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50 px-6 lg:px-12">
       {showAnnouncement && (
         <div
           role="region"
@@ -113,7 +113,7 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
       )}
 
       <div
-        className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-0 transition-[padding] ${
+        className={`mx-auto max-w-7xl transition-[padding] ${
           scrolled ? "pt-3" : "pt-6"
         }`}
       >
@@ -133,7 +133,7 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
             <div className="absolute inset-0 rounded-2xl bg-[conic-gradient(at_10%_10%,#a78bfa,transparent_25%,#60a5fa_40%,transparent_60%,#c084fc_75%,transparent)] blur-[10px]" />
           </div>
 
-          <div className="relative flex items-center justify-between px-4 py-3 sm:px-6">
+          <div className="relative flex items-center justify-between px-4 py-3 sm:px-6 lg:px-6">
             {/* Logo */}
             <Link
               href="/"

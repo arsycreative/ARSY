@@ -29,8 +29,8 @@ export default function SiteFooter({ footer = {}, navLinks = [] }) {
   const isActive = (href = "") => pathname === href || (href && pathname?.startsWith(href + "/"));
 
   return (
-    <footer className="relative bg-zinc-950 text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20">
+    <footer className="relative bg-zinc-950 px-6 py-24 text-white lg:px-12">
+      <div className="mx-auto max-w-7xl">
         {/* Top Section */}
         <div className="flex flex-col items-center justify-between gap-10 border-b border-white/10 pb-10 lg:flex-row">
           {/* Brand */}

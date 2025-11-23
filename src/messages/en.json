@@ -194,9 +194,9 @@
   "About": {
     "hero": {
       "eyebrow": "About us",
-      "title": "We are more than a digital practice.",
-      "body": "We are a creative team weaving design, technology, and storytelling so brands feel alive online. Every engagement begins with understanding the people behind the idea.",
-      "detail": "We believe remarkable digital experiences are born at the balance of function and emotion.",
+      "title": "A digital studio rooted in Bandung.",
+      "body": "We mix design, engineering, and story so brands feel alive online. Everything starts by understanding the people behind the idea.",
+      "detail": "Great experiences come from balancing function with feeling.",
       "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1800&auto=format&fit=crop&q=80",
       "secondary": "We stay close to the humans who will use what we build so every interaction feels considered.",
       "highlights": {
@@ -214,31 +214,41 @@
     },
     "who": {
       "eyebrow": "Who we are",
-      "title": "A multidisciplinary studio with a human touch.",
-      "body": "Our studio was born from the belief that technology can feel human. We grew in Bandung's creative energy and matured with brands that value collaboration.",
+      "title": "A small studio with a warm touch.",
+      "body": "We grew up in Bandung's creative energy and still believe technology should feel human and collaborative.",
       "cards": {
         "roots": {
           "title": "Roots in Bandung",
-          "body": "Raised in a city full of creative energy, we carry that warmth into every partnership."
+          "body": "Raised in Bandung’s creative scene. We keep that warmth in every partnership."
         },
         "craft": {
           "title": "Design, build, care",
-          "body": "We design, engineer, and steward digital products that help businesses connect with their audience in a warm, intuitive, character-led way."
+          "body": "We shape digital products so brands meet people in warm, intuitive moments."
         },
         "relationships": {
           "title": "Long-term relationships",
-          "body": "We do more than deliver projects. We build trust so the collaboration stays honest and long lasting."
+          "body": "We focus on trust so every collaboration stays open and lasting."
         }
       }
     },
     "philosophy": {
       "eyebrow": "Our philosophy",
-      "title": "Meticulous process, soulful outcomes.",
-      "body": "Every design decision, line of code, and interaction detail is crafted with a clear intent.",
-      "detail": "We are not racing after trends. We create work that remains relevant, functional, and directional.",
-      "pillars": {
-        "intent": "Every artifact stays intentional, from systems architecture to microcopy.",
-        "clarity": "Perfection means clarity that feels effortless, not decoration."
+      "title": "Vision & mission.",
+      "vision": {
+        "title": "Vision",
+        "lines": {
+          "lineOne": "Become the trusted creative partner",
+          "lineTwo": "for business digital transformation",
+          "lineThree": "across Indonesia."
+        }
+      },
+      "mission": {
+        "title": "Mission",
+        "items": {
+          "one": "Deliver quality digital solutions with a creative, user-centered mindset.",
+          "two": "Provide service that aligns with every client's needs and goals.",
+          "three": "Drive business growth through innovation and technology."
+        }
       }
     },
     "process": {
@@ -248,36 +258,32 @@
         "listen": {
           "tag": "01",
           "title": "Listen & understand",
-          "body": "We start with stories, listening to needs, audiences, and the meaning behind every idea."
+          "body": "We hear your goals and audience first."
         },
         "craft": {
           "tag": "02",
           "title": "Design & build",
-          "body": "Ideas move from sketches to tactile interfaces, balancing aesthetics and performance."
+          "body": "Sketches become interfaces that feel refined."
         },
         "sustain": {
           "tag": "03",
           "title": "Sustain & evolve",
-          "body": "After launch we stay close, keeping everything smooth while evolving with the business."
+          "body": "We stay nearby after launch so everything keeps working."
         }
       }
     },
     "reasons": {
       "eyebrow": "Why choose us",
-      "title": "Human, exacting, collaborative.",
+      "title": "People-first craft, transparent process.",
       "items": {
-        "human": {
-          "title": "Human approach",
-          "body": "We understand that every product is used by people with needs, emotion, and context."
-        },
-        "quality": {
-          "title": "Uncompromising quality",
-          "body": "Every detail is handled carefully, from system architecture down to micro-interactions."
-        },
-        "collaboration": {
-          "title": "Open collaboration",
-          "body": "Clients stay involved at every stage so decisions remain transparent and meaningful."
-        }
+        "one": "Handled by seasoned professionals.",
+        "two": "Exclusive, modern design language.",
+        "three": "Latest technology stack.",
+        "four": "Fast, responsive communication.",
+        "five": "Tailored to each client's needs.",
+        "six": "After-sales support that stays.",
+        "seven": "Quality guarantee.",
+        "eight": "Transparent, flexible process."
       }
     },
     "metrics": {
@@ -297,8 +303,7 @@
       "eyebrow": "Let's connect",
       "title": "Tell us about the next big thing you want to build.",
       "body": "We love working with people who have a vision. Share the idea, brand, or challenge and we'll translate it into a living digital experience.",
-      "primary": "Start a conversation",
-      "secondary": "Email the studio"
+      "primary": "Start a conversation"
     }
   },
   "ServicesPage": {

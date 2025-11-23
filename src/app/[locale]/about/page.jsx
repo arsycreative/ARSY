@@ -5,12 +5,11 @@ import { Link } from "@/i18n/navigation";
 import {
   ArrowUpRight,
   BookOpen,
-  Gem,
-  HeartHandshake,
   PenTool,
   RefreshCcw,
   Sparkles,
-  Users,
+  Eye,
+  Target,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -18,12 +17,6 @@ const processIcons = {
   listen: BookOpen,
   craft: PenTool,
   sustain: RefreshCcw,
-};
-
-const reasonIcons = {
-  human: HeartHandshake,
-  quality: Gem,
-  collaboration: Sparkles,
 };
 
 export default function AboutPage({ params }) {
@@ -54,9 +47,18 @@ export default function AboutPage({ params }) {
   const philosophy = {
     eyebrow: t("philosophy.eyebrow"),
     title: t("philosophy.title"),
-    body: t("philosophy.body"),
-    detail: t("philosophy.detail"),
-    pillars: ["intent", "clarity"].map((key) => t(`philosophy.pillars.${key}`)),
+    vision: {
+      title: t("philosophy.vision.title"),
+      lines: ["lineOne", "lineTwo", "lineThree"].map((key) =>
+        t(`philosophy.vision.lines.${key}`)
+      ),
+    },
+    mission: {
+      title: t("philosophy.mission.title"),
+      items: ["one", "two", "three"].map((key) =>
+        t(`philosophy.mission.items.${key}`)
+      ),
+    },
   };
 
   const process = {
@@ -73,11 +75,16 @@ export default function AboutPage({ params }) {
   const reasons = {
     eyebrow: t("reasons.eyebrow"),
     title: t("reasons.title"),
-    items: ["human", "quality", "collaboration"].map((key) => ({
-      key,
-      title: t(`reasons.items.${key}.title`),
-      body: t(`reasons.items.${key}.body`),
-    })),
+    items: [
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+    ].map((key) => t(`reasons.items.${key}`)),
   };
 
   const metrics = {
@@ -94,7 +101,6 @@ export default function AboutPage({ params }) {
     title: t("cta.title"),
     body: t("cta.body"),
     primary: t("cta.primary"),
-    secondary: t("cta.secondary"),
   };
 
   return (
@@ -122,15 +128,6 @@ export default function AboutPage({ params }) {
             <p className="text-xl font-light text-white/70 leading-relaxed">
               {hero.body}
             </p>
-          </div>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
-            >
-              {cta.primary}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
           </div>
         </div>
       </section>
@@ -174,59 +171,76 @@ export default function AboutPage({ params }) {
           className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
           aria-hidden="true"
         />
-        <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="grid gap-16 lg:grid-cols-[0.9fr,1.1fr]">
-            <div className="space-y-6">
-              <p className="text-xs uppercase tracking-[0.4em] text-white/40">
-                {philosophy.eyebrow}
-              </p>
-              <h2 className="text-5xl lg:text-6xl font-light leading-tight">
-                {philosophy.title}
-              </h2>
-              <p className="text-xl font-light text-white/70 leading-relaxed">
-                {philosophy.body}
-              </p>
-              <p className="text-sm text-white/50">{philosophy.detail}</p>
-              <div className="space-y-3">
-                {philosophy.pillars.map((pillar) => (
+        <div className="relative z-10 mx-auto max-w-7xl space-y-12">
+          <div className="space-y-6">
+            <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+              {philosophy.eyebrow}
+            </p>
+            <h2 className="text-5xl lg:text-6xl font-light leading-tight">
+              {philosophy.title}
+            </h2>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="rounded-3xl border border-white/15 bg-white/5 p-8 shadow-[0_30px_120px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition hover:border-white/30 hover:bg-white/10">
+              <div className="flex items-center gap-3 text-sm uppercase tracking-[0.4em] text-white/50">
+                <Eye className="h-5 w-5 text-violet-300" />
+                {philosophy.vision.title}
+              </div>
+              <div className="mt-6 space-y-2 text-2xl font-light leading-tight text-white/90">
+                {philosophy.vision.lines.map((line, idx) => (
+                  <p key={`vision-line-${idx}`}>{line}</p>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-3xl border border-white/15 bg-linear-to-br from-white/5 to-white/10 p-8 shadow-[0_25px_90px_rgba(0,0,0,0.3)]">
+              <div className="flex items-center gap-3 text-sm uppercase tracking-[0.4em] text-white/50">
+                <Target className="h-5 w-5 text-violet-300" />
+                {philosophy.mission.title}
+              </div>
+              <div className="mt-6 space-y-4">
+                {philosophy.mission.items.map((item, idx) => (
                   <div
-                    key={pillar}
-                    className="flex items-center gap-4 rounded-2xl border border-white/15 bg-white/5 px-5 py-4 transition-all duration-300 hover:border-white/30 hover:bg-white/10"
+                    key={`mission-item-${idx}`}
+                    className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base font-light leading-relaxed text-white/80"
                   >
-                    <Users className="h-5 w-5 text-violet-300" />
-                    <p className="text-white/80">{pillar}</p>
+                    <span className="mt-1 h-2 w-2 rounded-full bg-violet-300" />
+                    <p>{item}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="grid gap-6 md:grid-cols-3">
-              {process.steps.map((step) => {
-                const Icon = processIcons[step.key] || BookOpen;
-                return (
-                  <div
-                    key={step.title}
-                    className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
-                  >
-                    <p className="text-xs uppercase tracking-[0.4em] text-white/40">
-                      {step.tag}
-                    </p>
-                    <div className="mt-4 flex items-center gap-3">
-                      <div className="rounded-2xl bg-white/10 p-3 text-white/80 transition group-hover:bg-white/20">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <h3 className="text-lg font-light">{step.title}</h3>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {process.steps.map((step) => {
+              const Icon = processIcons[step.key] || BookOpen;
+              return (
+                <div
+                  key={step.title}
+                  className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
+                >
+                  <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+                    {step.tag}
+                  </p>
+                  <div className="mt-4 flex items-center gap-3">
+                    <div className="rounded-2xl bg-white/10 p-3 text-white/80 transition group-hover:bg-white/20">
+                      <Icon className="h-5 w-5" />
                     </div>
-                    <p className="mt-4 text-sm text-white/60">{step.body}</p>
+                    <h3 className="text-lg font-light">{step.title}</h3>
                   </div>
-                );
-              })}
-            </div>
+                  <p className="mt-4 text-sm text-white/60">{step.body}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-zinc-50 py-24 px-6 dark:bg-zinc-950 lg:px-12">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(147,51,234,0.08),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(59,130,246,0.12),transparent_55%)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl space-y-10">
           <div className="max-w-3xl space-y-6">
             <p className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40">
               {reasons.eyebrow}
@@ -235,26 +249,23 @@ export default function AboutPage({ params }) {
               {reasons.title}
             </h2>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {reasons.items.map((item) => {
-              const Icon = reasonIcons[item.key] || Sparkles;
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-3xl border border-zinc-200/70 bg-white p-8 shadow-[0_25px_80px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_35px_100px_rgba(0,0,0,0.1)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
-                >
-                  <div className="mb-4 inline-flex rounded-2xl bg-zinc-900/90 p-3 text-white transition group-hover:bg-zinc-900 dark:bg-white/10 dark:text-white">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-xl font-light text-zinc-900 dark:text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-zinc-500 dark:text-white/60">
-                    {item.body}
+          <div className="grid gap-6 lg:grid-cols-2">
+            {reasons.items.map((item, idx) => (
+              <div
+                key={`${item}-${idx}`}
+                className="group relative overflow-hidden rounded-[36px] border border-zinc-200/70 bg-white/80 p-8 shadow-[0_25px_90px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-zinc-300 hover:bg-white dark:border-white/10 dark:bg-zinc-900/70 dark:hover:border-white/30"
+              >
+                <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-transparent via-violet-400/40 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                <div className="relative flex items-center gap-6">
+                  <span className="text-3xl font-light text-zinc-400 dark:text-white/30">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-xl font-light leading-relaxed text-zinc-900 dark:text-white">
+                    {item}
                   </p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -310,12 +321,6 @@ export default function AboutPage({ params }) {
               {cta.primary}
               <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
-            <a
-              href="mailto:hello@arsystudio.com"
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10 hover:border-white/60"
-            >
-              {cta.secondary}
-            </a>
           </div>
         </div>
       </section>

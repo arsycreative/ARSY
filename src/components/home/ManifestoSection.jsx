@@ -31,7 +31,7 @@ export default function ManifestoSection({ copy = {} }) {
 
   return (
     <section
-      className="relative overflow-hidden bg-white text-zinc-950 dark:bg-zinc-950 dark:text-white"
+      className="relative overflow-hidden bg-white px-6 py-24 text-zinc-950 dark:bg-zinc-950 dark:text-white lg:px-12"
       aria-labelledby="manifesto-heading"
     >
       {/* Dekorasi lembut (light & dark) */}
@@ -43,7 +43,7 @@ export default function ManifestoSection({ copy = {} }) {
             "radial-gradient(60% 50% at 70% 0%, rgba(124,58,237,.20), transparent 60%), radial-gradient(40% 35% at 0% 100%, rgba(59,130,246,.10), transparent 60%)",
         }}
       />
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-24">
+      <div className="relative mx-auto max-w-7xl">
         {/* Eyebrow */}
         <motion.div
           className="mb-8"
