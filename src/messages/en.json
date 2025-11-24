@@ -299,6 +299,29 @@
         }
       }
     },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions partners ask most often.",
+      "body": "A short, curated list so you know how we collaborate before the first call.",
+      "items": {
+        "process": {
+          "question": "How do we start working together?",
+          "answer": "We begin with a discovery session to understand your goals, audience, and constraints. From there we outline scope, timeline, and the core team before any design happens."
+        },
+        "timeline": {
+          "question": "What does a typical timeline look like?",
+          "answer": "Most flagship projects run 6–10 weeks depending on complexity. We only take on two concurrent launches so every milestone stays focused."
+        },
+        "ownership": {
+          "question": "Do we get access to files and systems?",
+          "answer": "Yes. Design files, code repositories, and documentation are handed over progressively so your team is never locked out."
+        },
+        "support": {
+          "question": "What about post-launch support?",
+          "answer": "We stay involved for stabilisation and can extend retainers for iteration, optimisation, or new feature work."
+        }
+      }
+    },
     "cta": {
       "eyebrow": "Let's connect",
       "title": "Tell us about the next big thing you want to build.",

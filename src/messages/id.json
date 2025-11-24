@@ -295,6 +295,29 @@
         }
       }
     },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Pertanyaan yang paling sering kami terima.",
+      "body": "Daftar singkat agar kamu paham cara kami berkolaborasi bahkan sebelum diskusi dimulai.",
+      "items": {
+        "process": {
+          "question": "Bagaimana proses awalnya?",
+          "answer": "Kami mulai dengan sesi discovery untuk memahami tujuan, audiens, dan batasanmu. Setelah itu kami merinci scope, timeline, dan tim inti sebelum desain dimulai."
+        },
+        "timeline": {
+          "question": "Berapa lama proyek biasanya berjalan?",
+          "answer": "Sebagian besar proyek flagship berlangsung 6–10 minggu tergantung kompleksitas. Kami hanya menangani dua peluncuran sekaligus agar fokus terjaga."
+        },
+        "ownership": {
+          "question": "Apakah kami mendapat akses file dan sistem?",
+          "answer": "Tentu. File desain, repositori kode, dan dokumentasi diserahkan secara bertahap sehingga timmu tidak pernah terkunci."
+        },
+        "support": {
+          "question": "Bagaimana dukungan setelah peluncuran?",
+          "answer": "Kami tetap mendampingi untuk stabilisasi dan bisa memperpanjang retainer untuk iterasi, optimasi, atau fitur baru."
+        }
+      }
+    },
     "cta": {
       "eyebrow": "Mari berkenalan",
       "title": "Ceritakan hal besar berikutnya yang ingin kamu bangun.",

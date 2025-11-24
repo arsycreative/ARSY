@@ -12,6 +12,7 @@ import {
   Target,
 } from "lucide-react";
 import Image from "next/image";
+import FAQSection from "@/components/about/faq-section";
 
 const processIcons = {
   listen: BookOpen,
@@ -82,6 +83,17 @@ export default function AboutPage({ params }) {
       "seven",
       "eight",
     ].map((key) => t(`reasons.items.${key}`)),
+  };
+
+  const faq = {
+    eyebrow: t("faq.eyebrow"),
+    title: t("faq.title"),
+    body: t("faq.body"),
+    items: ["process", "timeline", "ownership", "support"].map((key) => ({
+      id: key,
+      question: t(`faq.items.${key}.question`),
+      answer: t(`faq.items.${key}.answer`),
+    })),
   };
 
   const metrics = {
@@ -266,6 +278,8 @@ export default function AboutPage({ params }) {
           </div>
         </div>
       </section>
+
+      <FAQSection copy={faq} />
 
       <section className="bg-zinc-50 py-24 px-6 dark:bg-zinc-900 lg:px-12">
         <div className="mx-auto max-w-7xl">
