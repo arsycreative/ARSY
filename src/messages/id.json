@@ -439,8 +439,7 @@
       "eyebrow": "Siap membangun?",
       "title": "Mari kita orkestrasi flagship berikutnya.",
       "body": "Bawa brief, intuisi, atau roadmap produkmu. Kami akan membalas dengan rencana khusus kurang dari 24 jam.",
-      "primary": "Mulai brief",
-      "secondary": "Email studio"
+      "primary": "Mulai brief"
     }
   },
   "ContactPage": {
@@ -451,9 +450,7 @@
       "detail": "Kami hanya menangani dua engagement bersamaan agar setiap build terasa sinematik dan terkontrol.",
       "image": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
       "primaryCta": "Jadwalkan discovery call",
-      "secondaryCta": "Email studio",
       "primaryHref": "https://cal.com/arsy-studio/discovery",
-      "secondaryHref": "mailto:hello@arsystudio.com",
       "directLabel": "Akses langsung",
       "cardSubcopy": "Kirimkan deck, tantangan, atau sekadar intuisi awal.",
       "highlights": {

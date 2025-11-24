@@ -443,8 +443,7 @@
       "eyebrow": "Ready to build?",
       "title": "Let’s choreograph the next flagship together.",
       "body": "Bring the brief, the hunch, or the product roadmap. We’ll respond with a tailored plan in under 24 hours.",
-      "primary": "Start the brief",
-      "secondary": "Email the studio"
+      "primary": "Start the brief"
     }
   },
   "ContactPage": {
@@ -455,9 +454,7 @@
       "detail": "We cap ourselves at two concurrent engagements so every build feels cinematic and controlled.",
       "image": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
       "primaryCta": "Book a discovery call",
-      "secondaryCta": "Email the studio",
       "primaryHref": "https://cal.com/arsy-studio/discovery",
-      "secondaryHref": "mailto:hello@arsystudio.com",
       "directLabel": "Direct access",
       "cardSubcopy": "Send the deck, challenge, or even a whisper of an idea.",
       "highlights": {

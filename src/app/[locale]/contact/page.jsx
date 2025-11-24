@@ -31,9 +31,7 @@ export default function ContactPage({ params }) {
     detail: t("hero.detail"),
     image: t("hero.image"),
     primaryCta: t("hero.primaryCta"),
-    secondaryCta: t("hero.secondaryCta"),
     primaryHref: t("hero.primaryHref"),
-    secondaryHref: t("hero.secondaryHref"),
     directLabel: t("hero.directLabel"),
     cardSubcopy: t("hero.cardSubcopy"),
     highlights: ["response", "timezone"].map((key) => ({
@@ -43,7 +41,6 @@ export default function ContactPage({ params }) {
   };
 
   const heroPrimaryExternal = heroCopy.primaryHref.startsWith("http");
-  const heroSecondaryExternal = heroCopy.secondaryHref.startsWith("http");
 
   const channels = ["email", "whatsapp", "workshop"].map((key) => ({
     icon: key,
@@ -129,15 +126,6 @@ export default function ContactPage({ params }) {
               <PhoneCall className="h-4 w-4" />
               {heroCopy.primaryCta}
               <span className="absolute inset-0 -z-10 rounded-full bg-linear-to-r from-violet-100 to-white opacity-0 transition-opacity group-hover:opacity-100" />
-            </a>
-            <a
-              href={heroCopy.secondaryHref}
-              target={heroSecondaryExternal ? "_blank" : undefined}
-              rel={heroSecondaryExternal ? "noreferrer" : undefined}
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white hover:bg-white/10"
-            >
-              <Mail className="h-4 w-4" />
-              {heroCopy.secondaryCta}
             </a>
           </div>
         </div>

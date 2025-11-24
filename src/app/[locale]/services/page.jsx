@@ -75,7 +75,6 @@ export default function ServicesPage({ params }) {
     title: t("cta.title"),
     body: t("cta.body"),
     primary: t("cta.primary"),
-    secondary: t("cta.secondary"),
   };
 
   return (
@@ -103,7 +102,6 @@ export default function ServicesPage({ params }) {
             <p className="text-xl font-light text-white/70 leading-relaxed">
               {hero.body}
             </p>
-            <p className="text-sm text-white/50">{hero.detail}</p>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
@@ -113,20 +111,6 @@ export default function ServicesPage({ params }) {
               {hero.cta}
               <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
-            <a
-              href="#offerings"
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10"
-            >
-              {hero.secondary}
-            </a>
-          </div>
-          <div className="mt-10 flex flex-wrap gap-6 text-sm uppercase tracking-[0.3em] text-white/70">
-            {hero.stats.map((stat) => (
-              <div key={stat.label} className="space-y-1">
-                <p className="text-white/50">{stat.label}</p>
-                <p className="text-lg font-light text-white">{stat.value}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -289,12 +273,6 @@ export default function ServicesPage({ params }) {
               {cta.primary}
               <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
-            <a
-              href="mailto:hello@arsystudio.com"
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10 hover:border-white/60"
-            >
-              {cta.secondary}
-            </a>
           </div>
         </div>
       </section>
