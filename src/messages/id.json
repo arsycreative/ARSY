@@ -345,6 +345,13 @@
         "access": { "label": "Akses", "value": "Ruang dipimpin partner" }
       }
     },
+    "signature": {
+      "eyebrow": "Fokus signature",
+      "title": "Tiga layanan, satu standar craft.",
+      "body": "Tiga layanan inti dari beranda kami, kini dijabarkan lebih dalam untuk engagement yang serius.",
+      "cta": "Bahas layanan ini",
+      "timelineLabel": "Ritme proyek {index}"
+    },
     "offerings": {
       "eyebrow": "Yang kami bangun",
       "title": "Menu butik untuk flagship digital.",

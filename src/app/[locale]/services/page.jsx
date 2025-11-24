@@ -6,7 +6,6 @@ import {
   ArrowUpRight,
   LayoutGrid,
   PenTool,
-  ShieldCheck,
   Sparkles,
   Workflow,
 } from "lucide-react";
@@ -22,6 +21,7 @@ export default function ServicesPage({ params }) {
   const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("ServicesPage");
+  const homeServices = useTranslations("Home.services");
 
   const hero = {
     eyebrow: t("hero.eyebrow"),
@@ -37,26 +37,30 @@ export default function ServicesPage({ params }) {
     image: t("hero.image"),
   };
 
-  const offeringsRaw = t.raw("offerings.items");
-  const offerings = ["web", "product", "brand"].map((key) => {
-    const raw = offeringsRaw?.[key] ?? {};
-    return {
-      key,
-      tag: t(`offerings.items.${key}.tag`),
-      title: t(`offerings.items.${key}.title`),
-      body: t(`offerings.items.${key}.body`),
-      features: Object.values(raw.features ?? {}),
-    };
-  });
+  const signatureServices = ["web", "mobile", "brand"].map((key, idx) => ({
+    key,
+    tag: homeServices(`cards.${key}.tag`),
+    title: homeServices(`cards.${key}.title`),
+    body: homeServices(`cards.${key}.body`),
+    index: String(idx + 1).padStart(2, "0"),
+  }));
 
-  const approach = {
-    eyebrow: t("approach.eyebrow"),
-    title: t("approach.title"),
-    steps: ["discover", "build", "launch"].map((key) => ({
-      tag: t(`approach.steps.${key}.tag`),
-      title: t(`approach.steps.${key}.title`),
-      body: t(`approach.steps.${key}.body`),
-    })),
+  const signatureVisuals = {
+    web: {
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80&auto=format&fit=crop",
+      caption: "Custom platforms engineered around your operations.",
+    },
+    mobile: {
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80&auto=format&fit=crop",
+      caption: "Interfaces that feel effortless on every device.",
+    },
+    brand: {
+      image:
+        "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?w=1600&q=80&auto=format&fit=crop",
+      caption: "Identity systems with warmth, consistency, and intent.",
+    },
   };
 
   const stackRaw = t.raw("stack.items");
@@ -116,97 +120,68 @@ export default function ServicesPage({ params }) {
       </section>
 
       <section
-        id="offerings"
-        className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12"
+        id="signature-services"
+        className="relative overflow-hidden bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12"
       >
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40">
-              {t("offerings.eyebrow")}
+        <div className="relative mx-auto max-w-7xl space-y-16">
+          <div className="max-w-3xl space-y-4">
+            <p className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/40">
+              {t("signature.eyebrow")}
             </p>
-            <h2 className="text-5xl font-light text-zinc-950 dark:text-white leading-tight">
-              {t("offerings.title")}
+            <h2 className="text-5xl font-light text-zinc-950 dark:text-white lg:text-6xl">
+              {t("signature.title")}
             </h2>
-            <p className="text-xl font-light text-zinc-600 dark:text-white/60 leading-relaxed">
-              {t("offerings.body")}
+            <p className="text-lg font-light leading-relaxed text-zinc-600 dark:text-white/70">
+              {t("signature.body")}
             </p>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {offerings.map((item) => {
+
+          <div className="space-y-20">
+            {signatureServices.map((item, idx) => {
+              const isEven = idx % 2 === 0;
+              const visual = signatureVisuals[item.key];
               const Icon = offeringIcons[item.key] || Sparkles;
+
               return (
                 <div
                   key={item.title}
-                  className="group flex h-full flex-col rounded-3xl border border-zinc-200/80 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.05)] transition-all hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_30px_90px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-white/5"
+                  className={`grid gap-10 lg:grid-cols-2 lg:items-stretch ${
+                    isEven ? "" : "lg:[&>div:first-child]:order-2"
+                  }`}
                 >
-                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-white/50">
-                    <span>{item.tag}</span>
-                    <span className="rounded-full border border-zinc-200/80 px-3 py-1 text-[10px] text-zinc-500 dark:border-white/20 dark:text-white/60">
-                      {t("offerings.cardBadge")}
-                    </span>
+                  <div className="overflow-hidden rounded-[32px]">
+                    <Image
+                      src={visual.image}
+                      alt={item.title}
+                      width={1400}
+                      height={700}
+                      className="h-full min-h-[320px] w-full object-cover grayscale"
+                    />
                   </div>
-                  <div className="mt-6 inline-flex rounded-2xl bg-zinc-900/90 p-3 text-white dark:bg-white/10 dark:text-white">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mt-6 text-2xl font-light text-zinc-950 dark:text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-base font-light text-zinc-600 dark:text-white/60 leading-relaxed">
-                    {item.body}
-                  </p>
-                  <div className="mt-6 space-y-2">
-                    {item.features.map((feature) => (
-                      <div
-                        key={feature}
-                        className="flex items-center gap-3 rounded-full bg-zinc-50 px-4 py-2 text-sm text-zinc-600 transition group-hover:bg-zinc-900 group-hover:text-white dark:bg-white/5 dark:text-white/60 dark:group-hover:bg-white/10"
-                      >
-                        <Sparkles className="h-3.5 w-3.5" />
-                        <span className="font-light">{feature}</span>
-                      </div>
-                    ))}
+                  <div className="flex h-full flex-col space-y-5 rounded-[32px] border border-zinc-200/80 bg-white/95 p-10 shadow-[0_30px_120px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-white/5">
+                    <div className="text-sm uppercase tracking-[0.3em] text-zinc-500 dark:text-white/60">
+                      {item.tag}
+                    </div>
+                    <h3 className="text-3xl font-light text-zinc-950 dark:text-white">
+                      {item.title}
+                    </h3>
+                    <p className="text-lg leading-relaxed text-zinc-600 dark:text-white/70">
+                      {item.body}
+                    </p>
+                    <p className="text-base text-zinc-500 dark:text-white/60">
+                      {visual.caption}
+                    </p>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-3 self-start rounded-full border border-zinc-900 px-6 py-2 text-sm font-medium text-zinc-900 transition hover:bg-zinc-900 hover:text-white dark:border-white/40 dark:text-white dark:hover:bg-white/10"
+                    >
+                      {t("signature.cta")}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </Link>
                   </div>
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden py-24 px-6 text-white lg:px-12">
-        <div
-          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
-          aria-hidden="true"
-        />
-        <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="max-w-3xl space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/40">
-              {approach.eyebrow}
-            </p>
-            <h2 className="text-5xl font-light leading-tight">
-              {approach.title}
-            </h2>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {approach.steps.map((step, idx) => (
-              <div
-                key={step.title}
-                className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
-              >
-                <p className="text-xs uppercase tracking-[0.3em] text-white/50">
-                  {step.tag}
-                </p>
-                <div className="mt-4 inline-flex items-center gap-3 rounded-full border border-white/20 px-4 py-2 text-sm text-white/70">
-                  <span>{String(idx + 1).padStart(2, "0")}</span>
-                  <ShieldCheck className="h-4 w-4" />
-                </div>
-                <h3 className="mt-6 text-2xl font-light text-white">
-                  {step.title}
-                </h3>
-                <p className="mt-4 text-base font-light text-white/70 leading-relaxed">
-                  {step.body}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -349,6 +349,13 @@
         "access": { "label": "Access", "value": "Partner-led rooms" }
       }
     },
+    "signature": {
+      "eyebrow": "Signature focus",
+      "title": "One trio, endless detail.",
+      "body": "The same craftsmanship from our homepage services, reimagined for deeper engagements.",
+      "cta": "Discuss this service",
+      "timelineLabel": "Project cadence {index}"
+    },
     "offerings": {
       "eyebrow": "What we build",
       "title": "A boutique menu crafted for digital flagships.",
