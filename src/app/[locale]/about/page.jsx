@@ -44,20 +44,17 @@ export default function AboutPage({ params }) {
     })),
   };
 
+  const philosophyCopy = t.raw("philosophy");
   const philosophy = {
-    eyebrow: t("philosophy.eyebrow"),
-    title: t("philosophy.title"),
+    eyebrow: philosophyCopy?.eyebrow ?? "",
+    title: philosophyCopy?.title ?? "",
     vision: {
-      title: t("philosophy.vision.title"),
-      lines: ["lineOne", "lineTwo", "lineThree"].map((key) =>
-        t(`philosophy.vision.lines.${key}`)
-      ),
+      title: philosophyCopy?.vision?.title ?? "",
+      lines: Object.values(philosophyCopy?.vision?.lines ?? {}),
     },
     mission: {
-      title: t("philosophy.mission.title"),
-      items: ["one", "two", "three"].map((key) =>
-        t(`philosophy.mission.items.${key}`)
-      ),
+      title: philosophyCopy?.mission?.title ?? "",
+      items: Object.values(philosophyCopy?.mission?.items ?? {}),
     },
   };
 

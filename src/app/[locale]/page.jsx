@@ -86,18 +86,11 @@ export default function HomePage({ params }) {
   const manifestoPrinciples = ["clarity", "design", "strategy"].map((key) =>
     t(`manifesto.principles.${key}`)
   );
-  const philosophyExpertiseItems = [
-    "responsiveWeb",
-    "mobileApps",
-
-    "uiux",
-    "cms",
-    "ecommerce",
-    "customWeb",
-  ].map((key) => t(`philosophy.expertise.items.${key}`));
-
-  const philosophyProcessParagraphs = ["one", "two"].map((key) =>
-    t(`philosophy.process.paragraphs.${key}`)
+  const philosophyExpertiseItems = Object.values(
+    t.raw("philosophy.expertise.items")
+  );
+  const philosophyProcessParagraphs = Object.values(
+    t.raw("philosophy.process.paragraphs")
   );
 
   const techItems = [

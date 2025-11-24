@@ -229,12 +229,22 @@
     },
     "philosophy": {
       "eyebrow": "Filosofi kami",
-      "title": "Proses teliti, hasil penuh jiwa.",
-      "body": "Setiap keputusan desain, setiap baris kode, dan setiap detail interaksi kami buat dengan maksud yang jelas.",
-      "detail": "Kami tidak terburu-buru mengejar tren. Kami menciptakan sesuatu yang relevan, fungsional, dan punya arah.",
-      "pillars": {
-        "intent": "Setiap artefak dibuat penuh maksud, dari arsitektur sistem hingga microcopy.",
-        "clarity": "Kesempurnaan berarti menghadirkan kejelasan yang terasa effortless, bukan hiasan."
+      "title": "Visi & misi.",
+      "vision": {
+        "title": "Visi",
+        "lines": {
+          "lineOne": "Menjadi mitra kreatif terpercaya",
+          "lineTwo": "dalam transformasi digital bisnis",
+          "lineThree": "di Indonesia."
+        }
+      },
+      "mission": {
+        "title": "Misi",
+        "items": {
+          "one": "Menyediakan solusi digital berkualitas dengan pendekatan kreatif dan user-centered.",
+          "two": "Memberikan layanan terbaik yang sesuai dengan kebutuhan dan tujuan klien.",
+          "three": "Mendorong pertumbuhan bisnis melalui inovasi dan teknologi."
+        }
       }
     },
     "process": {
