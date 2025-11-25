@@ -119,21 +119,25 @@
     },
     "philosophy": {
       "eyebrow": "Filosofi kami",
-      "title": "Visi & misi.",
-      "vision": {
-        "title": "Visi",
-        "lines": {
-          "lineOne": "Menjadi mitra kreatif terpercaya",
-          "lineTwo": "dalam transformasi digital bisnis",
-          "lineThree": "di Indonesia."
+      "title": "Kolaborasi & presisi.",
+      "subtitle": "Kami percaya karya yang kuat lahir saat semua tim fokus dan peduli pada detail kecil.",
+      "expertise": {
+        "title": "Yang kami tangani",
+        "body": "Disiplin yang kami kerjakan tiap minggu:",
+        "items": {
+          "uiux": "Desain UI/UX",
+          "responsiveWeb": "Website & web app responsif",
+          "cms": "Integrasi CMS kustom",
+          "ecommerce": "eCommerce premium",
+          "customWeb": "Aplikasi web khusus",
+          "mobileApps": "Desain & pengembangan aplikasi mobile"
         }
       },
-      "mission": {
-        "title": "Misi",
-        "items": {
-          "one": "Menyediakan solusi digital berkualitas dengan pendekatan kreatif dan user-centered.",
-          "two": "Memberikan layanan terbaik yang sesuai dengan kebutuhan dan tujuan klien.",
-          "three": "Mendorong pertumbuhan bisnis melalui inovasi dan teknologi."
+      "process": {
+        "title": "Cara kami bekerja",
+        "paragraphs": {
+          "one": "Setiap proyek dimulai dengan mendengar bisnis dan orang yang akan memakainya.",
+          "two": "Strategi, desain, dan engineering tetap terhubung agar peluncuran terasa rapi dan mudah dirawat."
         }
       }
     },
@@ -328,10 +332,10 @@
   "ServicesPage": {
     "hero": {
       "eyebrow": "Signature services",
-      "title": "Program yang dirancang dengan ketenangan editorial.",
-      "body": "Kami menyatukan strategi, desain, dan engineering dalam satu atap agar setiap peluncuran terasa sinematik, presisi, dan manusiawi.",
+      "title": "Program digital yang rapi dan tenang.",
+      "body": "Strategi, desain, dan engineering kami satukan di satu meja agar setiap peluncuran terasa sinematik, presisi, dan tetap manusiawi.",
       "detail": "Hanya dua peluncuran sekaligus. Partner senior hadir di setiap sesi. Tanpa estafet.",
-      "cta": "Rencanakan discovery call",
+      "cta": "Jadwalkan call",
       "secondary": "Lihat kapabilitas",
       "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1800&auto=format&fit=crop&q=80",
       "card": {
@@ -419,33 +423,33 @@
         "experience": {
           "title": "Experience",
           "bullets": {
-            "one": "Pemetaan narasi",
-            "two": "Strategi pengalaman",
-            "three": "Koreografi konten"
+            "one": "Pemetaan cerita",
+            "two": "Rencana pengalaman",
+            "three": "Alur konten"
           }
         },
         "technology": {
           "title": "Teknologi",
           "bullets": {
             "one": "Next.js & React",
-            "two": "Headless commerce",
-            "three": "Automasi & integrasi"
+            "two": "Alur integrasi CMS",
+            "three": "Otomasi & koneksi"
           }
         },
         "delivery": {
           "title": "Delivery",
           "bullets": {
             "one": "Aksesibilitas & QA",
-            "two": "Instrumentasi analytics",
-            "three": "Ritual pertumbuhan"
+            "two": "Setelan analytics",
+            "three": "Perawatan berkala"
           }
         }
       }
     },
     "cta": {
       "eyebrow": "Siap membangun?",
-      "title": "Mari kita orkestrasi flagship berikutnya.",
-      "body": "Bawa brief, intuisi, atau roadmap produkmu. Kami akan membalas dengan rencana khusus kurang dari 24 jam.",
+      "title": "Ayo jalankan proyek besar berikutnya.",
+      "body": "Kirimkan brief, intuisi, atau roadmapmu. Kami balas dengan rencana yang jelas dalam 24 jam.",
       "primary": "Mulai brief"
     }
   },

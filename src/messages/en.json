@@ -332,10 +332,10 @@
   "ServicesPage": {
     "hero": {
       "eyebrow": "Signature services",
-      "title": "Programs engineered with editorial calm.",
-      "body": "We choreograph strategy, design, and engineering under one roof so every launch feels cinematic, precise, and human.",
+      "title": "Programs that feel calm and controlled.",
+      "body": "Strategy, design, and engineering sit at one table so every launch feels cinematic, precise, and human.",
       "detail": "Two launches at a time. Senior partners in every room. No handoffs.",
-      "cta": "Plan a discovery call",
+      "cta": "Book a call",
       "secondary": "See our capabilities",
       "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1800&auto=format&fit=crop&q=80",
       "card": {
@@ -423,24 +423,24 @@
         "experience": {
           "title": "Experience",
           "bullets": {
-            "one": "Narrative mapping",
-            "two": "Experience strategy",
-            "three": "Content choreography"
+            "one": "Story maps",
+            "two": "Journey plans",
+            "three": "Content flow"
           }
         },
         "technology": {
           "title": "Technology",
           "bullets": {
-            "one": "Next.js & React",
-            "two": "Headless commerce",
-            "three": "Automation & integrations"
+            "one": "Next.js + React",
+            "two": "CMS integration flow",
+            "three": "Automation & connections"
           }
         },
         "delivery": {
           "title": "Delivery",
           "bullets": {
             "one": "Accessibility & QA",
-            "two": "Analytics instrumentation",
+            "two": "Analytics setup",
             "three": "Growth rituals"
           }
         }
