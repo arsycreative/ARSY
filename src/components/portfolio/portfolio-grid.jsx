@@ -38,7 +38,7 @@ export function PortfolioGrid({ filters = [], projects = [], emptyLabel }) {
                   className={`relative z-10 ${
                     isActive
                       ? "text-white dark:text-zinc-950"
-                      : "border border-zinc-200/80 text-zinc-500 dark:border-white/20 dark:text-white/60"
+                      : " text-zinc-500 dark:text-white/60"
                   }`}
                 >
                   {filter.label}
