@@ -107,15 +107,6 @@ export default function ServicesPage({ params }) {
               {hero.body}
             </p>
           </div>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
-            >
-              {hero.cta}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -149,11 +140,11 @@ export default function ServicesPage({ params }) {
                     isEven ? "" : "lg:[&>div:first-child]:order-2"
                   }`}
                 >
-                  <div className="group relative overflow-hidden rounded-[32px]">
+                  <div className="group relative overflow-hidden rounded-4xl">
                     <div className="absolute inset-0 z-10 opacity-20 transition duration-700 group-hover:opacity-60">
                       <div className="h-full w-full bg-linear-to-r from-black to-transparent" />
                     </div>
-                    <div className="absolute inset-0 z-10 rounded-[32px] border border-transparent transition duration-700 group-hover:border-white/40" />
+                    <div className="absolute inset-0 z-10 rounded-4xl border border-transparent transition duration-700 group-hover:border-white/40" />
                     <div className="absolute inset-0 z-10 border-l border-white/40 opacity-0 transition duration-700 group-hover:opacity-100" />
                     <div className="absolute inset-0 z-10 border-r border-white/40 opacity-0 transition duration-700 group-hover:opacity-100" />
                     <Image
@@ -161,11 +152,11 @@ export default function ServicesPage({ params }) {
                       alt={item.title}
                       width={1400}
                       height={700}
-                      className="h-full min-h-[320px] w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                      className="h-full min-h-80 w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
                     />
-                    <div className="pointer-events-none absolute inset-0 z-0 scale-110 bg-gradient-to-br from-white/10 to-transparent opacity-0 blur-3xl transition duration-700 group-hover:opacity-60" />
+                    <div className="pointer-events-none absolute inset-0 z-0 scale-110 bg-linear-to-br from-white/10 to-transparent opacity-0 blur-3xl transition duration-700 group-hover:opacity-60" />
                   </div>
-                  <div className="flex h-full flex-col space-y-5 rounded-[32px] border border-zinc-200/80 bg-white/95 p-10 shadow-[0_30px_120px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-zinc-900/30 hover:shadow-[0_40px_130px_rgba(15,23,42,0.14)] dark:border-white/10 dark:bg-white/5">
+                  <div className="flex h-full flex-col space-y-5 rounded-4xl border border-zinc-200/80 bg-white/95 p-10 shadow-[0_30px_120px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-zinc-900/30 hover:shadow-[0_40px_130px_rgba(15,23,42,0.14)] dark:border-white/10 dark:bg-white/5">
                     <div className="text-sm uppercase tracking-[0.3em] text-zinc-500 dark:text-white/60">
                       {item.tag}
                     </div>

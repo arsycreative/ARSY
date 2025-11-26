@@ -15,19 +15,7 @@ export default function PortfolioPage({ params }) {
     eyebrow: t("hero.eyebrow"),
     title: t("hero.title"),
     body: t("hero.body"),
-    detail: t("hero.detail"),
-    primary: t("hero.primary"),
-    secondary: t("hero.secondary"),
     image: t("hero.image", { defaultMessage: "" }),
-    card: {
-      label: t("hero.card.label"),
-      title: t("hero.card.title"),
-      body: t("hero.card.body"),
-    },
-    highlights: ["timeline", "industries"].map((key) => ({
-      label: t(`hero.highlights.${key}.label`),
-      value: t(`hero.highlights.${key}.value`),
-    })),
   };
 
   const filtersRaw = t.raw("filters") || {};
@@ -81,30 +69,6 @@ export default function PortfolioPage({ params }) {
             <p className="text-xl font-light text-white/70 leading-relaxed">
               {hero.body}
             </p>
-            <p className="text-sm text-white/50">{hero.detail}</p>
-          </div>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
-            >
-              {hero.primary}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10"
-            >
-              {hero.secondary}
-            </a>
-          </div>
-          <div className="mt-10 grid gap-6 text-sm uppercase tracking-[0.3em] text-white/70 sm:grid-cols-3">
-            {hero.highlights.map((item) => (
-              <div key={item.label} className="space-y-1">
-                <p className="text-white/50">{item.label}</p>
-                <p className="text-lg font-light text-white">{item.value}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -119,39 +83,6 @@ export default function PortfolioPage({ params }) {
             projects={projects}
             emptyLabel={t("empty")}
           />
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden py-24 px-6 text-white lg:px-12">
-        <div
-          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
-          aria-hidden="true"
-        />
-        <div className="relative z-10 mx-auto max-w-5xl space-y-6 text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/40">
-            {cta.eyebrow}
-          </p>
-          <h2 className="text-5xl font-light leading-tight lg:text-6xl">
-            {cta.title}
-          </h2>
-          <p className="text-xl font-light text-white/70 leading-relaxed">
-            {cta.body}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
-            >
-              {cta.primary}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
-            <a
-              href="mailto:hello@arsystudio.com"
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10"
-            >
-              {cta.secondary}
-            </a>
-          </div>
         </div>
       </section>
     </>

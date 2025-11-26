@@ -57,13 +57,6 @@ export default function BlogPage({ params }) {
             <p className="text-lg font-light text-white/70 leading-relaxed">
               {hero.body}
             </p>
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
-            >
-              {hero.cta}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
           </div>
         </div>
       </section>

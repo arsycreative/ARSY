@@ -332,8 +332,8 @@
   "ServicesPage": {
     "hero": {
       "eyebrow": "Signature services",
-      "title": "Programs that feel calm and controlled.",
-      "body": "Strategy, design, and engineering sit at one table so every launch feels cinematic, precise, and human.",
+      "title": "Calm, considered programs.",
+      "body": "Strategy, design, and engineering sit together so each launch feels precise and human.",
       "detail": "Two launches at a time. Senior partners in every room. No handoffs.",
       "cta": "Book a call",
       "secondary": "See our capabilities",
@@ -604,7 +604,7 @@
     "hero": {
       "eyebrow": "Selected work",
       "title": "Portfolio built with calm precision.",
-      "body": "A boutique mix of web platforms, mobile apps, and embedded teams crafted for founders who expect cinematic polish.",
+      "body": "Boutique web, mobile, and embedded teams for founders who expect polish.",
       "detail": "Every build is senior-led, research-driven, and released in concert with your teams.",
       "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&auto=format&fit=crop&q=80",
       "primary": "Plan a discovery call",
