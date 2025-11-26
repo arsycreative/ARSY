@@ -112,9 +112,6 @@ export default function ContactPage({ params }) {
             <p className="text-xl font-light leading-relaxed text-white/70">
               {heroCopy.body}
             </p>
-            <p className="text-sm font-light text-white/50">
-              {heroCopy.detail}
-            </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -184,49 +181,6 @@ export default function ContactPage({ params }) {
                 </a>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden py-24 px-6 text-white lg:px-12">
-        <div
-          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
-          aria-hidden="true"
-        />
-        <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
-            <div className="space-y-6">
-              <p className="text-xs uppercase tracking-[0.4em] text-white/40">
-                {availability.eyebrow}
-              </p>
-              <h2 className="text-4xl font-light leading-snug">
-                {availability.title}
-              </h2>
-              <p className="text-lg font-light text-white/70">
-                {availability.body}
-              </p>
-              <p className="text-sm text-white/50">{availability.detail}</p>
-            </div>
-            <div className="space-y-4">
-              {availability.slots.map((slot) => (
-                <div
-                  key={slot.label}
-                  className="flex items-center justify-between rounded-3xl border border-white/10 bg-white/5 px-6 py-5"
-                >
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/40">
-                      {slot.label}
-                    </p>
-                    <p className="text-xl font-light text-white">
-                      {slot.value}
-                    </p>
-                  </div>
-                  <div className="h-10 w-10 rounded-full border border-white/20 text-white/70">
-                    <CalendarClock className="h-10 w-10 p-2" />
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

@@ -457,7 +457,7 @@
     "hero": {
       "eyebrow": "Hubungi studio",
       "title": "Buat peluncuranmu terasa tak terelakkan.",
-      "body": "Bagikan deck, brief yang belum rapi, atau sekadar intuisi. Kami akan merespons dengan rencana yang jelas dalam 24 jam.",
+      "body": "Kirim deck, brief kasar, atau intuisi singkat. Kami balas dengan rencana jelas kurang dari 24 jam.",
       "detail": "Kami hanya menangani dua engagement bersamaan agar setiap build terasa sinematik dan terkontrol.",
       "image": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
       "primaryCta": "Jadwalkan discovery call",
@@ -548,8 +548,8 @@
   "BlogPage": {
     "hero": {
       "eyebrow": "Catatan studio",
-      "title": "Catatan tentang desain, engineering, dan ritme brand.",
-      "body": "Rangkuman ide dari dalam studio — mulai dari ritual riset, keputusan teknis, hingga pelajaran bersama founder.",
+      "title": "Catatan seputar desain, engineering, dan ritme brand.",
+      "body": "Log ide dari studio — soal riset, keputusan teknis, dan pelajaran bersama founder.",
       "cta": "Hubungi studio",
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1800&auto=format&fit=crop&q=80"
     },
