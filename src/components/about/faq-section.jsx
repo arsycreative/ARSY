@@ -3,6 +3,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const SECTION_HEADING =
+  "text-4xl font-light leading-tight md:text-5xl lg:text-6xl";
+const SECTION_BODY = "text-lg font-light leading-relaxed md:text-xl";
+const CARD_TITLE = "text-2xl font-light md:text-3xl";
+const CARD_BODY = "text-base font-light leading-relaxed";
+const EYEBROW_TEXT = "text-xs uppercase tracking-[0.4em]";
+
 export default function FAQSection({ copy }) {
   const [active, setActive] = useState(null);
 
@@ -14,16 +21,10 @@ export default function FAQSection({ copy }) {
       />
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr,1.15fr]">
         <div className="space-y-6">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/40">
-            {copy.eyebrow}
-          </p>
-          <h2 className="text-5xl font-light leading-tight lg:text-6xl">
-            {copy.title}
-          </h2>
+          <p className={`${EYEBROW_TEXT} text-white/40`}>{copy.eyebrow}</p>
+          <h2 className={SECTION_HEADING}>{copy.title}</h2>
           {copy.body && (
-            <p className="text-lg font-light leading-relaxed text-white/70">
-              {copy.body}
-            </p>
+            <p className={`${SECTION_BODY} text-white/70`}>{copy.body}</p>
           )}
         </div>
         <div className="space-y-4">
@@ -43,9 +44,7 @@ export default function FAQSection({ copy }) {
                     <p className="text-xs uppercase tracking-[0.35em] text-white/40">
                       {String(index + 1).padStart(2, "0")}
                     </p>
-                    <h3 className="mt-2 text-2xl font-light">
-                      {item.question}
-                    </h3>
+                    <h3 className={`mt-2 ${CARD_TITLE}`}>{item.question}</h3>
                   </div>
                   <motion.span
                     animate={{ rotate: isOpen ? 45 : 0 }}
@@ -64,7 +63,7 @@ export default function FAQSection({ copy }) {
                       transition={{ duration: 0.35, ease: "easeOut" }}
                     >
                       <div className="px-6 pb-6">
-                        <p className="text-base leading-relaxed text-white/70">
+                        <p className={`${CARD_BODY} text-white/70`}>
                           {item.answer}
                         </p>
                       </div>

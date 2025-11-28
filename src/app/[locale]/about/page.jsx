@@ -20,6 +20,15 @@ const processIcons = {
   sustain: RefreshCcw,
 };
 
+const SECTION_HEADING =
+  "text-4xl font-light leading-tight md:text-5xl lg:text-6xl";
+const SECTION_BODY = "text-lg font-light leading-relaxed md:text-xl";
+const CARD_TITLE = "text-2xl font-light md:text-3xl";
+const CARD_BODY = "text-base font-light leading-relaxed";
+const EYEBROW_TEXT = "text-xs uppercase tracking-[0.4em]";
+const FEATURE_TEXT = "text-xl font-light leading-tight md:text-2xl";
+const METRIC_VALUE = "text-4xl font-light md:text-5xl";
+
 export default function AboutPage({ params }) {
   const { locale } = use(params);
   setRequestLocale(locale);
@@ -127,14 +136,16 @@ export default function AboutPage({ params }) {
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-0 pb-20 pt-32">
           <div className="space-y-6 max-w-3xl">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/70">
+            <div
+              className={`inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 ${EYEBROW_TEXT} text-white/70`}
+            >
               <Sparkles className="h-3 w-3" />
               {hero.eyebrow}
             </div>
-            <h1 className="text-5xl font-light leading-tight lg:text-6xl">
+            <h1 className={`${SECTION_HEADING} text-white`}>
               {hero.title}
             </h1>
-            <p className="text-xl font-light text-white/70 leading-relaxed">
+            <p className={`${SECTION_BODY} text-white/70`}>
               {hero.body}
             </p>
           </div>
@@ -182,22 +193,29 @@ export default function AboutPage({ params }) {
         />
         <div className="relative z-10 mx-auto max-w-7xl space-y-12">
           <div className="space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+            <p className={`${EYEBROW_TEXT} text-white/40`}>
               {philosophy.eyebrow}
             </p>
-            <h2 className="text-5xl lg:text-6xl font-light leading-tight">
+            <h2 className={`${SECTION_HEADING}`}>
               {philosophy.title}
             </h2>
           </div>
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="rounded-3xl border border-white/15 bg-white/5 p-8 shadow-[0_30px_120px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition hover:border-white/30 hover:bg-white/10">
-              <div className="flex items-center gap-3 text-sm uppercase tracking-[0.4em] text-white/50">
+              <div
+                className={`flex items-center gap-3 text-sm uppercase tracking-[0.4em] text-white/50`}
+              >
                 <Eye className="h-5 w-5 text-violet-300" />
                 {philosophy.vision.title}
               </div>
-              <div className="mt-6 space-y-2 text-2xl font-light leading-tight text-white/90">
+              <div className="mt-6 space-y-3">
                 {philosophy.vision.lines.map((line, idx) => (
-                  <p key={`vision-line-${idx}`}>{line}</p>
+                  <p
+                    key={`vision-line-${idx}`}
+                    className={`${FEATURE_TEXT} text-white/90`}
+                  >
+                    {line}
+                  </p>
                 ))}
               </div>
             </div>
@@ -210,10 +228,10 @@ export default function AboutPage({ params }) {
                 {philosophy.mission.items.map((item, idx) => (
                   <div
                     key={`mission-item-${idx}`}
-                    className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base font-light leading-relaxed text-white/80"
+                    className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white/80"
                   >
                     <span className="mt-1 h-2 w-2 rounded-full bg-violet-300" />
-                    <p>{item}</p>
+                    <p className={CARD_BODY}>{item}</p>
                   </div>
                 ))}
               </div>
@@ -227,16 +245,20 @@ export default function AboutPage({ params }) {
                   key={step.title}
                   className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
                 >
-                  <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+                  <p className={`${EYEBROW_TEXT} text-white/40`}>
                     {step.tag}
                   </p>
                   <div className="mt-4 flex items-center gap-3">
                     <div className="rounded-2xl bg-white/10 p-3 text-white/80 transition group-hover:bg-white/20">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="text-lg font-light">{step.title}</h3>
+                    <h3 className={`${FEATURE_TEXT} text-white/90`}>
+                      {step.title}
+                    </h3>
                   </div>
-                  <p className="mt-4 text-sm text-white/60">{step.body}</p>
+                  <p className={`mt-4 ${CARD_BODY} text-white/60`}>
+                    {step.body}
+                  </p>
                 </div>
               );
             })}
@@ -251,10 +273,14 @@ export default function AboutPage({ params }) {
         />
         <div className="relative mx-auto max-w-7xl space-y-10">
           <div className="max-w-3xl space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40">
+            <p
+              className={`${EYEBROW_TEXT} text-zinc-400 dark:text-white/40`}
+            >
               {reasons.eyebrow}
             </p>
-            <h2 className="text-5xl lg:text-6xl font-light text-zinc-950 dark:text-white leading-tight">
+            <h2
+              className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}
+            >
               {reasons.title}
             </h2>
           </div>
@@ -269,7 +295,9 @@ export default function AboutPage({ params }) {
                   <span className="text-3xl font-light text-zinc-400 dark:text-white/30">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
-                  <p className="text-xl font-light leading-relaxed text-zinc-900 dark:text-white">
+                  <p
+                    className={`${SECTION_BODY} text-zinc-900 dark:text-white`}
+                  >
                     {item}
                   </p>
                 </div>
@@ -284,10 +312,14 @@ export default function AboutPage({ params }) {
       <section className="bg-zinc-50 py-24 px-6 dark:bg-zinc-900 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-500 dark:text-white/40">
+            <p
+              className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}
+            >
               {metrics.eyebrow}
             </p>
-            <h2 className="text-5xl lg:text-6xl font-light text-zinc-950 dark:text-white leading-tight">
+            <h2
+              className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}
+            >
               {metrics.title}
             </h2>
           </div>
@@ -297,7 +329,7 @@ export default function AboutPage({ params }) {
                 key={metric.label}
                 className="rounded-3xl border border-zinc-200/80 bg-white p-8 text-center shadow-[0_20px_80px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_35px_100px_rgba(0,0,0,0.1)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
               >
-                <p className="text-5xl font-light text-zinc-950 dark:text-white">
+                <p className={`${METRIC_VALUE} text-zinc-950 dark:text-white`}>
                   {metric.value}
                 </p>
                 <p className="mt-3 text-xs uppercase tracking-[0.3em] text-zinc-500 dark:text-white/60">
@@ -315,13 +347,13 @@ export default function AboutPage({ params }) {
           aria-hidden="true"
         />
         <div className="relative z-10 mx-auto max-w-5xl text-center space-y-6">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+          <p className={`${EYEBROW_TEXT} text-white/40`}>
             {cta.eyebrow}
           </p>
-          <h2 className="text-5xl lg:text-6xl font-light leading-tight">
+          <h2 className={`${SECTION_HEADING}`}>
             {cta.title}
           </h2>
-          <p className="text-xl text-white/70 font-light leading-relaxed">
+          <p className={`${SECTION_BODY} text-white/70`}>
             {cta.body}
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-4">
