@@ -18,6 +18,14 @@ const channelIcons = {
   workshop: CalendarClock,
 };
 
+const SECTION_HEADING =
+  "text-4xl font-light leading-tight md:text-5xl lg:text-6xl";
+const SECTION_BODY = "text-lg font-light leading-relaxed md:text-xl";
+const EYEBROW_TEXT = "text-xs uppercase tracking-[0.4em]";
+const CARD_TAG = "text-xs uppercase tracking-[0.3em]";
+const CARD_TITLE = "text-xl font-light md:text-2xl";
+const CARD_BODY = "text-sm font-light leading-relaxed";
+
 export default function ContactPage({ params }) {
   const { locale } = use(params);
   setRequestLocale(locale);
@@ -102,14 +110,16 @@ export default function ContactPage({ params }) {
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-0 py-20">
           <div className="space-y-8 max-w-3xl">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/70">
+            <div
+              className={`inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 ${EYEBROW_TEXT} text-white/70`}
+            >
               <Sparkles className="h-3 w-3" />
               {heroCopy.eyebrow}
             </div>
-            <h1 className="text-5xl font-light leading-tight text-white lg:text-6xl">
+            <h1 className={`${SECTION_HEADING} text-white`}>
               {heroCopy.title}
             </h1>
-            <p className="text-xl font-light leading-relaxed text-white/70">
+            <p className={`${SECTION_BODY} text-white/70`}>
               {heroCopy.body}
             </p>
           </div>
@@ -131,13 +141,19 @@ export default function ContactPage({ params }) {
       <section className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl space-y-4">
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40">
+            <p
+              className={`${EYEBROW_TEXT} text-zinc-400 dark:text-white/40`}
+            >
               {t("channels.eyebrow")}
             </p>
-            <h2 className="text-4xl font-light text-zinc-950 dark:text-white">
+            <h2
+              className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}
+            >
               {t("channels.title")}
             </h2>
-            <p className="text-lg font-light text-zinc-500 dark:text-white/60">
+            <p
+              className={`${SECTION_BODY} text-zinc-500 dark:text-white/60`}
+            >
               {t("channels.subtitle")}
             </p>
           </div>
@@ -158,7 +174,9 @@ export default function ContactPage({ params }) {
                   rel={rel}
                   className="group flex h-full flex-col gap-6 rounded-3xl border border-zinc-200/70 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
                 >
-                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-zinc-400 dark:text-white/40">
+                  <div
+                    className={`flex items-center justify-between ${CARD_TAG} text-zinc-400 dark:text-white/40`}
+                  >
                     <span>{channel.tag}</span>
                     <ArrowUpRight className="h-4 w-4 text-zinc-300 transition group-hover:text-zinc-500 dark:text-white/40" />
                   </div>
@@ -167,10 +185,12 @@ export default function ContactPage({ params }) {
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-zinc-900 dark:text-white">
+                      <h3
+                        className={`${CARD_TITLE} text-zinc-900 dark:text-white`}
+                      >
                         {channel.title}
                       </h3>
-                      <p className="text-sm text-zinc-500 dark:text-white/60">
+                      <p className={`${CARD_BODY} text-zinc-500 dark:text-white/60`}>
                         {channel.body}
                       </p>
                     </div>

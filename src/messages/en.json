@@ -456,14 +456,14 @@
   "ContactPage": {
     "hero": {
       "eyebrow": "Contact the studio",
-      "title": "Let's make your launch feel inevitable.",
-      "body": "Send the deck, rough brief, or a quick hunch. We’ll reply with a clear path in under 24 hours.",
-      "detail": "We cap ourselves at two concurrent engagements so every build feels cinematic and controlled.",
+      "title": "Tell us about your next build.",
+      "body": "Send a deck, note, or quick hunch. We reply within a day with the next steps.",
+      "detail": "We only run two builds at a time so attention stays high.",
       "image": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
       "primaryCta": "Book a discovery call",
       "primaryHref": "https://cal.com/arsy-studio/discovery",
       "directLabel": "Direct access",
-      "cardSubcopy": "Send the deck, challenge, or even a whisper of an idea.",
+      "cardSubcopy": "Drop a deck, challenge, or even the earliest idea.",
       "highlights": {
         "response": { "label": "Response time", "value": "<24 hours" },
         "timezone": { "label": "Timezones", "value": "Jakarta • Singapore" }
@@ -471,27 +471,27 @@
     },
     "channels": {
       "eyebrow": "Channels",
-      "title": "Choose the path that fits your pace.",
-      "subtitle": "Every conversation routes directly to partners and directors.",
+      "title": "Pick your channel.",
+      "subtitle": "Reach us directly—partners respond within a day.",
       "items": {
         "email": {
           "tag": "01",
           "title": "Write to us",
-          "body": "Send context, timelines, and ambitions. You'll receive a POV and next steps shortly.",
+          "body": "Share context and timing. We'll reply with the next steps.",
           "action": "hello@arsystudio.com",
           "href": "mailto:hello@arsystudio.com"
         },
         "whatsapp": {
           "tag": "02",
           "title": "WhatsApp the studio",
-          "body": "Perfect for fast gut-checks, voice notes, or introductions between teams.",
+          "body": "Use this for quick gut-checks, voice notes, or intros.",
           "action": "+62 812-8898-1122",
           "href": "https://wa.me/6281288981122"
         },
         "workshop": {
           "tag": "03",
           "title": "Request a workshop",
-          "body": "Book a 45-minute working session to map scope, squads, and success metrics.",
+          "body": "Book a 45-minute working session to map scope and squads.",
           "action": "Book a chemistry call",
           "href": "https://cal.com/arsy-studio/discovery"
         }
@@ -519,13 +519,13 @@
     },
     "panel": {
       "eyebrow": "Signature Services",
-      "title": "Tell us what you want the internet to feel like.",
-      "body": "We take on two launches at a time to preserve care. Share your hunch, deck, or challenge.",
+      "title": "Tell us how you want the internet to feel.",
+      "body": "We cap ourselves at two launches. Share a hunch, deck, or challenge.",
       "primaryCta": "Start the brief",
       "secondaryCta": "WhatsApp the team",
       "reasons": {
-        "build": "Shaping a flagship, product, or fund launch",
-        "refresh": "Refreshing an existing property without losing equity",
+        "build": "Shipping a flagship, product, or launch",
+        "refresh": "Refining an existing property without losing equity",
         "partner": "Looking for a long-term design + engineering partner"
       },
       "person": {

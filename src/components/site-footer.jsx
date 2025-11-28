@@ -2,6 +2,7 @@
 
 import { Mail, Phone, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
+import Image from "next/image";
 
 export default function SiteFooter({ footer = {}, navLinks = [] }) {
   const year = new Date().getFullYear();
@@ -35,16 +36,20 @@ export default function SiteFooter({ footer = {}, navLinks = [] }) {
         <div className="flex flex-col items-center justify-between gap-10 border-b border-white/10 pb-10 lg:flex-row">
           {/* Brand */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="relative">
-                <div className="h-12 w-12 rounded-full bg-linear-to-br from-violet-500 via-purple-500 to-indigo-600 shadow-lg shadow-violet-500/30" />
-                <div className="absolute inset-0 h-12 w-12 rounded-full bg-linear-to-br from-violet-500 to-purple-500 blur opacity-40" />
-              </div>
+            <div className="flex items-center gap-2 mb-3">
+              <Image
+                src="/logo.png"
+                alt="Arsy Studio logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+                priority
+              />
               <div className="leading-tight">
-                <span className="block text-base font-semibold tracking-[0.2em]">
+                <span className="block text-sm font-medium">
                   {studio}
                 </span>
-                <span className="block text-[0.7rem] uppercase tracking-[0.3em] text-white/50">
+                <span className="block text-xs uppercase tracking-[0.2em] text-white/50">
                   {tagline}
                 </span>
               </div>

@@ -456,14 +456,14 @@
   "ContactPage": {
     "hero": {
       "eyebrow": "Hubungi studio",
-      "title": "Buat peluncuranmu terasa tak terelakkan.",
-      "body": "Kirim deck, brief kasar, atau intuisi singkat. Kami balas dengan rencana jelas kurang dari 24 jam.",
-      "detail": "Kami hanya menangani dua engagement bersamaan agar setiap build terasa sinematik dan terkontrol.",
+      "title": "Ceritakan build berikutnya.",
+      "body": "Kirim deck, catatan singkat, atau intuisi. Kami balas dalam 24 jam.",
+      "detail": "Kami hanya menangani dua build sekaligus agar fokus utuh.",
       "image": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
       "primaryCta": "Jadwalkan discovery call",
       "primaryHref": "https://cal.com/arsy-studio/discovery",
       "directLabel": "Akses langsung",
-      "cardSubcopy": "Kirimkan deck, tantangan, atau sekadar intuisi awal.",
+      "cardSubcopy": "Kirim deck, tantangan, atau ide paling awal.",
       "highlights": {
         "response": { "label": "Waktu respons", "value": "<24 jam" },
         "timezone": { "label": "Zona waktu", "value": "Jakarta • Singapura" }
@@ -471,27 +471,27 @@
     },
     "channels": {
       "eyebrow": "Kanal",
-      "title": "Pilih jalur komunikasi yang paling pas.",
-      "subtitle": "Setiap percakapan langsung ditangani partner dan director.",
+      "title": "Pilih kanal favoritmu.",
+      "subtitle": "Partner kami membalas langsung, biasanya dalam 24 jam.",
       "items": {
         "email": {
           "tag": "01",
           "title": "Kirim email",
-          "body": "Bagikan konteks, timeline, dan ambisi. Kami akan mengirim POV dan langkah lanjutan.",
+          "body": "Bagikan konteks dan timeline. Kami kirim langkah lanjut.",
           "action": "hello@arsystudio.com",
           "href": "mailto:hello@arsystudio.com"
         },
         "whatsapp": {
           "tag": "02",
           "title": "WhatsApp studio",
-          "body": "Ideal untuk cek cepat, voice note, atau perkenalan antar tim.",
+          "body": "Untuk cek cepat, voice note, atau perkenalan tim.",
           "action": "+62 812-8898-1122",
           "href": "https://wa.me/6281288981122"
         },
         "workshop": {
           "tag": "03",
           "title": "Minta sesi workshop",
-          "body": "Sesi kerja 45 menit untuk memetakan scope, tim, dan metrik sukses.",
+          "body": "Sesi kerja 45 menit buat memetakan scope dan tim.",
           "action": "Book chemistry call",
           "href": "https://cal.com/arsy-studio/discovery"
         }
@@ -519,14 +519,14 @@
     },
     "panel": {
       "eyebrow": "Signature Services",
-      "title": "Ceritakan rasa seperti apa yang kamu inginkan di internet.",
-      "body": "Kami hanya menjalankan dua peluncuran sekaligus agar kualitas terjaga. Kirimkan hunch, deck, atau tantanganmu.",
+      "title": "Ceritakan rasa internet yang kamu mau.",
+      "body": "Kami hanya jalankan dua peluncuran. Kirim hunch, deck, atau tantanganmu.",
       "primaryCta": "Mulai brief",
       "secondaryCta": "WhatsApp tim kami",
       "reasons": {
-        "build": "Menyusun flagship, produk, atau peluncuran fund",
-        "refresh": "Menyegarkan properti tanpa kehilangan ekuitas",
-        "partner": "Mencari partner desain + engineering jangka panjang"
+        "build": "Menyiapkan flagship, produk, atau peluncuran",
+        "refresh": "Menyegarkan properti tanpa kehilangan rasa",
+        "partner": "Butuh partner desain + engineering jangka panjang"
       },
       "person": {
         "role": "Studio line",

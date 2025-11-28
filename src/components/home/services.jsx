@@ -21,7 +21,7 @@ const iconMap = {
 
 export function ServicesSection({ copy, cards }) {
   return (
-    <section className="py-32 px-6 lg:px-12 bg-white dark:bg-zinc-950">
+    <section className="pt-32 pb-20 px-6 lg:px-12 bg-white dark:bg-zinc-950">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="max-w-3xl mb-20"

@@ -5,6 +5,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { ArrowUpRight, Menu, X, Sparkles, Mail } from "lucide-react";
 import LocaleSwitcher from "./locale-switcher";
 import ThemeToggle from "./theme-toggle";
+import Image from "next/image";
 
 const SERVER_SNAPSHOT = Object.freeze({ progress: 0, scrolled: false });
 let CLIENT_SNAPSHOT = { progress: 0, scrolled: false };
@@ -137,10 +138,17 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-2 rounded-full p-1.5 "
+              className="flex items-center gap-2 rounded-full p-1.5"
               aria-label="Go to homepage"
             >
-              <span className="inline-block h-8 w-8 rounded-full bg-linear-to-br from-violet-500 via-purple-500 to-indigo-600" />
+              <Image
+                src="/logo.png"
+                alt="Arsy Studio logo"
+                width={28}
+                height={28}
+                className="h-7 w-7 object-contain"
+                priority
+              />
               <span
                 className={`hidden text-sm font-medium sm:inline ${
                   scrolled ? "text-zinc-900 dark:text-white" : "text-white"
