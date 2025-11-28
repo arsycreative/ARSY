@@ -6,6 +6,11 @@ import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { BlogList } from "@/components/blog/blog-list";
 
+const SECTION_HEADING =
+  "text-4xl font-light leading-tight md:text-5xl lg:text-6xl";
+const SECTION_BODY = "text-lg font-light leading-relaxed md:text-xl";
+const EYEBROW_TEXT = "text-xs uppercase tracking-[0.4em]";
+
 export default function BlogPage({ params }) {
   const { locale } = use(params);
   setRequestLocale(locale);
@@ -27,6 +32,8 @@ export default function BlogPage({ params }) {
     })
   );
 
+  const categoriesSubtitle = t("categoriesSubtitle")?.trim();
+
   const posts = Object.entries(t.raw("posts")).map(([key, post]) => ({
     slug: key,
     ...post,
@@ -47,14 +54,16 @@ export default function BlogPage({ params }) {
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-0 py-20">
           <div className="space-y-6 max-w-3xl">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/70">
+            <div
+              className={`inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 ${EYEBROW_TEXT} text-white/70`}
+            >
               <Sparkles className="h-3 w-3" />
               {hero.eyebrow}
             </div>
-            <h1 className="text-5xl font-light leading-tight lg:text-6xl">
+            <h1 className={`${SECTION_HEADING} text-white`}>
               {hero.title}
             </h1>
-            <p className="text-lg font-light text-white/70 leading-relaxed">
+            <p className={`${SECTION_BODY} text-white/70`}>
               {hero.body}
             </p>
           </div>
@@ -63,14 +72,24 @@ export default function BlogPage({ params }) {
 
       <section className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12">
         <div className="mx-auto max-w-7xl space-y-12">
-          <div className="text-center space-y-4">
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-400 dark:text-white/40">
-              {t("categoriesTitle")}
-            </p>
-            <h2 className="text-4xl font-light text-zinc-950 dark:text-white">
-              {t("categoriesSubtitle")}
-            </h2>
-          </div>
+          {(t("categoriesTitle")?.trim() || categoriesSubtitle) && (
+            <div className="space-y-4">
+              {t("categoriesTitle")?.trim() && (
+                <p
+                  className={`${EYEBROW_TEXT} text-zinc-400 dark:text-white/40`}
+                >
+                  {t("categoriesTitle")}
+                </p>
+              )}
+              {categoriesSubtitle && (
+                <h2
+                  className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}
+                >
+                  {categoriesSubtitle}
+                </h2>
+              )}
+            </div>
+          )}
           <BlogList categories={categories} posts={posts} />
         </div>
       </section>

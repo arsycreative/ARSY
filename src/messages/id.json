@@ -553,8 +553,8 @@
       "cta": "Hubungi studio",
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1800&auto=format&fit=crop&q=80"
     },
-    "categoriesTitle": "Kategori",
-    "categoriesSubtitle": "Kumpulan bacaan untuk para builder yang berpikir jauh.",
+    "categoriesTitle": "",
+    "categoriesSubtitle": "",
     "categories": {
       "all": "Semua",
       "insight": "Wawasan",

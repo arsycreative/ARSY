@@ -111,12 +111,8 @@ export default function ServicesPage({ params }) {
               <Sparkles className="h-3 w-3" />
               {hero.eyebrow}
             </div>
-            <h1 className={`${SECTION_HEADING} text-white`}>
-              {hero.title}
-            </h1>
-            <p className={`${SECTION_BODY} text-white/70`}>
-              {hero.body}
-            </p>
+            <h1 className={`${SECTION_HEADING} text-white`}>{hero.title}</h1>
+            <p className={`${SECTION_BODY} text-white/70`}>{hero.body}</p>
           </div>
         </div>
       </section>
@@ -127,19 +123,13 @@ export default function ServicesPage({ params }) {
       >
         <div className="relative mx-auto max-w-7xl space-y-16">
           <div className="max-w-3xl space-y-4">
-            <p
-              className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}
-            >
+            <p className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}>
               {t("signature.eyebrow")}
             </p>
-            <h2
-              className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}
-            >
+            <h2 className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}>
               {t("signature.title")}
             </h2>
-            <p
-              className={`${SECTION_BODY} text-zinc-600 dark:text-white/70`}
-            >
+            <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/70`}>
               {t("signature.body")}
             </p>
           </div>
@@ -189,9 +179,7 @@ export default function ServicesPage({ params }) {
                     >
                       {item.body}
                     </p>
-                    <p className="text-sm font-light leading-relaxed text-zinc-500 dark:text-white/60">
-                      {visual.caption}
-                    </p>
+
                     <Link
                       href="/contact"
                       className="inline-flex items-center gap-3 self-start rounded-full border border-zinc-900 px-6 py-2 text-sm font-medium text-zinc-900 transition hover:bg-zinc-900 hover:text-white dark:border-white/40 dark:text-white dark:hover:bg-white/10"
@@ -210,19 +198,13 @@ export default function ServicesPage({ params }) {
       <section className="bg-zinc-50 py-24 px-6 dark:bg-zinc-900 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl space-y-6">
-            <p
-              className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}
-            >
+            <p className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}>
               {stack.eyebrow}
             </p>
-            <h2
-              className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}
-            >
+            <h2 className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}>
               {stack.title}
             </h2>
-            <p
-              className={`${SECTION_BODY} text-zinc-600 dark:text-white/60`}
-            >
+            <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/60`}>
               {stack.body}
             </p>
           </div>
@@ -258,15 +240,9 @@ export default function ServicesPage({ params }) {
           aria-hidden="true"
         />
         <div className="relative z-10 mx-auto max-w-5xl space-y-6 text-center">
-          <p className={`${EYEBROW_TEXT} text-white/40`}>
-            {cta.eyebrow}
-          </p>
-          <h2 className={`${SECTION_HEADING}`}>
-            {cta.title}
-          </h2>
-          <p className={`${SECTION_BODY} text-white/70`}>
-            {cta.body}
-          </p>
+          <p className={`${EYEBROW_TEXT} text-white/40`}>{cta.eyebrow}</p>
+          <h2 className={`${SECTION_HEADING}`}>{cta.title}</h2>
+          <p className={`${SECTION_BODY} text-white/70`}>{cta.body}</p>
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <Link
               href={`/${locale}/contact`}

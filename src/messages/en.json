@@ -553,8 +553,8 @@
       "cta": "Talk to the studio",
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1800&auto=format&fit=crop&q=80"
     },
-    "categoriesTitle": "Categories",
-    "categoriesSubtitle": "Curated readings for thoughtful builders.",
+    "categoriesTitle": "",
+    "categoriesSubtitle": "",
     "categories": {
       "all": "All",
       "insight": "Insights",
