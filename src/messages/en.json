@@ -120,7 +120,7 @@
     "philosophy": {
       "eyebrow": "Our philosophy",
       "title": "Collaboration & precision.",
-      "subtitle": "We believe remarkable work comes from shared focus and care for every detail. Each touchpoint must stay useful, elegant, and rooted in your audience.",
+      "subtitle": "Shared focus keeps our craft precise. Every touchpoint remains tailored to your audience.",
       "expertise": {
         "title": "What we handle",
         "body": "A few disciplines we lead every week:",
@@ -324,8 +324,8 @@
     },
     "cta": {
       "eyebrow": "Let's connect",
-      "title": "Tell us about the next big thing you want to build.",
-      "body": "We love working with people who have a vision. Share the idea, brand, or challenge and we'll translate it into a living digital experience.",
+      "title": "Tell us about your next big thing.",
+      "body": "We love partnering with people who have a vision. Share the idea, brand, or challenge— we'll translate it into a living digital experience.",
       "primary": "Start a conversation"
     }
   },
