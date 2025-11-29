@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useSyncExternalStore, useState } from "react";
+import { useEffect, useSyncExternalStore, useState } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { ArrowUpRight, Menu, X, Sparkles, Mail } from "lucide-react";
 import LocaleSwitcher from "./locale-switcher";
 import ThemeToggle from "./theme-toggle";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 const SERVER_SNAPSHOT = Object.freeze({ progress: 0, scrolled: false });
 let CLIENT_SNAPSHOT = { progress: 0, scrolled: false };
@@ -56,9 +57,8 @@ function useScrollProgress() {
   );
 }
 
-export default function SiteHeader({ locale, navLinks = [], contactHref }) {
+export default function SiteHeader({ locale, navLinks = [] }) {
   const pathname = usePathname();
-  const overlayRef = useRef(null);
   const { progress, scrolled } = useScrollProgress();
   const [open, setOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(false);
@@ -173,8 +173,8 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
                         ? "text-zinc-950 dark:text-white"
                         : "text-zinc-700 hover:text-zinc-950 dark:text-white/70 dark:hover:text-white"
                       : isActive(item.href)
-                        ? "text-white"
-                        : "text-white/80 hover:text-white"
+                      ? "text-white"
+                      : "text-white/80 hover:text-white"
                   }`}
                 >
                   <span>{item.label}</span>
@@ -231,35 +231,94 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
       </div>
 
       {/* Mobile Sheet */}
-      {open && (
-        <div id="mobile-menu" className="lg:hidden">
-          <div
-            ref={overlayRef}
-            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
-            onClick={() => setOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="fixed inset-x-4 top-[88px] z-50 rounded-2xl border border-zinc-200/60 bg-white/90 p-4 shadow-2xl backdrop-blur dark:border-white/15 dark:bg-zinc-950/90">
-            <nav aria-label="Mobile Primary" className="space-y-1">
-              {navLinks.map((item) => (
+      <AnimatePresence>
+        {open && (
+          <div id="mobile-menu" className="lg:hidden">
+            <motion.div
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+              onClick={() => setOpen(false)}
+              aria-hidden="true"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            />
+            <motion.div
+              className="fixed inset-x-4 top-[88px] z-50 overflow-hidden rounded-3xl border border-zinc-200/70 bg-white/95 p-5 shadow-[0_22px_90px_rgba(15,23,42,0.2)] backdrop-blur dark:border-white/15 dark:bg-zinc-950/95"
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            >
+              <div className="mb-4 flex items-center justify-between">
                 <Link
-                  key={item.href}
-                  href={item.href}
+                  href="/"
+                  className="flex items-center gap-2"
+                  aria-label="Go to homepage"
                   onClick={() => setOpen(false)}
-                  className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm ${
-                    isActive(item.href)
-                      ? "bg-zinc-100 text-zinc-950 dark:bg-white/10 dark:text-white"
-                      : "text-zinc-700 hover:bg-zinc-100 dark:text-white/80 dark:hover:bg-white/10"
-                  }`}
                 >
-                  <span>{item.label}</span>
-                  <ArrowUpRight className="h-4 w-4 opacity-60" />
+                  <Image
+                    src="/logo.png"
+                    alt="Arsy Studio logo"
+                    width={24}
+                    height={24}
+                    className="h-6 w-6 object-contain"
+                    priority
+                  />
+                  <span className="text-sm font-medium text-zinc-900 dark:text-white">
+                    Arsy Studio
+                  </span>
                 </Link>
-              ))}
-            </nav>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="rounded-full p-2 text-zinc-900 hover:bg-zinc-100 dark:text-white dark:hover:bg-white/10"
+                  aria-label="Close menu"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              <div className="rounded-2xl bg-white/70 p-3 shadow-[0_16px_60px_rgba(15,23,42,0.08)] ring-1 ring-zinc-200/70 dark:bg-white/5 dark:ring-white/10">
+                <div className="grid gap-2">
+                  {navLinks.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className={`group relative flex items-center justify-between rounded-xl px-4 py-3 text-sm transition-all transform ${
+                        isActive(item.href)
+                          ? "bg-white/90 text-zinc-900 ring-1 ring-violet-200 shadow-[0_12px_35px_rgba(15,23,42,0.08)] scale-[1.02] dark:bg-white/10 dark:text-white dark:ring-white/20"
+                          : "text-zinc-600 ring-1 ring-transparent hover:bg-white hover:text-zinc-900 hover:ring-zinc-200 hover:shadow-[0_8px_24px_rgba(15,23,42,0.05)] dark:text-white/80 dark:hover:bg-white/10 dark:hover:ring-white/15"
+                      }`}
+                    >
+                    <span
+                      className={`flex items-center gap-2 transition-transform ${
+                        isActive(item.href) ? "scale-[1.05]" : ""
+                      }`}
+                    >
+                      <span
+                        aria-hidden="true"
+                        className={`h-3 w-3 rounded-full transition ${
+                          isActive(item.href)
+                            ? "bg-linear-to-r from-violet-500 via-purple-500 to-indigo-500 shadow-[0_0_10px_rgba(124,58,237,0.35)]"
+                            : "bg-zinc-300 dark:bg-white/40"
+                        }`}
+                      />
+                      <span>{item.label}</span>
+                    </span>
+                      <ArrowUpRight
+                        className={`h-4 w-4 opacity-60 transition transform group-hover:translate-x-1 group-hover:-translate-y-1 ${
+                          isActive(item.href) ? "scale-110" : ""
+                        }`}
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
     </header>
   );
 }
