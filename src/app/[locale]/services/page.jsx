@@ -10,6 +10,7 @@ import {
   Workflow,
 } from "lucide-react";
 import Image from "next/image";
+import FadeIn from "@/components/animation/FadeIn";
 
 const offeringIcons = {
   web: LayoutGrid,
@@ -105,14 +106,18 @@ export default function ServicesPage({ params }) {
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-0 pb-20 pt-32">
           <div className="space-y-6 max-w-3xl">
-            <div
+            <FadeIn
               className={`inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 ${EYEBROW_TEXT} text-white/70`}
             >
               <Sparkles className="h-3 w-3" />
               {hero.eyebrow}
-            </div>
-            <h1 className={`${SECTION_HEADING} text-white`}>{hero.title}</h1>
-            <p className={`${SECTION_BODY} text-white/70`}>{hero.body}</p>
+            </FadeIn>
+            <FadeIn delay={0.05}>
+              <h1 className={`${SECTION_HEADING} text-white`}>{hero.title}</h1>
+            </FadeIn>
+            <FadeIn delay={0.08}>
+              <p className={`${SECTION_BODY} text-white/70`}>{hero.body}</p>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -123,15 +128,21 @@ export default function ServicesPage({ params }) {
       >
         <div className="relative mx-auto max-w-7xl space-y-16">
           <div className="max-w-3xl space-y-4">
-            <p className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}>
-              {t("signature.eyebrow")}
-            </p>
-            <h2 className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}>
-              {t("signature.title")}
-            </h2>
-            <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/70`}>
-              {t("signature.body")}
-            </p>
+            <FadeIn>
+              <p className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}>
+                {t("signature.eyebrow")}
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.05}>
+              <h2 className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}>
+                {t("signature.title")}
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.08}>
+              <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/70`}>
+                {t("signature.body")}
+              </p>
+            </FadeIn>
           </div>
 
           <div className="space-y-20">
@@ -141,8 +152,9 @@ export default function ServicesPage({ params }) {
               const Icon = offeringIcons[item.key] || Sparkles;
 
               return (
-                <div
+                <FadeIn
                   key={item.title}
+                  delay={0.05 + idx * 0.04}
                   className={`grid gap-10 lg:grid-cols-2 lg:items-stretch ${
                     isEven ? "" : "lg:[&>div:first-child]:order-2"
                   }`}
@@ -188,7 +200,7 @@ export default function ServicesPage({ params }) {
                       <ArrowUpRight className="h-4 w-4" />
                     </Link>
                   </div>
-                </div>
+                </FadeIn>
               );
             })}
           </div>
@@ -201,55 +213,74 @@ export default function ServicesPage({ params }) {
           aria-hidden="true"
         />
         <div className="relative z-10 mx-auto max-w-5xl space-y-6 text-center">
-          <p className={`${EYEBROW_TEXT} text-white/40`}>{cta.eyebrow}</p>
-          <h2 className={`${SECTION_HEADING}`}>{cta.title}</h2>
-          <p className={`${SECTION_BODY} text-white/70`}>{cta.body}</p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
-            >
-              {cta.primary}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
-          </div>
+          <FadeIn>
+            <p className={`${EYEBROW_TEXT} text-white/40`}>{cta.eyebrow}</p>
+          </FadeIn>
+          <FadeIn delay={0.05}>
+            <h2 className={`${SECTION_HEADING}`}>{cta.title}</h2>
+          </FadeIn>
+          <FadeIn delay={0.08}>
+            <p className={`${SECTION_BODY} text-white/70`}>{cta.body}</p>
+          </FadeIn>
+          <FadeIn delay={0.12}>
+            <div className="flex flex-wrap justify-center gap-4 pt-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
+              >
+                {cta.primary}
+                <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       <section className="bg-zinc-50 py-24 px-6 dark:bg-zinc-900 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl space-y-6">
-            <p className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}>
-              {stack.eyebrow}
-            </p>
-            <h2 className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}>
-              {stack.title}
-            </h2>
-            <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/60`}>
-              {stack.body}
-            </p>
+            <FadeIn>
+              <p className={`${EYEBROW_TEXT} text-zinc-500 dark:text-white/40`}>
+                {stack.eyebrow}
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.05}>
+              <h2
+                className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}
+              >
+                {stack.title}
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.08}>
+              <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/60`}>
+                {stack.body}
+              </p>
+            </FadeIn>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {stack.items.map((item) => (
-              <div
+            {stack.items.map((item, idx) => (
+              <FadeIn
                 key={item.title}
-                className="rounded-3xl border border-zinc-200/80 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] transition hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_30px_90px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
+                delay={0.05 + idx * 0.05}
+                className="h-full"
               >
-                <h3 className={`${CARD_TITLE} text-zinc-900 dark:text-white`}>
-                  {item.title}
-                </h3>
-                <div className="mt-4 space-y-2">
-                  {item.bullets.map((bullet) => (
-                    <div
-                      key={bullet}
-                      className="flex items-center gap-3 rounded-full bg-zinc-50 px-4 py-2 text-zinc-600 dark:bg-white/5 dark:text-white/60"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-zinc-900 dark:bg-white" />
-                      <span className={BULLET_TEXT}>{bullet}</span>
-                    </div>
-                  ))}
+                <div className="h-full rounded-3xl border border-zinc-200/80 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.05)] transition hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_30px_90px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20">
+                  <h3 className={`${CARD_TITLE} text-zinc-900 dark:text-white`}>
+                    {item.title}
+                  </h3>
+                  <div className="mt-4 space-y-2">
+                    {item.bullets.map((bullet) => (
+                      <div
+                        key={bullet}
+                        className="flex items-center gap-3 rounded-full bg-zinc-50 px-4 py-2 text-zinc-600 transition dark:bg-white/5 dark:text-white/60"
+                      >
+                        <span className="h-1.5 w-1.5 rounded-full bg-zinc-900 dark:bg-white" />
+                        <span className={BULLET_TEXT}>{bullet}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import FadeIn from "@/components/animation/FadeIn";
 
 const SECTION_HEADING =
   "text-4xl font-light leading-tight md:text-5xl lg:text-6xl";
@@ -21,18 +22,25 @@ export default function FAQSection({ copy }) {
       />
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr,1.15fr]">
         <div className="space-y-6">
-          <p className={`${EYEBROW_TEXT} text-white/40`}>{copy.eyebrow}</p>
-          <h2 className={SECTION_HEADING}>{copy.title}</h2>
+          <FadeIn>
+            <p className={`${EYEBROW_TEXT} text-white/40`}>{copy.eyebrow}</p>
+          </FadeIn>
+          <FadeIn delay={0.05}>
+            <h2 className={SECTION_HEADING}>{copy.title}</h2>
+          </FadeIn>
           {copy.body && (
-            <p className={`${SECTION_BODY} text-white/70`}>{copy.body}</p>
+            <FadeIn delay={0.08}>
+              <p className={`${SECTION_BODY} text-white/70`}>{copy.body}</p>
+            </FadeIn>
           )}
         </div>
         <div className="space-y-4">
           {copy.items.map((item, index) => {
             const isOpen = active === index;
             return (
-              <div
+              <FadeIn
                 key={item.id}
+                delay={0.06 + index * 0.04}
                 className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur transition-colors duration-300 hover:border-white/30 hover:bg-white/10"
               >
                 <button
@@ -70,7 +78,7 @@ export default function FAQSection({ copy }) {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </FadeIn>
             );
           })}
         </div>
