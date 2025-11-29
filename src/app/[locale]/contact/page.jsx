@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   ArrowUpRight,
-  CalendarClock,
+  MapPin,
   Mail,
   MessageCircle,
   PhoneCall,
@@ -12,23 +12,20 @@ import {
 import Image from "next/image";
 import {
   CONTACT_PHONE,
-  CONTACT_WHATSAPP,
   CONTACT_WHATSAPP_LINK,
+  CONTACT_EMAIL,
 } from "@/lib/contact-info";
 
 const channelIcons = {
   email: Mail,
   whatsapp: MessageCircle,
-  workshop: CalendarClock,
+  workshop: MapPin,
 };
 
 const SECTION_HEADING =
   "text-4xl font-light leading-tight md:text-5xl lg:text-6xl";
 const SECTION_BODY = "text-lg font-light leading-relaxed md:text-xl";
 const EYEBROW_TEXT = "text-xs uppercase tracking-[0.4em]";
-const CARD_TAG = "text-xs uppercase tracking-[0.3em]";
-const CARD_TITLE = "text-xl font-light md:text-2xl";
-const CARD_BODY = "text-sm font-light leading-relaxed";
 
 export default function ContactPage({ params }) {
   const { locale } = use(params);
@@ -54,6 +51,23 @@ export default function ContactPage({ params }) {
 
   const heroPrimaryExternal = heroCopy.primaryHref.startsWith("http");
 
+  const contactInfo = {
+    heading: t("contactInfo.heading"),
+    addressLabel: t("contactInfo.addressLabel"),
+    address: t("contactInfo.address"),
+    phoneLabel: t("contactInfo.phoneLabel"),
+    emailLabel: t("contactInfo.emailLabel"),
+    formTitle: t("contactInfo.formTitle"),
+    formBody: t("contactInfo.formBody"),
+    fields: {
+      name: t("contactInfo.name"),
+      workEmail: t("contactInfo.workEmail"),
+      phone: t("contactInfo.phone"),
+      company: t("contactInfo.company"),
+      message: t("contactInfo.message"),
+      submit: t("contactInfo.submit"),
+    },
+  };
   const channels = ["email", "whatsapp", "workshop"].map((key) => {
     const base = {
       icon: key,
@@ -62,35 +76,17 @@ export default function ContactPage({ params }) {
       body: t(`channels.items.${key}.body`),
       action: t(`channels.items.${key}.action`, {
         phone: CONTACT_PHONE,
-        whatsapp: CONTACT_WHATSAPP,
+        whatsapp: CONTACT_PHONE,
       }),
       href: t(`channels.items.${key}.href`, {
         whatsappHref: CONTACT_WHATSAPP_LINK,
       }),
     };
-
     if (key === "whatsapp") {
-      return {
-        ...base,
-        action: CONTACT_WHATSAPP,
-        href: CONTACT_WHATSAPP_LINK,
-      };
+      return { ...base, action: CONTACT_PHONE, href: CONTACT_WHATSAPP_LINK };
     }
-
     return base;
   });
-
-  const availability = {
-    eyebrow: t("availability.eyebrow"),
-    title: t("availability.title"),
-    body: t("availability.body"),
-    detail: t("availability.detail"),
-    slots: ["builds", "partnerships", "audits"].map((key) => ({
-      label: t(`availability.slots.${key}.label`),
-      value: t(`availability.slots.${key}.value`),
-    })),
-  };
-
   const map = {
     title: t("map.title"),
     body: t("map.body"),
@@ -133,64 +129,118 @@ export default function ContactPage({ params }) {
       </section>
 
       <section className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl space-y-4">
-            <p className={`${EYEBROW_TEXT} text-zinc-400 dark:text-white/40`}>
+        <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-[2fr_3fr] lg:grid-cols-[2fr_3fr]">
+          <div className="space-y-6 text-zinc-900 dark:text-white">
+            <div className={`${EYEBROW_TEXT} text-zinc-400 dark:text-white/60`}>
               {t("channels.eyebrow")}
-            </p>
+            </div>
             <h2 className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}>
               {t("channels.title")}
             </h2>
-            <p className={`${SECTION_BODY} text-zinc-500 dark:text-white/60`}>
+            <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/70`}>
               {t("channels.subtitle")}
             </p>
-          </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {channels.map((channel) => {
-              const Icon = channelIcons[channel.icon] || Mail;
-              const target = channel.href.startsWith("http")
-                ? "_blank"
-                : undefined;
-              const rel = target ? "noreferrer" : undefined;
-
-              return (
-                <a
-                  key={channel.title}
-                  href={channel.href}
-                  target={target}
-                  rel={rel}
-                  className="group flex h-full flex-col gap-6 rounded-3xl border border-zinc-200/70 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)] dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
-                >
-                  <div
-                    className={`flex items-center justify-between ${CARD_TAG} text-zinc-400 dark:text-white/40`}
+            <div className="space-y-4">
+              {channels.map((channel) => {
+                const Icon = channelIcons[channel.icon] || Mail;
+                const target = channel.href?.startsWith("http")
+                  ? "_blank"
+                  : undefined;
+                const rel = target ? "noreferrer" : undefined;
+                return (
+                  <a
+                    key={channel.title}
+                    href={channel.href}
+                    target={target}
+                    rel={rel}
+                    className="group flex items-start gap-4 rounded-2xl border border-zinc-200/80 bg-white px-5 py-4 shadow-[0_15px_50px_rgba(15,23,42,0.07)] transition hover:-translate-y-0.5 hover:border-zinc-300 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
                   >
-                    <span>{channel.tag}</span>
-                    <ArrowUpRight className="h-4 w-4 text-zinc-300 transition group-hover:text-zinc-500 dark:text-white/40" />
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="rounded-2xl bg-linear-to-br from-zinc-950 to-zinc-800 p-4 text-white dark:from-white/10 dark:to-white/5">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-zinc-950 to-zinc-800 text-white shadow-lg dark:from-white/10 dark:to-white/5">
                       <Icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h3
-                        className={`${CARD_TITLE} text-zinc-900 dark:text-white`}
-                      >
-                        {channel.title}
-                      </h3>
-                      <p
-                        className={`${CARD_BODY} text-zinc-500 dark:text-white/60`}
-                      >
+                    </span>
+                    <div className="flex-1 space-y-1">
+                      <div className="flex items-center gap-2">
+                        <p className="text-sm uppercase tracking-[0.25em] text-zinc-500 dark:text-white/60">
+                          {channel.tag}
+                        </p>
+                        <ArrowUpRight className="h-4 w-4 text-zinc-400 transition group-hover:translate-x-1 group-hover:-translate-y-1 dark:text-white/50" />
+                      </div>
+                      <h3 className="text-lg font-light">{channel.title}</h3>
+                      <p className="text-sm text-zinc-600 dark:text-white/70">
                         {channel.body}
                       </p>
+                      <div className="text-sm font-semibold text-zinc-900 dark:text-white">
+                        {channel.action}
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-auto text-sm font-semibold text-zinc-900 transition group-hover:text-violet-500 dark:text-white">
-                    {channel.action}
-                  </div>
-                </a>
-              );
-            })}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-[0_25px_90px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-white/5">
+            <div className="relative space-y-2 mb-6">
+              <h3 className="text-3xl font-light text-zinc-950 dark:text-white sm:text-4xl">
+                {contactInfo.formTitle}
+              </h3>
+              <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/70`}>
+                {contactInfo.formBody}
+              </p>
+            </div>
+            <form className="relative space-y-4">
+              <div className="grid gap-4 md:grid-cols-2">
+                <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
+                  <span>{contactInfo.fields.name}</span>
+                  <input
+                    type="text"
+                    className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
+                    placeholder={contactInfo.fields.name}
+                  />
+                </label>
+                <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
+                  <span>{contactInfo.fields.workEmail}</span>
+                  <input
+                    type="email"
+                    className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
+                    placeholder={contactInfo.fields.workEmail}
+                  />
+                </label>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2">
+                <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
+                  <span>{contactInfo.fields.phone}</span>
+                  <input
+                    type="tel"
+                    className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
+                    placeholder={CONTACT_PHONE}
+                  />
+                </label>
+                <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
+                  <span>{contactInfo.fields.company}</span>
+                  <input
+                    type="text"
+                    className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
+                    placeholder={contactInfo.fields.company}
+                  />
+                </label>
+              </div>
+              <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
+                <span>{contactInfo.fields.message}</span>
+                <textarea
+                  rows={5}
+                  className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
+                  placeholder={contactInfo.fields.message}
+                />
+              </label>
+              <button
+                type="button"
+                className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-violet-500 via-purple-500 to-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(124,58,237,0.35)] transition hover:scale-[1.02]"
+              >
+                {contactInfo.fields.submit}
+              </button>
+            </form>
           </div>
         </div>
       </section>

@@ -471,29 +471,29 @@
     },
     "channels": {
       "eyebrow": "Kanal",
-      "title": "Pilih kanal favoritmu.",
-      "subtitle": "Partner kami membalas langsung, biasanya dalam 24 jam.",
+      "title": "Pilih kanal.",
+      "subtitle": "Partner kami membalas cepat.",
       "items": {
         "email": {
           "tag": "01",
           "title": "Kirim email",
-          "body": "Bagikan konteks dan timeline. Kami kirim langkah lanjut.",
+          "body": "",
           "action": "hello@arsystudio.com",
           "href": "mailto:hello@arsystudio.com"
         },
         "whatsapp": {
           "tag": "02",
           "title": "WhatsApp studio",
-          "body": "Untuk cek cepat, voice note, atau perkenalan tim.",
+          "body": "",
           "action": "{phone}",
           "href": "{whatsappHref}"
         },
         "workshop": {
           "tag": "03",
-          "title": "Minta sesi workshop",
-          "body": "Sesi kerja 45 menit buat memetakan scope dan tim.",
-          "action": "Book chemistry call",
-          "href": "https://cal.com/arsy-studio/discovery"
+          "title": "Alamat",
+          "body": "",
+          "action": "Bandung, Indonesia",
+          "href": "https://maps.google.com/?q=Bandung%20Indonesia"
         }
       }
     },
@@ -516,6 +516,21 @@
           "value": "Tersedia dalam 2 minggu"
         }
       }
+    },
+    "contactInfo": {
+      "heading": "Kontak langsung",
+      "addressLabel": "Alamat",
+      "address": "Bandung, Indonesia",
+      "phoneLabel": "Telepon",
+      "emailLabel": "Email",
+      "formTitle": "Ceritakan proyekmu.",
+      "formBody": "Kami balas dalam 1 hari kerja.",
+      "name": "Nama",
+      "workEmail": "Email kerja",
+      "phone": "Telepon",
+      "company": "Perusahaan",
+      "message": "Pesan",
+      "submit": "Kirim"
     },
     "map": {
       "title": "",

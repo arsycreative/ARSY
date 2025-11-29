@@ -471,29 +471,29 @@
     },
     "channels": {
       "eyebrow": "Channels",
-      "title": "Pick your channel.",
-      "subtitle": "Reach us directly—partners respond within a day.",
+      "title": "Pick a channel.",
+      "subtitle": "Direct replies from partners.",
       "items": {
         "email": {
           "tag": "01",
           "title": "Write to us",
-          "body": "Share context and timing. We'll reply with the next steps.",
+          "body": "",
           "action": "hello@arsystudio.com",
           "href": "mailto:hello@arsystudio.com"
         },
         "whatsapp": {
           "tag": "02",
           "title": "WhatsApp the studio",
-          "body": "Use this for quick gut-checks, voice notes, or intros.",
+          "body": "",
           "action": "{phone}",
           "href": "{whatsappHref}"
         },
         "workshop": {
           "tag": "03",
-          "title": "Request a workshop",
-          "body": "Book a 45-minute working session to map scope and squads.",
-          "action": "Book a chemistry call",
-          "href": "https://cal.com/arsy-studio/discovery"
+          "title": "Address",
+          "body": "",
+          "action": "Bandung, Indonesia",
+          "href": "https://maps.google.com/?q=Bandung%20Indonesia"
         }
       }
     },
@@ -516,6 +516,21 @@
           "value": "Bookable within 2 weeks"
         }
       }
+    },
+    "contactInfo": {
+      "heading": "Direct contacts",
+      "addressLabel": "Address",
+      "address": "Bandung, Indonesia",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "formTitle": "Tell us about your project.",
+      "formBody": "We reply within one business day.",
+      "name": "Name",
+      "workEmail": "Work email",
+      "phone": "Phone",
+      "company": "Company",
+      "message": "Message",
+      "submit": "Send"
     },
     "map": {
       "title": "",
