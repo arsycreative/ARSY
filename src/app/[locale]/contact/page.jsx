@@ -15,6 +15,7 @@ import {
   CONTACT_WHATSAPP_LINK,
   CONTACT_EMAIL,
 } from "@/lib/contact-info";
+import ContactForm from "@/components/contact/contact-form";
 
 const channelIcons = {
   email: Mail,
@@ -189,58 +190,11 @@ export default function ContactPage({ params }) {
                 {contactInfo.formBody}
               </p>
             </div>
-            <form className="relative space-y-4">
-              <div className="grid gap-4 md:grid-cols-2">
-                <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
-                  <span>{contactInfo.fields.name}</span>
-                  <input
-                    type="text"
-                    className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
-                    placeholder={contactInfo.fields.name}
-                  />
-                </label>
-                <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
-                  <span>{contactInfo.fields.workEmail}</span>
-                  <input
-                    type="email"
-                    className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
-                    placeholder={contactInfo.fields.workEmail}
-                  />
-                </label>
-              </div>
-              <div className="grid gap-4 md:grid-cols-2">
-                <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
-                  <span>{contactInfo.fields.phone}</span>
-                  <input
-                    type="tel"
-                    className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
-                    placeholder={CONTACT_PHONE}
-                  />
-                </label>
-                <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
-                  <span>{contactInfo.fields.company}</span>
-                  <input
-                    type="text"
-                    className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
-                    placeholder={contactInfo.fields.company}
-                  />
-                </label>
-              </div>
-              <label className="flex flex-col gap-2 text-sm text-zinc-700 dark:text-white/80">
-                <span>{contactInfo.fields.message}</span>
-                <textarea
-                  rows={5}
-                  className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:border-white/40 dark:focus:ring-white/10"
-                  placeholder={contactInfo.fields.message}
-                />
-              </label>
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-violet-500 via-purple-500 to-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(124,58,237,0.35)] transition hover:scale-[1.02]"
-              >
-                {contactInfo.fields.submit}
-              </button>
-            </form>
+            <ContactForm
+              contactInfo={contactInfo}
+              placeholderPhone={CONTACT_PHONE}
+              formspreeUrl="https://formspree.io/f/xgvjdrbd"
+            />
           </div>
         </div>
       </section>
