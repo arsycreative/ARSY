@@ -199,7 +199,11 @@ export default function SiteHeader({ locale, navLinks = [], contactHref }) {
               <button
                 type="button"
                 onClick={() => setOpen((v) => !v)}
-                className="rounded-full p-2 hover:bg-zinc-100 dark:hover:bg-white/10 lg:hidden"
+                className={`rounded-full p-2 ${
+                  scrolled
+                    ? "text-zinc-900 hover:bg-zinc-100 dark:text-white dark:hover:bg-white/10"
+                    : "text-white hover:bg-white/10"
+                } lg:hidden`}
                 aria-expanded={open}
                 aria-controls="mobile-menu"
                 aria-label="Toggle menu"
