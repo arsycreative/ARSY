@@ -517,6 +517,11 @@
         }
       }
     },
+    "map": {
+      "title": "",
+      "body": "",
+      "embedUrl": "https://maps.google.com/maps?q=Bandung%20Indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    },
     "panel": {
       "eyebrow": "Signature Services",
       "title": "Tell us how you want the internet to feel.",

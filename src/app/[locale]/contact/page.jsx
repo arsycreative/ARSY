@@ -9,7 +9,6 @@ import {
   PhoneCall,
   Sparkles,
 } from "lucide-react";
-import { ContactPanel } from "@/components/home/contact-panel";
 import Image from "next/image";
 import {
   CONTACT_PHONE,
@@ -92,24 +91,11 @@ export default function ContactPage({ params }) {
     })),
   };
 
-  const panelCopy = {
-    eyebrow: t("panel.eyebrow"),
-    title: t("panel.title"),
-    body: t("panel.body"),
-    primaryCta: t("panel.primaryCta"),
-    secondaryCta: t("panel.secondaryCta"),
-    reasons: ["build", "refresh", "partner"].map((key) =>
-      t(`panel.reasons.${key}`)
-    ),
-    person: {
-      role: t("panel.person.role"),
-      name: t("panel.person.name"),
-      title: t("panel.person.title"),
-      email: t("panel.person.email"),
-    },
+  const map = {
+    title: t("map.title"),
+    body: t("map.body"),
+    embedUrl: t("map.embedUrl"),
   };
-
-  const directEmail = panelCopy.person?.email || "hello@arsystudio.com";
 
   return (
     <>
@@ -209,7 +195,22 @@ export default function ContactPage({ params }) {
         </div>
       </section>
 
-      <ContactPanel copy={panelCopy} />
+      <section className="bg-zinc-50 py-24 px-6 dark:bg-zinc-950 lg:px-12">
+        <div className="mx-auto max-w-7xl space-y-6">
+          <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-white/5">
+            <iframe
+              title="Studio map location"
+              src={map.embedUrl}
+              width="100%"
+              height="420"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 }
