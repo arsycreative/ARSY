@@ -11,6 +11,11 @@ import {
 } from "lucide-react";
 import { ContactPanel } from "@/components/home/contact-panel";
 import Image from "next/image";
+import {
+  CONTACT_PHONE,
+  CONTACT_WHATSAPP,
+  CONTACT_WHATSAPP_LINK,
+} from "@/lib/contact-info";
 
 const channelIcons = {
   email: Mail,
@@ -50,14 +55,31 @@ export default function ContactPage({ params }) {
 
   const heroPrimaryExternal = heroCopy.primaryHref.startsWith("http");
 
-  const channels = ["email", "whatsapp", "workshop"].map((key) => ({
-    icon: key,
-    tag: t(`channels.items.${key}.tag`),
-    title: t(`channels.items.${key}.title`),
-    body: t(`channels.items.${key}.body`),
-    action: t(`channels.items.${key}.action`),
-    href: t(`channels.items.${key}.href`),
-  }));
+  const channels = ["email", "whatsapp", "workshop"].map((key) => {
+    const base = {
+      icon: key,
+      tag: t(`channels.items.${key}.tag`),
+      title: t(`channels.items.${key}.title`),
+      body: t(`channels.items.${key}.body`),
+      action: t(`channels.items.${key}.action`, {
+        phone: CONTACT_PHONE,
+        whatsapp: CONTACT_WHATSAPP,
+      }),
+      href: t(`channels.items.${key}.href`, {
+        whatsappHref: CONTACT_WHATSAPP_LINK,
+      }),
+    };
+
+    if (key === "whatsapp") {
+      return {
+        ...base,
+        action: CONTACT_WHATSAPP,
+        href: CONTACT_WHATSAPP_LINK,
+      };
+    }
+
+    return base;
+  });
 
   const availability = {
     eyebrow: t("availability.eyebrow"),
@@ -119,21 +141,7 @@ export default function ContactPage({ params }) {
             <h1 className={`${SECTION_HEADING} text-white`}>
               {heroCopy.title}
             </h1>
-            <p className={`${SECTION_BODY} text-white/70`}>
-              {heroCopy.body}
-            </p>
-          </div>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href={heroCopy.primaryHref}
-              target={heroPrimaryExternal ? "_blank" : undefined}
-              rel={heroPrimaryExternal ? "noreferrer" : undefined}
-              className="group relative inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition-transform hover:scale-[1.02]"
-            >
-              <PhoneCall className="h-4 w-4" />
-              {heroCopy.primaryCta}
-              <span className="absolute inset-0 -z-10 rounded-full bg-linear-to-r from-violet-100 to-white opacity-0 transition-opacity group-hover:opacity-100" />
-            </a>
+            <p className={`${SECTION_BODY} text-white/70`}>{heroCopy.body}</p>
           </div>
         </div>
       </section>
@@ -141,19 +149,13 @@ export default function ContactPage({ params }) {
       <section className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl space-y-4">
-            <p
-              className={`${EYEBROW_TEXT} text-zinc-400 dark:text-white/40`}
-            >
+            <p className={`${EYEBROW_TEXT} text-zinc-400 dark:text-white/40`}>
               {t("channels.eyebrow")}
             </p>
-            <h2
-              className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}
-            >
+            <h2 className={`${SECTION_HEADING} text-zinc-950 dark:text-white`}>
               {t("channels.title")}
             </h2>
-            <p
-              className={`${SECTION_BODY} text-zinc-500 dark:text-white/60`}
-            >
+            <p className={`${SECTION_BODY} text-zinc-500 dark:text-white/60`}>
               {t("channels.subtitle")}
             </p>
           </div>
@@ -190,7 +192,9 @@ export default function ContactPage({ params }) {
                       >
                         {channel.title}
                       </h3>
-                      <p className={`${CARD_BODY} text-zinc-500 dark:text-white/60`}>
+                      <p
+                        className={`${CARD_BODY} text-zinc-500 dark:text-white/60`}
+                      >
                         {channel.body}
                       </p>
                     </div>

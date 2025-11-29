@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import Image from "next/image";
 
@@ -113,15 +113,6 @@ export default function SiteFooter({ footer = {}, navLinks = [] }) {
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all hover:border-white/20 hover:bg-white/10"
             >
               <Linkedin className="h-5 w-5 text-white/70" />
-            </a>
-            <a
-              href={footer?.social?.twitter || "#"}
-              aria-label="Twitter"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all hover:border-white/20 hover:bg-white/10"
-            >
-              <Twitter className="h-5 w-5 text-white/70" />
             </a>
             <a
               href={footer?.social?.instagram || "#"}

@@ -132,7 +132,7 @@ export default function ManifestoSection({ copy = {} }) {
 
             <div className="flex flex-wrap items-center gap-3">
               <Link
-                href="#contact"
+                href="/contact"
                 className={`group inline-flex items-center gap-3 rounded-full border border-white/20 bg-linear-to-r ${ACCENT} px-7 py-3 text-sm font-medium text-white shadow-[0_18px_45px_rgba(124,58,237,.35)] transition-transform hover:scale-[1.02]`}
                 aria-label={primaryCta}
               >
@@ -140,7 +140,7 @@ export default function ManifestoSection({ copy = {} }) {
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
               <Link
-                href="#services"
+                href="/services"
                 className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-7 py-3 text-sm font-medium text-white transition hover:bg-white/20"
                 aria-label={secondaryCta}
               >

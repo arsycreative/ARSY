@@ -73,7 +73,7 @@ export function AboutPreview({ copy, locale }) {
               ))}
             </div>
             <Link
-              href={`/${locale}/about`}
+              href="/about"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-zinc-950 dark:bg-white text-white dark:text-zinc-950 font-medium hover:bg-zinc-800 dark:hover:bg-white/90 transition-all hover:gap-4"
             >
               {copy.cta}

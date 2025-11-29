@@ -448,8 +448,8 @@
     },
     "cta": {
       "eyebrow": "Ready to build?",
-      "title": "Let’s choreograph the next flagship together.",
-      "body": "Bring the brief, the hunch, or the product roadmap. We’ll respond with a tailored plan in under 24 hours.",
+      "title": "Let's plan your next build.",
+      "body": "Send a brief or hunch. We reply within a day with a clear plan.",
       "primary": "Start the brief"
     }
   },
@@ -485,8 +485,8 @@
           "tag": "02",
           "title": "WhatsApp the studio",
           "body": "Use this for quick gut-checks, voice notes, or intros.",
-          "action": "+62 812-8898-1122",
-          "href": "https://wa.me/6281288981122"
+          "action": "{phone}",
+          "href": "{whatsappHref}"
         },
         "workshop": {
           "tag": "03",
@@ -698,7 +698,7 @@
     "contact": {
       "title": "Studio line",
       "email": "hello@arsystudio.com",
-      "phone": "+62 812-8898-1122",
+      "phone": "{phone}",
       "address": "Jl. Senopati 08, Jakarta - collaborating worldwide."
     },
     "rights": "All rights reserved.",

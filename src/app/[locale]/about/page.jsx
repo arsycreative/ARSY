@@ -358,7 +358,7 @@ export default function AboutPage({ params }) {
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <Link
-              href={`/${locale}/contact`}
+              href="/contact"
               className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition-all hover:scale-[1.02] hover:shadow-[0_30px_60px_rgba(255,255,255,0.3)]"
             >
               {cta.primary}

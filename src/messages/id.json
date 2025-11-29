@@ -448,8 +448,8 @@
     },
     "cta": {
       "eyebrow": "Siap membangun?",
-      "title": "Ayo jalankan proyek besar berikutnya.",
-      "body": "Kirimkan brief, intuisi, atau roadmapmu. Kami balas dengan rencana yang jelas dalam 24 jam.",
+      "title": "Ayo rencanakan build berikutnya.",
+      "body": "Kirim brief atau intuisi. Kami balas dengan rencana jelas dalam 24 jam.",
       "primary": "Mulai brief"
     }
   },
@@ -485,8 +485,8 @@
           "tag": "02",
           "title": "WhatsApp studio",
           "body": "Untuk cek cepat, voice note, atau perkenalan tim.",
-          "action": "+62 812-8898-1122",
-          "href": "https://wa.me/6281288981122"
+          "action": "{phone}",
+          "href": "{whatsappHref}"
         },
         "workshop": {
           "tag": "03",
@@ -698,7 +698,7 @@
     "contact": {
       "title": "Studio line",
       "email": "hello@arsystudio.com",
-      "phone": "+62 812-8898-1122",
+      "phone": "{phone}",
       "address": "Jl. Senopati 08, Jakarta - kolaborasi global."
     },
     "rights": "Seluruh hak cipta dilindungi.",

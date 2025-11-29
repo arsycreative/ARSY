@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Link } from "@/i18n/navigation";
 
 export default function HeroSection({ copy }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -144,15 +145,21 @@ export default function HeroSection({ copy }) {
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.6, delay: 0.26 }}
             >
-              <button className="group relative px-8 py-4 bg-white text-zinc-950 rounded-full font-medium overflow-hidden transition-all hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(255,255,255,0.12)]">
+              <Link
+                href="/contact"
+                className="group relative px-8 py-4 bg-white text-zinc-950 rounded-full font-medium overflow-hidden transition-all hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(255,255,255,0.12)]"
+              >
                 <span className="relative z-10 flex items-center gap-2">
                   {copy.primaryCta}
                   <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </span>
-              </button>
-              <button className="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/5 transition-all backdrop-blur-xl">
+              </Link>
+              <Link
+                href="/services"
+                className="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/5 transition-all backdrop-blur-xl"
+              >
                 {copy.secondaryCta}
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
 

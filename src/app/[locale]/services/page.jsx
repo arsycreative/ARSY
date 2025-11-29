@@ -245,7 +245,7 @@ export default function ServicesPage({ params }) {
           <p className={`${SECTION_BODY} text-white/70`}>{cta.body}</p>
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <Link
-              href={`/${locale}/contact`}
+              href="/contact"
               className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
             >
               {cta.primary}

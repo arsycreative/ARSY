@@ -14,6 +14,10 @@ import { AppProviders } from "@/components/providers/app-providers";
 import SiteHeader from "@/components/site-header";
 import { FaPhone } from "react-icons/fa6";
 import SiteFooter from "@/components/site-footer";
+import {
+  CONTACT_PHONE,
+  CONTACT_WHATSAPP_LINK,
+} from "@/lib/contact-info";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -105,7 +109,7 @@ export default async function LocaleLayout({ children, params }) {
     contact: {
       title: footerCopy("contact.title"),
       email: footerCopy("contact.email"),
-      phone: footerCopy("contact.phone"),
+      phone: CONTACT_PHONE,
       address: footerCopy("contact.address"),
     },
     rights: footerCopy("rights"),
@@ -128,7 +132,7 @@ export default async function LocaleLayout({ children, params }) {
             <main className="flex-1">{children}</main>
             <SiteFooter footer={footer} navLinks={navLinks} />
             <a
-              href="https://wa.me/6281288981122"
+              href={CONTACT_WHATSAPP_LINK}
               target="_blank"
               rel="noreferrer"
               className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#32d951] text-white shadow-[0_15px_45px_rgba(50,217,81,0.35)] transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
