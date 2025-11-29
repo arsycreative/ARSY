@@ -60,6 +60,7 @@ export default function ContactPage({ params }) {
     emailLabel: t("contactInfo.emailLabel"),
     formTitle: t("contactInfo.formTitle"),
     formBody: t("contactInfo.formBody"),
+    formNote: t("contactInfo.formNote"),
     fields: {
       name: t("contactInfo.name"),
       workEmail: t("contactInfo.workEmail"),
@@ -155,13 +156,13 @@ export default function ContactPage({ params }) {
                     href={channel.href}
                     target={target}
                     rel={rel}
-                    className="group flex items-start gap-4 rounded-2xl border border-zinc-200/80 bg-white px-5 py-4 shadow-[0_15px_50px_rgba(15,23,42,0.07)] transition hover:-translate-y-0.5 hover:border-zinc-300 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
+                    className="group flex items-start gap-4 rounded-2xl bg-white/80 px-5 py-4 shadow-[0_15px_50px_rgba(15,23,42,0.07)] transition hover:-translate-y-0.5 hover:bg-linear-to-r hover:from-white hover:via-violet-50 hover:to-white dark:bg-white/5 dark:hover:from-white/10 dark:hover:via-white/5 dark:hover:to-white/10"
                   >
                     <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-zinc-950 to-zinc-800 text-white shadow-lg dark:from-white/10 dark:to-white/5">
                       <Icon className="h-5 w-5" />
                     </span>
                     <div className="flex-1 space-y-1">
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center justify-between gap-2">
                         <p className="text-sm uppercase tracking-[0.25em] text-zinc-500 dark:text-white/60">
                           {channel.tag}
                         </p>
@@ -183,9 +184,11 @@ export default function ContactPage({ params }) {
 
           <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-[0_25px_90px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-white/5">
             <div className="relative space-y-2 mb-6">
-              <h3 className="text-3xl font-light text-zinc-950 dark:text-white sm:text-4xl">
-                {contactInfo.formTitle}
-              </h3>
+              {contactInfo.formTitle ? (
+                <h3 className="text-3xl font-light text-zinc-950 dark:text-white sm:text-4xl">
+                  {contactInfo.formTitle}
+                </h3>
+              ) : null}
               <p className={`${SECTION_BODY} text-zinc-600 dark:text-white/70`}>
                 {contactInfo.formBody}
               </p>
@@ -199,7 +202,7 @@ export default function ContactPage({ params }) {
         </div>
       </section>
 
-      <section className="bg-zinc-50 py-24 px-6 dark:bg-zinc-950 lg:px-12">
+      <section className="bg-zinc-50 pb-24 px-6 dark:bg-zinc-950 lg:px-12">
         <div className="mx-auto max-w-7xl space-y-6">
           <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-white/5">
             <iframe

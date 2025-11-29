@@ -472,7 +472,7 @@
     "channels": {
       "eyebrow": "Channels",
       "title": "Pick a channel.",
-      "subtitle": "Direct replies from partners.",
+      "subtitle": "Free consultation, no strings attached. Partners reply fast.",
       "items": {
         "email": {
           "tag": "01",
@@ -523,8 +523,9 @@
       "address": "Bandung, Indonesia",
       "phoneLabel": "Phone",
       "emailLabel": "Email",
-      "formTitle": "Tell us about your project.",
+      "formTitle": "",
       "formBody": "We reply within one business day.",
+      "formNote": "We’ll set a free intro consult, no strings attached.",
       "name": "Name",
       "workEmail": "Work email",
       "phone": "Phone",

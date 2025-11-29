@@ -195,6 +195,27 @@ export default function ServicesPage({ params }) {
         </div>
       </section>
 
+      <section className="relative overflow-hidden py-24 px-6 text-white lg:px-12">
+        <div
+          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto max-w-5xl space-y-6 text-center">
+          <p className={`${EYEBROW_TEXT} text-white/40`}>{cta.eyebrow}</p>
+          <h2 className={`${SECTION_HEADING}`}>{cta.title}</h2>
+          <p className={`${SECTION_BODY} text-white/70`}>{cta.body}</p>
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
+            >
+              {cta.primary}
+              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-zinc-50 py-24 px-6 dark:bg-zinc-900 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl space-y-6">
@@ -230,27 +251,6 @@ export default function ServicesPage({ params }) {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden py-24 px-6 text-white lg:px-12">
-        <div
-          className="absolute inset-0 bg-linear-to-br from-zinc-950 via-zinc-900 to-black"
-          aria-hidden="true"
-        />
-        <div className="relative z-10 mx-auto max-w-5xl space-y-6 text-center">
-          <p className={`${EYEBROW_TEXT} text-white/40`}>{cta.eyebrow}</p>
-          <h2 className={`${SECTION_HEADING}`}>{cta.title}</h2>
-          <p className={`${SECTION_BODY} text-white/70`}>{cta.body}</p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-900 transition hover:scale-[1.02]"
-            >
-              {cta.primary}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
           </div>
         </div>
       </section>

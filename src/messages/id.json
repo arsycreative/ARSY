@@ -472,7 +472,7 @@
     "channels": {
       "eyebrow": "Kanal",
       "title": "Pilih kanal.",
-      "subtitle": "Partner kami membalas cepat.",
+      "subtitle": "Konsultasi gratis tanpa syarat. Partner kami respon cepat.",
       "items": {
         "email": {
           "tag": "01",
@@ -525,6 +525,7 @@
       "emailLabel": "Email",
       "formTitle": "Ceritakan proyekmu.",
       "formBody": "Kami balas dalam 1 hari kerja.",
+      "formNote": "Kami atur konsultasi awal gratis, tanpa syarat.",
       "name": "Nama",
       "workEmail": "Email kerja",
       "phone": "Telepon",
