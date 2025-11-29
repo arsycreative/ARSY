@@ -2,9 +2,9 @@ import { use } from "react";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { PortfolioGrid } from "@/components/portfolio/portfolio-grid";
+import FadeIn from "@/components/animation/FadeIn";
 
 export default function PortfolioPage({ params }) {
   const { locale } = use(params);
@@ -59,16 +59,22 @@ export default function PortfolioPage({ params }) {
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-0 pb-20 pt-32">
           <div className="space-y-6 max-w-3xl">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/70">
-              <Sparkles className="h-3 w-3" />
-              {hero.eyebrow}
-            </div>
-            <h1 className="text-5xl font-light leading-tight lg:text-6xl">
-              {hero.title}
-            </h1>
-            <p className="text-xl font-light text-white/70 leading-relaxed">
-              {hero.body}
-            </p>
+            <FadeIn>
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-white/70">
+                <Sparkles className="h-3 w-3" />
+                {hero.eyebrow}
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.05}>
+              <h1 className="text-5xl font-light leading-tight lg:text-6xl">
+                {hero.title}
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.08}>
+              <p className="text-xl font-light text-white/70 leading-relaxed">
+                {hero.body}
+              </p>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -78,11 +84,13 @@ export default function PortfolioPage({ params }) {
         className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12"
       >
         <div className="mx-auto max-w-7xl space-y-12">
-          <PortfolioGrid
-            filters={filters}
-            projects={projects}
-            emptyLabel={t("empty")}
-          />
+          <FadeIn>
+            <PortfolioGrid
+              filters={filters}
+              projects={projects}
+              emptyLabel={t("empty")}
+            />
+          </FadeIn>
         </div>
       </section>
     </>
