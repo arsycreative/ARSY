@@ -131,7 +131,7 @@ export default function ContactPage({ params }) {
       </section>
 
       <section className="bg-white py-24 px-6 dark:bg-zinc-950 lg:px-12">
-        <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-[2fr_3fr] lg:grid-cols-[2fr_3fr]">
+        <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[2fr_3fr]">
           <div className="space-y-6 text-zinc-900 dark:text-white">
             <div className={`${EYEBROW_TEXT} text-zinc-400 dark:text-white/60`}>
               {t("channels.eyebrow")}
